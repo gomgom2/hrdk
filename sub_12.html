@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>HDRK</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta property="og:title" content="HDRK - 한국산업인력공단">
+	<meta property="og:description" content="한국산업인력공단 웹매거진">
+	<meta property="og:image" content="contents/thumb.jpg">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/hrdk_sub.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<style>
+:root {
+	--color-first: #FBEBDE;
+	--color-second: #F86856;
+	--color-third: #000;
+	--color-fourth: #000;
+}
+body {
+	background-color: var(--color-first);
+}
+.article-body {
+	max-width: 900px;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+.info-header {
+	position: relative;
+}
+.category {
+	display: block;
+    width: fit-content;
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+    font-family: GmarketSansMedium;
+    padding: 0px 12px;
+    border: 1px solid var(--color-third);
+    color: var(--color-third);
+    border-radius: .8rem;
+    margin-bottom: 1rem;
+}
+.info-header p {
+	color: var(--color-fourth);
+	margin-bottom: 1rem;
+	width: 60%;
+}
+.info-header h4 {
+	color: var(--color-second);
+	font-family: Paperlogy-5Medium;
+	font-size: 1.5rem;
+}
+.info-header h2 {
+	color: var(--color-third);
+	font-family: Paperlogy-7Bold;
+	font-size: 2rem;
+	letter-spacing: -0.01rem;
+	line-height: 1.2;
+	margin-bottom: .5rem;
+}
+.info-header h5 {
+	font-family: Paperlogy-5Medium;
+	font-size: 1.3rem;
+	line-height: 1.3;
+	margin-top: 2.8rem;
+}
+.info-header .article-meta {
+	text-align: left;
+	font-size: 0.8rem;
+	color: var(--color-third);
+	margin-top: 0;
+}
+.info-header figure {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 45%;
+}
+.info-box {
+	position: relative;
+	border-top: 1px solid var(--color-second);
+	margin-top: 5rem;
+}
+.info-box::before {
+	content: "";
+	display: block;
+	width: 11px;
+	height: 11px;
+	background-color: var(--color-second);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-50%);
+	border-radius: 50%;
+}
+.info-box h3 {
+	font-family: Paperlogy-5Medium;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+.info-box h3 span {
+	color: var(--color-second);
+}
+.info-box h6 {
+	font-family: Paperlogy-7Bold;
+	color: #fff;
+	background-color: var(--color-second);
+	width: 8rem;
+	font-size: 1.1rem;
+	border-radius: 1.5rem;
+	text-align: center;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+}
+.info-box-text {
+	font-family: Paperlogy-5Medium;
+}
+.info-box-text span {
+	margin-right: 1rem;
+}
+.info-box-text b {
+	font-family: Paperlogy-8ExtraBold;
+}
+.info-box-in p {
+	font-family: Paperlogy-5Medium;
+}
+.info-box-image {
+	display: flex;
+	justify-content: space-between;
+	gap: 3rem;
+	margin: 2rem 0;
+}
+.info-box-image.small {
+	width: 80%;
+}
+.info-box-text2 {
+	display: flex;
+	font-family: Paperlogy-5Medium;
+	margin-bottom: 1rem;
+}
+.info-box-text2 b {
+	font-family: Paperlogy-7Bold;
+}
+.info-box-text2 span {
+	font-family: Paperlogy-8ExtraBold;
+	font-size: 2rem;
+	color: var(--color-second);
+	margin-left: 0.5rem;
+	margin-right: 0.3rem;
+}
+.info-box-text2 div:first-child {
+	border-right: 1px solid var(--color-second);
+	padding-right: 1rem;
+	margin-right: 1rem;
+}
+.info-box-text3 {
+	display: grid;
+  	grid-template-columns: repeat(5, 1fr);
+	gap: 1rem;
+}
+.info-box-box {
+	margin-top: 1rem;
+}
+.info-box-box h4 {
+	background-color: var(--color-second);
+	color: #fff;
+	font-family: Paperlogy-7Bold;
+	text-align: center;
+	line-height: 1.2;
+	padding: 0rem 0;
+	border-radius: 0.5rem;
+	height: 3rem;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	word-break: keep-all;
+}
+.info-box-box h4.small {
+	font-size: 0.7rem;
+}
+.info-box-box li {
+	display: flex;
+}
+.info-box-box li .label {
+	width: 30%;
+	color: #7C756F;
+	font-family: Paperlogy-5Medium;
+	display: flex;
+  	align-items: center;
+  	margin-top: 0.5rem;
+  	line-height: 2rem;
+}
+.info-box-box li .number {
+	font-family: Jost;
+	font-weight: 800;
+	font-size: 1.55rem;
+	letter-spacing: -1px;
+	margin-left: 0;
+	display: flex;
+  	align-items: center;
+  	line-height: 2rem;
+}
+.info-box-in + h3 {
+	margin-top: 4rem;
+}
+@media (max-width:767px) {
+	.article-body {
+		padding: 2rem 1rem;
+	}
+	.info-header p {
+		width: 50%;
+	}
+	.info-box-text3 {
+	  	grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+
+	.info-box-image {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.info-box-image.small {
+		width: 100%;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1rem;
+	}
+	.info-box-text2 div {
+		word-break: keep-all;
+	}
+
+}
+	</style>
+</head>
+<body>
+	<header id="menu"></header>
+	<main>
+		<section>
+			<div class="article-body">
+				<div class="info-header">
+					<span class="category">테마 infographic</span>
+					<h4>인포그래픽으로 보는</h4>
+					<h2>
+						사업주 직업능력개발훈련 현황
+					</h2>
+					<div class="article-meta">
+						<span>글</span>
+						<span class="pipe">ㅣ</span>
+						<span>최영윤</span>
+						<span class="dot">・</span>
+						<span>자료</span>
+						<span class="pipe">ㅣ</span>
+						<span>한국산업인력공단</span>
+					</div>
+					<p>
+						한국산업인력공단은 사업주가 근로자 등을 대상으로 직업능력개발훈련을 실시할 경우 훈련비 등을 지원하여, 사업주의 직업능력개발훈련 참여를 촉진하고 근로자의 능력개발 향상을 도모하고 있습니다.
+					</p>
+					<figure>
+						<img src="contents/sub_12_top.png">
+					</figure>
+				</div>
+				<div class="info-box">
+					<h3>사업주 직업능력개발훈련 주요 내용</h3>
+					<div class="info-box-in">
+						<h6>1. 지원대상</h6>
+						<div class="info-box-text">
+							<span>
+								<b>실시주체:</b>
+								사업주
+							</span>
+							<span>
+								<b>실시대상:</b>
+								15세 이상의 근로자
+							</span>
+						</div>
+					</div>
+					<div class="info-box-in">
+						<h6>2. 지원내용</h6>
+						<div class="info-box-image small">
+							<figure>
+								<img src="contents/sub_12_1.png">
+							</figure>
+							<figure>
+								<img src="contents/sub_12_2.png">
+							</figure>
+							<figure>
+								<img src="contents/sub_12_3.png">
+							</figure>
+							<figure>
+								<img src="contents/sub_12_4.png">
+							</figure>
+						</div>
+						<p>
+							*훈련종류에 따라 지원내용이 다를 수 있습니다.
+						</p>
+					</div>
+					<div class="info-box-in">
+						<h6>3. 지원요건</h6>
+						<div class="info-box-text2">
+							<div>
+								<b>집체훈련·현장훈련:</b>
+								<div>
+									전체 훈련의 <span>80%</span> 이상 출석
+								</div>
+							</div>
+							<div>
+								<b>인터넷 원격훈련:</b>
+								<div>
+									학습활동 참여율의 <span>80%</span> 이상 / 수료요건 충족 출석
+								</div>
+							</div>
+						</div>
+						<p>
+							[출처] 한국산업인력공단
+						</p>
+					</div>
+				</div>
+				<div class="info-box">
+					<h3>사업주 직업능력개발훈련(유급 휴가 제외) 현황</h3>
+					<div class="info-box-in">
+						<div class="info-box-image">
+							<figure>
+								<img src="contents/sub_12_5.png">
+							</figure>
+							<figure>
+								<img src="contents/sub_12_6.png">
+							</figure>
+						</div>
+					</div>
+				</div>
+				<div class="info-box">
+					<h3>사업주 직업능력개발훈련(유급 휴가 제외) <span>규모별</span> 현황 2024</h3>
+					<div class="info-box-in">
+						<div class="info-box-image">
+							<figure>
+								<img src="contents/sub_12_7.png">
+							</figure>
+						</div>
+					</div>
+					<h3>사업주 직업능력개발훈련(유급 휴가 제외) <span>업종별</span> 현황 2024</h3>
+					<div class="info-box-text3">
+						<div class="info-box-box">
+							<h4>
+								농·임·어·광업
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">893</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">2,862</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4>
+								제조업
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">38,683</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">565,449</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4 class="small">
+								전기가스증기 및 공기조절 공급업, 수도·하수, 폐기, 원료 재생업
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">733</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">19,749</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4>
+								건설업
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">7,748</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">64,948</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4>
+								도소매·운수, 창고·숙박, 음식점업
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">10,469</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">274,335</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4>
+								정보통신업
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">4,889</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">112,327</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4>
+								금융·보험·부동산
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">8,020</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">212,776</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4 class="small">
+								전문, 과학 및 기술·사업시설 관리, 사업지원, 임대 서비스업
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">8,725</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">246,076</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4>
+								공공행정, 국방 및 사회보장 행정
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">59</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">22,141</span>
+								</li>
+							</ul>
+						</div>
+						<div class="info-box-box">
+							<h4>
+								교육 서비스·예술, 여가 관련·기타
+							</h4>
+							<ul>
+								<li>
+									<span class="label">사업장</span>
+									<span class="number">32,921</span>
+								</li>
+								<li>
+									<span class="label">인원</span>
+									<span class="number">598,928</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>					
+			</div>
+		</section>
+	</main>
+	<footer id="footer"></footer>
+</body>
+</html>

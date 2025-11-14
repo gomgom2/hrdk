@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>HDRK</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta property="og:title" content="HDRK - 한국산업인력공단">
+	<meta property="og:description" content="한국산업인력공단 웹매거진">
+	<meta property="og:image" content="contents/thumb.jpg">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/hrdk_sub.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<style>
+
+:root {
+	--color-first: #fff; 		/* 헤더 배경 */
+	--color-second: #F86856; 	/* h2 색상 */
+	--color-third: #F4B57F;		/* 전체배경 */
+	--color-fourth: #F86856; 	/* 프롤로그 배경 */
+	--color-fifth: #000; 		/* 프롤로그 색상 */
+}
+body {
+	background-color: var(--color-third);
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+.story-label {
+	color: var(--color-second);
+	border-color: var(--color-second);
+}
+.article-header-container-2 {
+    grid-template-columns: 2.5fr 1fr;
+    gap: 0;
+}
+.article-header-text-2 h4 {
+    font-family: Paperlogy-7Bold;
+    color: #000;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.article-header-text-2 h2 {
+	margin-bottom: 1rem;
+}
+.article-header-container-2 p {
+	margin-bottom: 2rem;
+	word-break: keep-all;
+}
+.article-header-text-2 .article-meta {
+	color: #000;
+}
+
+.article-body {
+	max-width: 800px;
+}
+.article-text {
+    margin-top: 2rem;
+}
+.match-box-dual, .match-box-single {
+	position: relative;
+	padding: 0 0 0 10%;
+}
+.match-box-single {
+	padding-top: 4rem;
+}
+.match-image {
+	position: absolute;
+}
+.match-image.small {
+	width: 30%;
+}
+.match-image.left {
+	top: 0;
+	left: 0;
+}
+.match-image.small.left {
+	transform: translateX(-80%) translateY(15%);
+}
+.dialogue {
+	display: flex;
+}
+.dialogue h6 {
+	font-size: 1rem;
+	font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01rem;
+    margin: 0 0 0.2rem 0;
+}
+.dialogue.right {
+	justify-content: flex-end;
+}
+.dialogue.right .dialogue-container {
+	width: 65%;
+/*	margin-top: 1rem;*/
+}
+.match-box-single .dialogue.right .dialogue-container p::before {
+	content: "";
+	width: 3rem;
+	height: 3rem;
+	display: block;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	padding: 2px;
+	position: absolute;
+	right: 0;
+	top: 0;
+    transform: translateX(120%) translateY(-80%);
+	background-clip: content-box;
+	background-color: #fff;
+	background-image: url("contents/sub_23_icon_1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.match-box-single .dialogue.left .dialogue-container p::before,
+.dialogue-container.list div::before {
+	content: "";
+	width: 3rem;
+	height: 3rem;
+	display: block;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	padding: 2px;
+	position: absolute;
+	left: 0;
+	top: 0;
+    transform: translateX(-120%) translateY(-80%);
+	background-clip: content-box;
+	background-color: #fff;
+	background-image: url("contents/sub_23_icon_2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.dialogue.left .dialogue-container {
+	width: 85%;
+}
+.match-box-single .dialogue.left .dialogue-container {
+	transform: translateX(40px) translateY(-30px);	
+}
+.dialogue.left h6 {
+	margin-left: 0.5rem;
+}
+.dialogue.right h6 {
+	text-align: right;
+	margin-right: 0.5rem;
+}
+.dialogue p {
+	background-color: #fff;
+	padding: 1.2rem;
+	border-radius: 10px;
+	position: relative;
+	z-index: 5;
+	font-size: 1rem;
+	margin: 0;
+	line-height: 1.5;
+	box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+.dialogue p span {
+	font-size: 0.8rem;
+}
+.dialogue p i {
+	display: inline-block;
+	width: 0.8rem;
+	height: 0.8rem;
+	background: url(contents/sub_icon_23_bul.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	transform: translateY(0.05rem);
+	margin-right: 0.2rem;
+}
+.dialogue p em {
+	font-weight: 600;
+	text-decoration: underline;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	display: block;
+}
+.dialogue.right p::after {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 25px;
+    background-image: url("contents/sub_bul_23.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(32px) translateY(15px) rotate(90deg);
+}
+.dialogue.left p::after,
+.dialogue-container.list div::after {
+	content: "";
+	display: block;
+	width: 54px;
+	height: 26px;
+    background-image: url("contents/sub_bul_23.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-21px) translateY(5px) rotate(0deg);
+}
+.dialogue-container.list div {
+	background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    position: relative;
+    z-index: 5;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+    box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+.dialogue-container.list div ul {
+	margin-top: 0.5rem;
+}
+.dialogue-container.list div li {
+	padding-left: 1.5rem;
+	margin-top: 0.1rem;
+	position: relative;
+	text-decoration: underline;
+	text-decoration-thickness: 0.01rem; 
+	text-underline-offset: 0.3rem;
+}
+.dialogue-container.list div li::before {
+	content: "";
+	display: block;
+	width: 18px;
+	height: 18px;
+    background-image: url("contents/sub_23_bul.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width:767px) {
+	.article-header-container-2 {
+	        grid-template-columns: 1fr;
+	   }
+
+.article-header-container-2 p {
+	width: 60%;
+}
+	.article-header-image-2 {
+	    margin-top: -20rem;
+	}
+	.article-header-image-2 figure {
+		width: 50%;
+		margin-left: 50%;
+	}
+	.match-image.big {
+		display: none;
+	}
+	.dialogue.left .dialogue-container,
+	.dialogue.right .dialogue-container {
+		width: 100%;
+	}
+	.dialogue.right {
+		justify-content: flex-start;
+	}
+	.match-box-dual, .match-box-single {
+		padding: 0 3rem 1rem;
+	}
+	.match-box-single .dialogue.left .dialogue-container {
+		transform: translateX(20px) translateY(0);
+	}
+	.match-box-single .dialogue.right .dialogue-container {
+		transform: translateX(-20px) translateY(0);
+	}
+	.dialogue-container {
+		margin-top: 1rem;
+	}
+	.match-box-single .dialogue.left .dialogue-container p::before {
+		transform: translateX(-120%) translateY(-50%);
+	}
+	.match-box-single .dialogue.right .dialogue-container p::before {
+		transform: translateX(120%) translateY(-50%);
+	}
+	.match-image {position: relative;}
+	.match-image.small.left {
+		top:0;
+		width: 40%;
+		left:0;
+		transform: translateX(0) translateY(0);
+	}
+}
+	</style>
+</head>
+<body>
+	<header id="menu"></header>
+	<main>
+		<section class="article-header">
+			<div class="article-header-wrap wrap">
+				<div class="article-header-container-2">
+					<div class="article-header-text-2">
+						<span class="story-label">퍼스널 매칭업(業)</span>
+						<h4>
+							사내 교육에서 
+						</h4>
+						<h2>
+							공신력 있는 제도로!
+						</h2>
+						<p>
+							기계 제조업체를 운영하는 박수진(가명) 씨는 직원들의 기술 수준을 높이기 위해 자체 교육 과정을 꾸준히 운영해 왔지만 사내 교육만으로는 외부에서 인정받기 어려워 직원들의 동기부에도 한계가 있었다. 자사 교육 과정에 공신력을 부여받을 수 없는지, 고민 끝에 수진 씨는 한국산업인력공단 자격품질관리국 자격품질기획부에 도움을 요청했다.
+						</p>
+						<div class="article-meta">
+							<span>글</span>
+							<span class="pipe">ㅣ</span>
+							<span>최영윤</span>
+						</div>
+					</div>
+					<div class="article-header-image-2">
+						<figure><img src="contents/sub_23_top.png" /></figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="article-body">
+				<article>
+					<div class="article-text">
+						<div class="match-box-single">
+							<figure class="match-image small left">
+								<img src="contents/sub_23_1.png">
+							</figure>
+							<div class="dialogue right">
+								<div class="dialogue-container">
+									<h6>박수진</h6>
+									<p>
+										안녕하세요.😁<br>
+										저는 기계 제조업체를 운영하는 박수진(가명)입니다!🦾
+									</p>
+								</div>
+							</div>
+							<div class="dialogue left">
+								<div class="dialogue-container">								
+									<h6>HRDK 자격품질기획부</h6>
+									<p>
+										안녕하세요. 한국산업인력공단 자격품질관리국 자격품질기획부입니다.<br>
+										저희는 국가기술자격과 기업자격 제도의 품질을 기획·관리하며, 자격제도의 운영방향을 수립하고 개선하며, 특히 기업자격 정부인정제를 총괄하여 기업의 자체 교육·훈련 과정을 공신력 있는 자격으로 인정하는 업무를 수행하고 있습니다.
+									</p>
+								</div>
+							</div>
+							<div class="dialogue right">
+								<div class="dialogue-container">
+									<h6>박수진</h6>
+									<p>
+										사업주 자격검정사업과 기업자격 정부인정제는 무엇인가요?🤔
+									</p>
+								</div>
+							</div>
+							<div class="dialogue left">
+								<div class="dialogue-container">
+									<h6>HRDK 자격품질기획부</h6>
+									<p>
+										사업주 자격검정사업과 기업자격 정부인정제는 사실상 같은 제도를 지칭합니다.<br>
+										공식 명칭은 기업자격 정부인정제로, 기업이 자체적으로 개발한 교육·훈련 과정을 ‘자격’으로 운영할 수 있도록 국가가 인정하는 제도입니다. 즉 회사 내부에서만 통용되던 교육·평가 체계를 공신력 있는 자격으로 제도화해 주는 것입니다.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="match-box-single">
+							<figure class="match-image small left">
+								<img src="contents/sub_23_2.png">
+							</figure>							
+							<div class="dialogue right">
+								<div class="dialogue-container">
+									<h6>박수진</h6>
+									<p>
+										저희 회사도 신청할 수 있나요? 자격 요건이 궁금합니다.👩‍💼🏢
+									</p>
+								</div>
+							</div>
+							<div class="dialogue left">
+								<div class="dialogue-container list">
+									<h6>HRDK 자격품질기획부</h6>
+									<div>
+										네, 가능합니다. 기업자격 정부인정제(사업주 자격검정사업)는 모든 기업(사업주)가 신청할 수 있으며, 다음과 같은 요건을 충족해야 합니다.<br>
+										<ul>
+											<li>
+												<b>운영 주체:</b>
+												사업주 단독·공동으로 운영, 소속 근로자 대상
+											</li>
+											<li>
+												<b>자격 체계:</b>
+												종목·검정 방법·합격 기준·응시자격 등이 명확히 정립
+											</li>
+											<li>
+												<b>현장 연계성:</b>
+												자격 종목이 현장 직무에 필요한 지식·기능과 직접 연관
+											</li>
+											<li>
+												<b>운영 기반:</b>
+												안정적 운영을 위한 인력·재원 확보 및 공정한 검정 체계 마련
+											</li>
+											<li>
+												<b>사후 관리:</b>
+												합격자에 대한 승진·승급·보수 등 우대 규정 마련
+											</li>
+											<li>
+												<b>운영 원칙:</b>
+												영리 목적 금지, 법령 및 사회질서 준수
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>							
+							<div class="dialogue right">
+								<div class="dialogue-container">
+									<h6>박수진</h6>
+									<p>
+										기업자격 정부인정제를 신청하려면 어떤 절차가 필요한가요?📅
+									</p>
+								</div>
+							</div>
+							<div class="dialogue left">
+								<div class="dialogue-container">
+									<h6>HRDK 자격품질기획부</h6>
+									<p>
+										신고기업은 신고에 필요한 서류를 한국산업인력공단 이사장에게 제출해야 합니다. 이후 공단 이사장은 현장조사와 인정위원회 심의 등을 거쳐 해당 신청 기관에 통지하며, 적합 판정 시 이를 홈페이지에 공고합니다. <br>
+										필요 준비 서류는 Q-Net(자격정보 > 기업자격 정부인정제 > 기업자격 신규·변경·폐지신청 절차)에서 다운받을 수 있습니다.
+									</p>
+								</div>
+							</div>							
+							<div class="dialogue right">
+								<div class="dialogue-container">
+									<h6>박수진</h6>
+									<p>
+										보통 제도 신청부터 인정까지 얼마나 걸리나요?📭⌚
+									</p>
+								</div>
+							</div>
+							<div class="dialogue left">
+								<div class="dialogue-container">
+									<h6>HRDK 자격품질기획부</h6>
+									<p>
+										소요 기간은 별도로 명시되어 있지 않으며, 기업의 준비 상황, 신청 내용의 복잡성, 정부 심사 절차 진행 등에 따라 달라질 수 있습니다. 신청 전에는 Q-Net을 통해 기업자격 검정사업 시행 규정과 요건을 확인하고, 심사 기준을 충족한 후 진행하시기 바랍니다.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="match-box-single">
+							<figure class="match-image small left">
+								<img src="contents/sub_23_3.png">
+							</figure>							
+							<div class="dialogue right">
+								<div class="dialogue-container">
+									<h6>박수진</h6>
+									<p>
+										기업자격 정부인정제를 도입한 이후에도 제도 내용을 변경하거나 경영상의 이유로 폐지가 가능한가요?😅
+									</p>
+								</div>
+							</div>
+							<div class="dialogue left">
+								<div class="dialogue-container">
+									<h6>HRDK 자격품질기획부</h6>
+									<p>
+										기업자격 정부인정제는 도입 이후에도 제도 내용을 변경하거나 폐지할 수 있습니다. 사업장 명칭·소재지, 자격 종목 명칭, 실시 규정 등 주요 사항이 변경되면 변경일 기준 30일 이내에 신고서와 증빙서류를 공단 이사장에게 제출해야 하며, 사업주가 자격 운영을 포기하거나 폐업하는 경우, 또는 3년간 자격검정을 실시하지 않을 시 폐지 신고서를 제출하여 제도를 종료할 수 있습니다.
+									</p>
+								</div>
+							</div>							
+							<div class="dialogue right">
+								<div class="dialogue-container">
+									<h6>박수진</h6>
+									<p>
+										기업자격 정부인정제는 제도 인정 외 별도 혜택은 없나요?🏆💸
+									</p>
+								</div>
+							</div>
+							<div class="dialogue left">
+								<div class="dialogue-container">
+									<h6>HRDK 자격품질기획부</h6>
+									<p>
+										과거에는 사업지원금 혜택이 있었으나, 일부 기업이 지원금 혜택만 받고 제도를 성실히 운영하지 않은 사례가 발생했습니다. 이에 정부 방침에 맞춰 2024년부터 사업지원금은 폐지되었으며, 대신 정부는 비현물적 지원사항을 모색했고, 그 일환으로 2025년부터는 직무능력은행제 디지털배지 연계가 적용되고 있습니다.
+									</p>
+								</div>
+							</div>							
+							<div class="dialogue right">
+								<div class="dialogue-container">
+									<h6>박수진</h6>
+									<p>
+										본 제도에 관해서 참고할 만한 샘플이나 가이드북이 있나요?📕
+									</p>
+								</div>
+							</div>
+							<div class="dialogue left">
+								<div class="dialogue-container">
+									<h6>HRDK 자격품질기획부</h6>
+									<p>
+										해당 제도와 관련해 컨설팅 신청서, 가이드북, 사업소개 자료 등이 제공되고 있습니다. 이를 참고로 기업 내 체계를 준비하면 도움이 될 것입니다. 관련 자료는 Q-Net(자격정보 > 기업자격 정부인정제 > 기업자격 정부인정제 관련 자료실)에서 다운받을 수 있습니다.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+	<footer id="footer"></footer>
+</body>
+</html>

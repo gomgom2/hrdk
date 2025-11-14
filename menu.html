@@ -1,0 +1,131 @@
+		<div class="nav-wrap flex fixed w-100 max-h-100 overflow-x z-100 pc">
+			<div class="nav-container w-100 max-h-2 flex flex-justify-between flex-direction-row overflow-h">
+				<div class="nav-left flex gap-10 flex-vertical-center">
+					<a href="index.html" class="top-logo">
+						<span class="top-logo-2"></span>
+					</a>
+					<a href="https://webzine.hrdkorea.or.kr/section/magazine/main" target="_blank"><span class="pdf">이전호 가기</span></a>
+					<a href="pdf/2025_10_hrdk.pdf" target="_blank"><span class="pdf">PDF보기</span></a>
+				</div>
+				<div class="nav-menu flex flex-direction-row">
+					<ul class="nav-menu-list inline-flex">
+						<li>
+							<button>Special</button>
+							<ul>
+								<li><a href="sub_11.html">테마 Story</a></li>
+								<li><a href="sub_12.html">테마 Infographic</a></li>
+								<li><a href="sub_13.html">HRDK 사용법</a></li>
+							</ul>
+						</li>
+						<li>
+							<button>업(業)그레이드 JOB</button>
+							<ul>
+								<li><a href="sub_21.html">최고人터뷰&멘토링</a></li>
+								<li><a href="sub_22.html">NCS 함께 보기</a></li>
+								<li><a href="sub_23.html">퍼스널 매칭업(業)</a></li>
+								<li><a href="sub_24.html">요즘 난리난 자격증</a></li>
+							</ul>
+						</li>
+						<li>
+							<button>업(業)그레이드 LIFE</button>
+							<ul>
+								<li><a href="sub_31.html">셀럽의 건강식단</a></li>
+								<li><a href="sub_32.html">도파민 디톡스</a></li>
+								<li><a href="sub_33.html">업글인간 카툰</a></li>
+								<li><a href="sub_34.html">독자 참여 이벤트</a></li>
+							</ul>
+						</li>
+						<li>
+							<button>업(業)그레이드 HRDK</button>
+							<ul>
+								<li><a href="sub_41.html">HRDK 포커스온</a></li>
+								<li><a href="sub_42.html">상생스토리</a></li>
+								<li><a href="sub_43.html">HRDK 뉴스</a></li>
+								<li><a href="sub_44.html">국가시험 캘린더</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="nav-wrap mobile">
+			<div class="nav-container w-100 max-h-2 flex flex-justify-between overflow-h">
+				<div class="nav-left flex gap-10 flex-vertical-center">
+					<a href="index.html" class="top-logo">
+						<span class="top-logo-2"></span>
+					</a>
+				</div>
+				<div class="nav-right">
+					<div class="nav-icon">
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<div class="nav-container-2">
+					<ul class="nav-menu-list">
+						<li>
+							<button>Special</button>
+							<ul>
+								<li><a href="sub_11.html">테마 Story</a></li>
+								<li><a href="sub_12.html">테마 Infographic</a></li>
+								<li><a href="sub_13.html">HRDK 사용법</a></li>
+							</ul>
+						</li>
+						<li>
+							<button>업(業)그레이드 JOB</button>
+							<ul>
+								<li><a href="sub_21.html">최고人터뷰&멘토링</a></li>
+								<li><a href="sub_22.html">NCS 함께 보기</a></li>
+								<li><a href="sub_23.html">퍼스널 매칭업(業)</a></li>
+								<li><a href="sub_24.html">요즘 난리난 자격증</a></li>
+							</ul>
+						</li>
+						<li>
+							<button>업(業)그레이드 LIFE</button>
+							<ul>
+								<li><a href="sub_31.html">셀럽의 건강식단</a></li>
+								<li><a href="sub_32.html">도파민 디톡스</a></li>
+								<li><a href="sub_33.html">업글인간 카툰</a></li>
+								<li><a href="sub_34.html">독자 참여 이벤트</a></li>
+							</ul>
+						</li>
+						<li>
+							<button>업(業)그레이드 HRDK</button>
+							<ul>
+								<li><a href="sub_41.html">HRDK 포커스온</a></li>
+								<li><a href="sub_42.html">상생스토리</a></li>
+								<li><a href="sub_43.html">HRDK 뉴스</a></li>
+								<li><a href="sub_44.html">국가시험 캘린더</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	    $('.nav-menu').hover(
+        function() {
+            $('.nav-container').removeClass('max-h-2').addClass('max-h-100');
+        },
+        function() {
+            $('.nav-container').removeClass('max-h-100').addClass('max-h-2');
+        }
+    );
+
+    $('.number').hover(
+        function() {
+            $('.nav-container').removeClass('max-h-2').addClass('max-h-100');
+        },
+        function() {
+            $('.nav-container').removeClass('max-h-100').addClass('max-h-2');
+        }
+    );
+
+    $('.nav-icon').on('click', function () {
+        $(this).toggleClass('open'); // 'active' 클래스를 토글
+        $('.nav-container-2').toggleClass('open'); // 'active' 클래스를 토글
+    });
+});
+</script>		
