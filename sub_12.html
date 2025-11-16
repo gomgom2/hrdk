@@ -14,8 +14,8 @@
 	<script src="js/script.js"></script>
 	<style>
 :root {
-	--color-first: #FBEBDE;
-	--color-second: #F86856;
+	--color-first: #DCDBED;
+	--color-second: #405883;
 	--color-third: #000;
 	--color-fourth: #000;
 }
@@ -45,7 +45,7 @@ body {
 .info-header p {
 	color: var(--color-fourth);
 	margin-bottom: 1rem;
-	width: 60%;
+	width: 50%;
 }
 .info-header h4 {
 	color: var(--color-second);
@@ -99,111 +99,140 @@ body {
 	font-family: Paperlogy-5Medium;
 	font-size: 1.5rem;
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .info-box h3 span {
 	color: var(--color-second);
 }
-.info-box h6 {
-	font-family: Paperlogy-7Bold;
-	color: #fff;
-	background-color: var(--color-second);
-	width: 8rem;
-	font-size: 1.1rem;
-	border-radius: 1.5rem;
-	text-align: center;
-	margin-top: 3rem;
-	margin-bottom: 1rem;
+.info-box p {
+	font-family: Paperlogy-4Regular;
 }
-.info-box-text {
-	font-family: Paperlogy-5Medium;
-}
-.info-box-text span {
-	margin-right: 1rem;
-}
-.info-box-text b {
-	font-family: Paperlogy-8ExtraBold;
-}
-.info-box-in p {
-	font-family: Paperlogy-5Medium;
-}
-.info-box-image {
+.info-box-flex {
 	display: flex;
 	justify-content: space-between;
-	gap: 3rem;
-	margin: 2rem 0;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
-.info-box-image.small {
+.info-box-flex.width-80 {
 	width: 80%;
 }
-.info-box-text2 {
-	display: flex;
-	font-family: Paperlogy-5Medium;
+.info-box-flex .info-box-in {
+	width: 30%;
+}
+.info-box-center h4 {
+	font-family: Paperlogy-7Bold;
+	color: #2C4573;
+	text-align: center;
+	font-size: 1.2rem;
 	margin-bottom: 1rem;
 }
-.info-box-text2 b {
+.info-box-center figure {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10%;
+}
+.info-box-list {
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--color-second);
+	border-radius: 0.5rem;
+	background-color: #fff;
+	margin-top: 2rem;
+}
+.info-box-list h5 {
+	font-size: 1.2rem;
 	font-family: Paperlogy-7Bold;
-}
-.info-box-text2 span {
-	font-family: Paperlogy-8ExtraBold;
-	font-size: 2rem;
-	color: var(--color-second);
-	margin-left: 0.5rem;
-	margin-right: 0.3rem;
-}
-.info-box-text2 div:first-child {
+	width: fit-content;
+	padding: 0 1rem;
 	border-right: 1px solid var(--color-second);
-	padding-right: 1rem;
+}
+.info-box-list-in {
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+	padding: 0.5rem 5%;
+}
+.info-box-list-in figure {
+	height: 2.5vw;
+}
+.info-box-list-in figure img {
+	width: auto;
+	height: 100%;
+}
+.info-box h5 {
+	font-family: Paperozi;
+	font-weight: 600;
+	font-size: 1.2rem;
+	text-align: center;
+}
+.info-box h5 + .info-box-flex {
+	margin-top: 2rem;
+}
+.info-box-flex.small-image {
+	position: relative;
+	text-align: center;
+}
+.info-box-flex.small-image figure {
+	width: 50%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 1rem;
+}
+.info-box-in h4 {
+	padding: 0.1rem 0;
+	text-align: center;
+	color: #fff;
+	font-family: Paperozi;
+	font-weight: 700;
+	letter-spacing: -0.01rem;
+	font-size: 1.2rem;
+	background-color: var(--color-second);
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+.info-box-in:nth-of-type(2) h4 {
+	background-color: #5B5CA3;
+}
+.info-box-in:nth-of-type(3) h4 {
+	background-color: #5656CE;
+}
+.info-box-in p {
+	text-align: center;
+}
+.info-box-list-2-in {
+	position: relative;
+	width: 25vw;
+	background-color: #fff;
+	margin: 4vw;
+	padding: 0.2vw 4vw;
+	border-radius: 2rem;
+	border: 2px solid var(--color-second);
+	font-family: Paperozi;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+}
+.info-box-list-2-in span {
 	margin-right: 1rem;
 }
-.info-box-text3 {
-	display: grid;
-  	grid-template-columns: repeat(5, 1fr);
-	gap: 1rem;
+.info-box-list-2-in em {
+	font-weight: 500;
 }
-.info-box-box {
-	margin-top: 1rem;
+.info-box-list-2-in strong {
+	font-size: 1.8rem;
+	margin: 0 0.3rem;
 }
-.info-box-box h4 {
-	background-color: var(--color-second);
-	color: #fff;
-	font-family: Paperlogy-7Bold;
-	text-align: center;
-	line-height: 1.2;
-	padding: 0rem 0;
-	border-radius: 0.5rem;
-	height: 3rem;
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	word-break: keep-all;
-}
-.info-box-box h4.small {
-	font-size: 0.7rem;
-}
-.info-box-box li {
-	display: flex;
-}
-.info-box-box li .label {
-	width: 30%;
-	color: #7C756F;
-	font-family: Paperlogy-5Medium;
-	display: flex;
-  	align-items: center;
-  	margin-top: 0.5rem;
-  	line-height: 2rem;
-}
-.info-box-box li .number {
-	font-family: Jost;
-	font-weight: 800;
-	font-size: 1.55rem;
-	letter-spacing: -1px;
-	margin-left: 0;
-	display: flex;
-  	align-items: center;
-  	line-height: 2rem;
-}
-.info-box-in + h3 {
-	margin-top: 4rem;
+.info-box-list-2-in figure {
+	width: 6vw;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
 }
 @media (max-width:767px) {
 	.article-body {
@@ -211,24 +240,6 @@ body {
 	}
 	.info-header p {
 		width: 50%;
-	}
-	.info-box-text3 {
-	  	grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-	}
-
-
-	.info-box-image {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-	}
-	.info-box-image.small {
-		width: 100%;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 1rem;
-	}
-	.info-box-text2 div {
-		word-break: keep-all;
 	}
 
 }
@@ -243,7 +254,7 @@ body {
 					<span class="category">테마 infographic</span>
 					<h4>인포그래픽으로 보는</h4>
 					<h2>
-						사업주 직업능력개발훈련 현황
+						국가인적자원개발컨소시엄 현황
 					</h2>
 					<div class="article-meta">
 						<span>글</span>
@@ -255,244 +266,142 @@ body {
 						<span>한국산업인력공단</span>
 					</div>
 					<p>
-						한국산업인력공단은 사업주가 근로자 등을 대상으로 직업능력개발훈련을 실시할 경우 훈련비 등을 지원하여, 사업주의 직업능력개발훈련 참여를 촉진하고 근로자의 능력개발 향상을 도모하고 있습니다.
+						한국산업인력공단은 사업주가 근로자 등을 대상으로 직업능력개발훈련을 실시할 경우 훈련비 등을 지원하여, 사업주의 직업능력개발훈련 참여를 촉진하고 근로자의 능력개발 향상을 도모하고 있습니다. 
 					</p>
 					<figure>
 						<img src="contents/sub_12_top.png">
 					</figure>
 				</div>
 				<div class="info-box">
-					<h3>사업주 직업능력개발훈련 주요 내용</h3>
-					<div class="info-box-in">
-						<h6>1. 지원대상</h6>
-						<div class="info-box-text">
-							<span>
-								<b>실시주체:</b>
-								사업주
-							</span>
-							<span>
-								<b>실시대상:</b>
-								15세 이상의 근로자
-							</span>
-						</div>
-					</div>
-					<div class="info-box-in">
-						<h6>2. 지원내용</h6>
-						<div class="info-box-image small">
+					<h3>국가인적자원개발컨소시엄이란</h3>
+					<p>
+						중소기업 재직근로자의 직업훈련 참여를 확대하고, 신성장동력분야, 융복합분야 등의 전략산업 전문인력을 육성하며, 산업계 주도의 지역별 직업훈련기반 조성하기 위해 복수의 중소기업과 인적자원개발 컨소시엄 협약을 구성한 기업에게 공동훈련에 필요한 훈련 인프라와 훈련비 등을 지원하는 대한민국의 대표적인 직업능력개발훈련 사업
+					</p>
+					<div class="info-box-flex width-80">
+						<div class="info-box-in">
 							<figure>
 								<img src="contents/sub_12_1.png">
 							</figure>
+						</div>
+						<div class="info-box-in">
 							<figure>
 								<img src="contents/sub_12_2.png">
 							</figure>
+						</div>
+						<div class="info-box-in">
 							<figure>
 								<img src="contents/sub_12_3.png">
 							</figure>
-							<figure>
-								<img src="contents/sub_12_4.png">
-							</figure>
 						</div>
-						<p>
-							*훈련종류에 따라 지원내용이 다를 수 있습니다.
-						</p>
 					</div>
-					<div class="info-box-in">
-						<h6>3. 지원요건</h6>
-						<div class="info-box-text2">
-							<div>
-								<b>집체훈련·현장훈련:</b>
-								<div>
-									전체 훈련의 <span>80%</span> 이상 출석
-								</div>
-							</div>
-							<div>
-								<b>인터넷 원격훈련:</b>
-								<div>
-									학습활동 참여율의 <span>80%</span> 이상 / 수료요건 충족 출석
-								</div>
-							</div>
-						</div>
-						<p>
-							[출처] 한국산업인력공단
-						</p>
+					<div class="info-box-center">
+						<h4>협약기업 훈련수요 맞춤형 훈련제공</h4>
+						<figure>
+							<img src="contents/sub_12_4.png">
+						</figure>
 					</div>
-				</div>
-				<div class="info-box">
-					<h3>사업주 직업능력개발훈련(유급 휴가 제외) 현황</h3>
-					<div class="info-box-in">
-						<div class="info-box-image">
+					<div class="info-box-list">
+						<h5>사업수행</h5>
+						<div class="info-box-list-in">
 							<figure>
 								<img src="contents/sub_12_5.png">
 							</figure>
 							<figure>
 								<img src="contents/sub_12_6.png">
 							</figure>
-						</div>
-					</div>
-				</div>
-				<div class="info-box">
-					<h3>사업주 직업능력개발훈련(유급 휴가 제외) <span>규모별</span> 현황 2024</h3>
-					<div class="info-box-in">
-						<div class="info-box-image">
 							<figure>
 								<img src="contents/sub_12_7.png">
 							</figure>
 						</div>
-					</div>
-					<h3>사업주 직업능력개발훈련(유급 휴가 제외) <span>업종별</span> 현황 2024</h3>
-					<div class="info-box-text3">
-						<div class="info-box-box">
-							<h4>
-								농·임·어·광업
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">893</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">2,862</span>
-								</li>
-							</ul>
+					</div>					
+				</div>
+				<div class="info-box">
+					<h3>국가인적자원개발컨소시엄 사업 목적</h3>
+					<h5>[사업 목적]</h5>
+					<div class="info-box-flex small-image">
+						<div class="info-box-in">
+							<figure>
+								<img src="contents/sub_12_8.png">
+							</figure>
+							<p>
+								중소기업에 지속적이고 체계적인<br>
+								인적자원개발 등 인력관리시스템을 제공
+							</p>
 						</div>
-						<div class="info-box-box">
-							<h4>
-								제조업
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">38,683</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">565,449</span>
-								</li>
-							</ul>
+						<div class="info-box-in">
+							<figure>
+								<img src="contents/sub_12_9.png">
+							</figure>
+							<p>
+								중소기업을 위한 공동 교육훈련<br>
+								인프라를 구축
+							</p>
 						</div>
-						<div class="info-box-box">
-							<h4 class="small">
-								전기가스증기 및 공기조절 공급업, 수도·하수, 폐기, 원료 재생업
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">733</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">19,749</span>
-								</li>
-							</ul>
-						</div>
-						<div class="info-box-box">
-							<h4>
-								건설업
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">7,748</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">64,948</span>
-								</li>
-							</ul>
-						</div>
-						<div class="info-box-box">
-							<h4>
-								도소매·운수, 창고·숙박, 음식점업
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">10,469</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">274,335</span>
-								</li>
-							</ul>
-						</div>
-						<div class="info-box-box">
-							<h4>
-								정보통신업
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">4,889</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">112,327</span>
-								</li>
-							</ul>
-						</div>
-						<div class="info-box-box">
-							<h4>
-								금융·보험·부동산
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">8,020</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">212,776</span>
-								</li>
-							</ul>
-						</div>
-						<div class="info-box-box">
-							<h4 class="small">
-								전문, 과학 및 기술·사업시설 관리, 사업지원, 임대 서비스업
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">8,725</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">246,076</span>
-								</li>
-							</ul>
-						</div>
-						<div class="info-box-box">
-							<h4>
-								공공행정, 국방 및 사회보장 행정
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">59</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">22,141</span>
-								</li>
-							</ul>
-						</div>
-						<div class="info-box-box">
-							<h4>
-								교육 서비스·예술, 여가 관련·기타
-							</h4>
-							<ul>
-								<li>
-									<span class="label">사업장</span>
-									<span class="number">32,921</span>
-								</li>
-								<li>
-									<span class="label">인원</span>
-									<span class="number">598,928</span>
-								</li>
-							</ul>
+						<div class="info-box-in">
+							<figure>
+								<img src="contents/sub_12_10.png">
+							</figure>
+							<p>
+								대·중소기업 상생을 위한 인력양성<br>
+								생태계 구축
+							</p>
 						</div>
 					</div>
-				</div>					
+				</div>	
+				<div class="info-box">
+					<h3>국가인적자원개발컨소시엄 사업 유형</h3>
+					<div class="info-box-flex">
+						<div class="info-box-in">
+							<h4>산업맞춤형</h4>
+							<p>
+								중소기업 등과 컨소시엄을 구성하여 직무훈련을 제공하는 등 중소기업 등의 종합적인 직업능력개발을 지원하는 공동훈련센터
+							</p>
+						</div>
+						<div class="info-box-in">
+							<h4>하이테크형</h4>
+							<p>
+								첨단산업, 산업전환 분야 등 신기술·신산업에 대응하여 직무훈련 및 각종 지원서비스를 제공하는 공동훈련센터
+							</p>
+						</div>
+						<div class="info-box-in">
+							<h4>대중소상생 아카테미</h4>
+							<p>
+								대기업이 보유한 우수 교육 훈련 프로그램을 중소기업과 공유하여  중소기업 근로자의 역량을 강화하고 동반 성장을 도모하는 아카데미
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="info-box">
+					<h3>국가인적자원개발컨소시엄 현황</h3>		
+					<div class="info-box-list-2">
+						<div class="info-box-list-2-in">
+							<figure>
+								<img src="contents/sub_12_11.png">
+							</figure>
+							<span>공동훈련센터</span>
+							<strong>306</strong>
+							<em>개소</em>
+						</div>
+						<div class="info-box-list-2-in">
+							<figure>
+								<img src="contents/sub_12_12.png">
+							</figure>
+							<span>실시인원</span>
+							<em>약</em>
+							<strong>213,000</strong>
+							<em>명</em>
+						</div>
+						<div class="info-box-list-2-in">
+							<figure>
+								<img src="contents/sub_12_13.png">
+							</figure>
+							<span>참여기업</span>
+							<em>약</em>
+							<strong>97,000</strong>
+							<em>개</em>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
