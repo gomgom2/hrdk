@@ -15,21 +15,17 @@
 	<style>
 :root {
 	--color-first: #fff;
-	--color-second: #F86856;
+	--color-second: #5656CE;
 	--color-third: #000;
-	--color-fourth: #C7A785;
+	--color-fourth: #405883;
 	--color-fifth: #F0D2AE;
 	
 }
 body {
-	background-color: #FCF0EE;
+	background-color: #D8DEE6;
 }
 .article-header-container {
 	margin-top: 2rem;
-}
-.article-header-image2 {
-	width: 60%;
-	margin: 0 auto;
 }
 .article-header-text {
 	margin: 0 auto;
@@ -39,6 +35,7 @@ body {
 	font-family: Paperlogy-7Bold;
 	margin-bottom: 0;
 	text-align: center;
+	font-size: 2.5rem;
 }
 .article-header-text h4 {
 	font-family: Paperlogy-5Medium;
@@ -74,54 +71,112 @@ body {
 	color: var(--color-second);
 	margin: 0;
 }
-.article-header-image3 {
-	width: 65%;
-	margin: 0 auto;
-	display: flex;
-	gap: 2rem;
-	padding-bottom: 3rem;
-}
-.article-header-image3 p {
-	margin: 1rem auto;
-	width: 80%;
-	text-align: center;
-	word-break: keep-all;
-}
-.article-header-image3 p span {
-	color: var(--color-second);
-}
-.small-image {
-	width: 65%;
-	margin-bottom: 1.5rem;
-}
-.wh-text {
-	padding: 0.5rem;
-	background-color: #fff;
-	border-radius: 0.5rem;
-}
-.wh-text.center {
-	text-align: center;
-}
-.wh-text p {
-	margin: 0;
-	line-height: 1.3;
-	font-size: 1rem;
-	padding: 0.5rem;
-}
-.wh-text span {
-	color: var(--color-second);
-}
-.wh-image {
-	display: grid;
-	grid-template-columns: 1fr 1.5fr;
+
+.img-text {
 	margin: 3rem 0;
+	background-color: #ECEEF3;
+	border: 1px solid var(--color-fourth);
+	border-radius: 1rem;
+	padding: 2rem 2rem 1.5rem;
+	position: relative;
 }
-.wh-image figure {
-	width: 60%;
-	margin: 0 auto;
+.img-text h6 {
+	margin: 0;
+	position: absolute;
+	width: fit-content;
+	padding: 0 3rem;
+	background-color: var(--color-fourth);
+	font-size: 1rem;
+	line-height: 2rem;
+	border-radius: 1rem;
+	color: #fff;
+	font-weight: 400;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%) translateY(-50%);
 }
-.wh-image .wh-text {
-	margin: 1rem 0;
+.img-text figure {
+	width: 70%;
+	margin: 1rem auto;
+}
+.img-text p {
+	text-align: center;
+	line-height: 1.3;
+	margin-bottom: 0;
+	color: var(--color-fourth);
+}
+.img-text ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+.img-text li {
+	padding-left: 1rem;
+	position: relative;
+	width: 50%;
+}
+.img-text li::before {
+	content: "☑︎";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-55%);
+}
+.img-text.wh {
+	background-color: #fff;
+	padding: 2rem 1rem;
+}
+.img-text.wh span {
+	font-weight: 600;
+}
+.img-text.wh p {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: #000;
+	padding-bottom: 0;
+}
+.img-text-in {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+}
+.img-text-in > div {
+	border-right: 0.01rem solid var(--color-fourth);
+	padding: 0 1.5rem;
+}
+.img-text-in > div:last-child {
+	border: none;
+}
+
+.article-image .image-dual {
+	grid-template-columns: 2.5fr 1fr;
+	gap: 0.5rem;
+}
+.table-normal,
+.table-normal th, .table-normal td {
+	border-color: #3C5983;
+}
+.table-normal {
+	border-top-width: 3px;
+	margin-top: 4rem;
+}
+.table-normal caption {
+	font-size: 1rem;
+	font-weight: 400;
+}
+.table-normal th, .table-normal td {
+	padding: 1rem 2rem;
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+.table-normal tr td:first-child {
+	text-align: center;
+}
+.table-normal dl {
+	display: flex;
+	gap: 0.5rem;
+}
+.table-normal dt {
+	width: fit-content;
 }
 @media (max-width:767px) {
 	.article-header-container {
@@ -138,13 +193,9 @@ body {
 		line-height: 1.3;
 		margin-bottom: 2rem;
 	}
-	.article-header-image2,
+	
 	.article-header-text-in {
 		width: 90%;
-	}
-	.article-header-image3 {
-		width: 100%;
-		gap: 1rem;
 	}
 	.article-text {
 		padding: 0 2rem;
@@ -179,39 +230,82 @@ body {
 				<div class="article-header-container grid gap-30" >
 					<div class="article-header-text flex flex-direction-column flex-justify-center">
 						<span>HRDK 포커스온</span>
-						<h2 class="paperlogy">한국산업인력공단</h2>
+						<h2 class="paperlogy">타지키스탄 외국인 근로자 최초 입국, </h2>
 						<h4>
-							국가기술자격 정보집 ‘자격Q’ 발간
+							직접 지은 한글 이름으로 힘찬 첫 출발!
 						</h4>
 					</div>
 					<div class="article-header-text-in">
 						<p>
-							한국산업인력공단은 지난 30일 기계 분야 주요 12개 국가기술자격 종목에 대한 응시 현황과 고용 통계 분석을 담은 2025년 3분기 국가기술자격 정보집 ‘자격Q’를 발간했다. 이번 정보집은 기계가공·조립(6개 종목), 기계설계(4개 종목), 정밀측정(2개 종목) 세부 직무를 포함한 기계 분야 대표 12개 종목에 대한 자격기초정보, 응시 및 취득 통계, 응시자 연령·성별, 응시목적, 취득자 취업률 분석 결과 등을 담았다. 
+							한국산업인력공단은 지난 22일 타지키스탄 고용허가제(EPS*) 외국인 근로자의 첫 번째 입국을 환영하며, 인천국제공항에서 ‘한글 이름표 달아주기’ 행사를 개최했다. 외국인 근로자(E-9*)들은 입국 직후 인천국제공항에서 한글 이름표를 받게 되며, 이는 한국 사회의 일원으로 존중받으며 안정적으로 정착할 수 있는 첫걸음을 상징한다. 
 						</p>
 					    <h5>
-					    	| 기계분야 주요 분석 결과 1 |
+					    	*EPS : Employment Permit System의 약자로, 중소기업에 17개국 외국인 근로자를 도입하여 인력난 해소를 지원함, E-9(비전문취업) 비자
 					    </h5>
-					    <h6>
-					    	최근 5년간 응시자 연평균 4.7만 명, 실무 중심 종목에 수요 집중
-					    </h6>
-					</div>
-				</div>
-				<div class="article-header-image3">
-					<div>
-						<figure>
-							<img src="contents/sub_41_1.png">
-						</figure>
+
+						<div class="img-text">
+							<h6>
+								고용허가제(E-9비자) 송출국:
+							</h6>
+							<p>
+								필리핀, 베트남, 태국, 인도네시아, 스리랑카, 몽골, 우즈베키스탄, 파키스탄, 캄보디아, 중국, 방글라데시, 키르기스스탄, 네팔, 미얀마, 동티모르, 라오스, 타지키스탄 
+							</p>
+						</div>
 						<p>
-							기계제작 분야의 최근 5년간(20~24) 연평균 필기시험 응시자는 <span>4.7만 명</span>이며, 연평균 <span>1.7% 감소</span>했습니다. 
+							한편, 입국한 근로자 3명은 2024년 10월 정부 간 양해각서(MOU) 체결을 통해 타지키스탄이 17번째 송출국가로 지정된 이후 최초 입국자라는 점에서 양국의 경제 교류 증진 및 관계 발전의 의미가 있다. 현재까지 공단은 외국인력 선발포인트제** 등을 통해 67명의 근로자를 선발했으며, 향후 더 많은 근로자가 입국할 것으로 기대된다.
 						</p>
-					</div>
-					<div>
-						<figure>
-							<img src="contents/sub_41_2.png">
-						</figure>
-						<p>
-							가장 높은 평균 응시자 수를 기록한 종목은 <span>‘일반기계기사’</span>로 최근 5년간 평균 약 <span>1.3만 명</span>이 응시했습니다. 
-						</p>
+					    <h5>
+					    	** 외국인력 선발포인트제 : 외국인력 선발을 위한 구직자명부를 작성하기 위해 한국어능력, 기능수준, 직무능력을 점수화하여 종합적으로 평가하는 시스템 
+					    </h5>
+					    <table class="table-normal">
+							<caption>
+								|외국인력 선발포인트제 2025년 기능시험 주요사항| 
+							</caption>
+							<colgroup>
+						        <col style="width: 20%;">
+						        <col style="width: 80%;">
+						    </colgroup>
+							<tbody>
+								<tr>
+								    <td>
+								    	기초기능
+								    </td>
+								    <td>
+								    	실제 사업장에서 수행하는 업무 기반으로 업종별 특화과제 신설<br>
+								    	평가과제: 공통과제(핀 꽂기) + 업종별 특화과제
+								    </td>
+								</tr>
+								<tr>
+								    <td>
+								    	한국어면접
+								    </td>
+								    <td>
+								    	업종별 특화 질문 및 산업안전 관련 평가항목 신설
+								    	<dl class="table-in">
+								    		<dt>평가과제:</dt>
+								    		<dd>❶ 자기소개 및 태도 ❷ 기초대화 및 행동지시 ❸ 작업도구 및 지시 수행능력 <br>❹ NCS 직업기초능력 ❺ 안전 인식</dd>
+								    	</dl>
+								    </td>
+								</tr>
+								<tr>
+								    <td>
+								    	체력평가
+								    </td>
+								    <td>
+								    	활동 기반의 체력검증을 위한 평가과제 신설<br>
+								    	평가과제: 악력·배근력 + 심폐지구력(버피테스트, 장비 옮기기, 핸드카트밀기) 
+								    </td>
+								</tr>
+								<tr>
+								    <td>
+								    	직무능력평가
+								    </td>
+								    <td>
+								    	기능시험 응시 업종과 관련된 경력, 자격, 훈련 등에 대한 가점 인정 
+								    </td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -220,46 +314,51 @@ body {
 			<div class="article-body">
 				<article>
 					<div class="article-text">
-						<h5>
-					    	| 기계분야 주요 분석 결과 2 |
-					    </h5>
-					    <h6>
-					    	응시목적 1위 ‘취업’, 취득자 고용성과도 뚜렷
-					    </h6>
-					    <div class="article-image small-image">
-							<div class="article-image-container">
+						<div class="img-text wh">
+							<h6>
+								인정되지 않는 경력·자격·훈련
+							</h6>
+							<div class="img-text-in">
+								<div>
+									<figure>
+										<img src="contents/sub_41_1.png">
+									</figure>
+									<span>경력</span>
+									<p>응시자가 업종별 산업 활동에 관련된 업체에서 근무했음에도 단순 판매, 경영지원 교육, 공무원 및 공공기관 종사자 등 단순 경력은 직무능력으로 인정하지 않음</p>
+								</div>
+								<div>
+									<figure>
+										<img src="contents/sub_41_2.png">
+									</figure>
+									<span>자격</span>
+									<p>업종별 직무내용과 무관한 자격(면허)는 인정하지 않음</p>
+								</div>
+								<div>
+									<figure>
+										<img src="contents/sub_41_1.png">
+									</figure>
+									<span>훈련</span>
+									<p>훈련 개설 목적이 직무 내용과 무관한 훈련과정은 인정하지 않음 </p>
+								</div>
+							</div>
+						</div>
+					    <p>
+					    	입국 현장에서는 주한 타지키스탄 키롬 살로히딘 대사도 직접 참석하여 환영의 뜻을 전했다. 대사는 “타지키스탄 근로자들이 고용허가제를 통해 처음으로 대한민국에 오게 된 것을 매우 기쁘게 생각하고, 이들이 한국 노동시장에 크게 기여할 것이라 믿는다”며, “이는 양국 간 우호와 국민 간 유대 강화에도 도움이될 것이라 확신한다”고 말했다.
+					    </p>
+					    <div class="article-image">
+					    	<div class="article-image-container image-dual">
+					    		<figure>
+									<img src="contents/sub_41_1.jpg">
+								</figure>
 								<figure>
-									<img src="contents/sub_41_3.png">
+									<img src="contents/sub_41_2.jpg">
 								</figure>
 							</div>
 						</div>
-						<div class="wh-text center">
-							기계제작 분야 응시자의 <span>58.3%</span>가 <span>‘취업’</span> 목적으로 시험에 응시했습니다.
-						</div>
-						<h5>
-					    	| 2024년 기계분야 응시자 분석 결과 |
-					    </h5>
-					    <h6>
-					    	청년층 응시 비중 52.8%, 기술 기반 취업 준비 경로로 주목
-					    </h6>
-					    <div class="wh-image">
-					    	<div>
-					    		<figure>
-					    			<img src="contents/sub_41_4.png">
-					    		</figure>
-					    	</div>
-					    	<div class="wh-text">
-					    		<p>
-					    			‘컴퓨터응용가공산업기사’, ‘기계조립산업기사’, ‘일반기계기사’, ‘기계설계산업기사’, ‘정밀측정산업기사’ = <span>청년층 비중 평균 80% 이상</span>
-					    		</p>
-					    		<p>
-					    			‘일반기계기사’ = <span>청년층 비중 97.7%</span>
-					    		</p>
-					    	</div>
-					    </div>
-					    <p>
-					    	이우영 한국산업인력공단 이사장은 “산업의 뿌리인 기계 분야 자격 데이터가 관련 분야 근로자와 청년들에게 많은 도움이 되길 기대한다”라며, “공단은 앞으로도 산업 현장에 필요한 자격정보를 통해 자격증 르네상스 시대를 선도하겠다”고 말했다. 
-					    </p>
+						<p>
+							공단은 10월 22일 타지키스탄 입국 근로자를 시작으로, 17개 송출 국가의 E-9 신규 입국 근로자 전원에게 한글 이름표를 제공할 예정이다. 이우영 이사장은 “타지키스탄 외국인 근로자의 첫 번째 입국을 진심으로 환영한다”라며, “공단은 외국인 근로자의 인권 보호와 상호존중 문화 조성을 위해 최선을 다하겠다” 고 말했다. 
+						</p>
+
 					</div>
 				</article>
 			</div>
