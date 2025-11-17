@@ -114,6 +114,18 @@
 	border-left-color: var(--color-second);
 	text-align: center;
 }
+.table-first-center thead tr th:nth-child(1) {
+	border-left-color: var(--color-second);
+}
+.table-first-center tbody tr td:nth-child(1) {
+	text-align: center;
+}
+.table-first-center thead tr th:nth-last-child(1) {
+	border-right-color: var(--color-second);
+}
+.table-first-center {
+	margin-top: 2rem;
+}
 .col-1 { width: 15%; }
 .col-2 { width: 20%; }
 .col-3 { width: 15%; }
@@ -123,6 +135,49 @@
 .use-box-image figure {
 	width: 70%;
 	transform: translateX(10%);
+}
+p.desc {
+	padding-left: 0;
+	font-weight: 400;
+	font-size: 0.9rem;
+	line-height: 1.3;
+	margin-top: 0.5rem;
+}
+.use-text-box p.no-pad {
+	padding-left: 0;
+	font-weight: 500;
+}
+.rect-box {
+	width: 80%;
+	margin: 0 auto;
+}
+.rect-box div {
+	padding: 0.5rem 1rem;
+	border: 0.01rem dashed var(--color-second);
+	border-radius: 1rem;
+	text-align: center;
+}
+.rect-box div figure img {
+	height: 1.5rem;
+	width: auto;
+	margin: 0 auto 0.5rem;
+}
+.rect-box div p {
+	padding: 0;
+	font-size: 0.9rem;
+	font-weight: 300;
+	line-height: 1.2;
+	word-break: keep-all;
+}
+.rect-box.dual {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-top: 3rem;
+	margin-bottom: 0.5rem;
+}
+.rect-box.flex {
+	margin-top: 0.5rem;
 }
 @media (max-width: 767px) {
     .article-header-container-2 {
@@ -355,7 +410,7 @@
 								    </tr>
 								  </tbody>
 								</table>
-								<p>
+								<p class="desc">
 									* 원칙적으로 인건비, 시설비, 장비비 지원에 대응투자금이 없으나, 훈련목표 미달 등 성과가 저조한 경우 차년도 지원시 대응투자 비율 부여
 								</p>
 							</div>
@@ -366,20 +421,108 @@
 								<h6>
 									[재직근로자 맞춤형 교육훈련 제공]
 								</h6>
-								<p>
+								<p class="no-pad">
 									대기업에 비해 상대적으로 어려운 중소기업 근로자들을 위하여 공동훈련센터에서 지속적으로 협약기업 근로자의 교육체계 관리서비스를 제공하고, 수요조사를 통하여 협약기업의 근로자가 원하는 맞춤형 교육훈련 및 핵심훈련을 지원
 								</p>
 								<h6>
 									[채용 예정자 훈련]
 								</h6>
-								<p>
+								<p class="no-pad">
 									MOU(memorandum of understanding) 협약업체(기업) 채용 예정자들을 대상으로, 해당분야에서 요구되는 실무지식 및 스킬교육을 제공하고, 협약기업에서 필요로 하는 맞춤형 인재양성육성 과정의 기회를 지원
 								</p>
-								<p>
+								<p class="desc">
 									* 특징 : 무료교육, 자격증취득, 훈련수당 (최대20만원) 취업연계 등
 								</p>
 							</div>
-
+						</div>
+						<div class="use-box">
+							<div class="use-box-title">
+								<h6>04</h6>
+								<h4>
+									사업 참여 가능 기관의 조건은 어떻게 되나요?
+								</h4>
+							</div>
+							<div class="use-text-box">
+								<table class="table-normal table-use-box table-first-center">
+								  	<colgroup>
+									    <col style="width: 30%;">
+									    <col style="width: 70%">
+								  	</colgroup>
+								  	<thead>
+								  	  <tr>
+								  	  	<th>구분</th>
+								  	  	<th>정의</th>
+								  	  </tr>
+								  	</thead>
+								  	<tbody>
+									  <tr>
+									    <td>기업</td>
+									    <td>
+									    	｢고용보험법｣ 제8조 및 ｢고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률｣ 제5조에 따라 고용보험에 가입된 기업→ 대기업 또는 중소기업이 공동훈련센터인 경우
+									    </td>
+									  </tr>
+									  <tr>
+									    <td>사업주단체 또는 그 연합체</td>
+									    <td>
+									    	회원사가 동일 산업 또는 업종의 기업인 단체로 동 회원사를 위한 지원 사업을 주된 목적으로 하는 협회 또는 조합등 의 단체
+									    </td>
+									  </tr>
+									  <tr>
+									    <td>학교 또는 대학형태의<br>평생교육시설 및 기능대학</td>
+									    <td>
+									    	｢고등교육법｣ 제4조 및 ｢평생교육법｣ 제31조부터 제33조까지의 규정에 따른 대학형태의 평생교육시설 및 ｢근로자직업능력 개발법｣ 제39조에 따른 기능대학
+									    </td>
+									  </tr>
+									  <tr>
+									    <td>기타</td>
+									    <td>
+									    	｢공공기관의 운영에 관한 법률｣ 제4조에 따른 공공기관, 특별법에 따라 정부가 보호·육성하는 법인으로서 정부가 출연한 법인<br>
+									    	｢지방자치단체 출자·출연 기관의 운영에 관한 법률｣에 따라 행정자치부장관이 고시한 기관<br>
+									    	｢연구개발특구의 육성에 관한 특별법｣ 제2조제5호의 국립연구기관 및 정부출연연구기관<br>
+									    	｢산업기술혁신 촉진법｣제42조제1항에 따른 전문생산기술연구소<br>
+									    	그 밖에 관계 중앙행정기관의 장의 추천을 받은 기관
+									    </td>
+									  </tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="use-box">
+							<div class="use-box-title">
+								<h6>05</h6>
+								<h4>
+									사업절차는 어떻게 되나요?
+								</h4>
+							</div>
+							<div class="use-text-box">
+								<div class="rect-box dual">
+									<div>
+										<figure>
+											<img src="contents/sub_13_3.png">
+										</figure>
+										<p>정책수립 제도 개선 등</p>
+									</div>
+									<div>
+										<figure>
+											<img src="contents/sub_13_4.png">
+										</figure>
+										<p>공동훈련센터 및 훈련과정 승인, 예산지원 및 관리</p>
+									</div>
+								</div>
+								<div class="sand-image">
+									<figure>
+										<img src="contents/sub_13_6.png">
+									</figure>
+								</div>
+								<div class="rect-box flex">
+									<div>
+										<figure>
+											<img src="contents/sub_13_5.png">
+										</figure>
+										<p>사업운영 컨설팅 지원, 사업 관련 조사 및 연구, 권역별 허브사업단 운영(중부권, 동남권, 서남권)</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</article>
