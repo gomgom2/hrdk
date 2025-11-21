@@ -90,6 +90,10 @@
 .img-text ul {
 	display: flex;
 	flex-wrap: wrap;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
 }
 .img-text li {
 	padding-left: 1rem;
@@ -130,6 +134,15 @@
 .table-normal tbody tr td:nth-last-child(1) {
 	border-right-color: #fff;
 }
+.table-normal.emphasize tr th:nth-last-child(1) {
+	background-color: #1e377a;
+}
+.table-normal.emphasize tr td:nth-last-child(1) {
+	background-color: #e9ebf1;
+}
+.col-1 { width: 20%; }
+.col-2 { width: 50%; }
+.col-3 { width: 30%; }
 @media (max-width: 767px) {
     .article-header-container-2 {
         grid-template-columns: 1fr;
@@ -137,12 +150,24 @@
     .article-header-text-2 h3 {
     	font-size: 1.6rem;
     }
+    .article-header-text-2 h4, .article-header-text-2 h2 {
+    	font-size: 2.5rem;
+    }
     .article-text h5 {
     	margin-left: 3rem;
     }
     .multi-image {
     	margin: 0 1rem;
     }
+    .img-text ul {
+    	/*width: 100%;*/
+    }
+    .img-text li {
+    	width: 80%;
+    }
+    .col-1 { width: 25%; }
+	.col-2 { width: 40%; }
+	.col-3 { width: 35%; }
 }
 
 	</style>
@@ -180,7 +205,7 @@
 				<article>
 					<div class="article-prologue">
 						<p>
-							경호 현장에서 사람을 지키던 마음은 기술로 이어졌다. 데이트 폭력이나 스토킹 피해자처럼 도움을 절실히 필요로 하는 이들을 사람들을 보호하던 경험은, 일상 속 화재 위험을 막는 기술로 확장됐다. 이제 브랜드뉴컴퍼니는 전기차·배터리 화재 등 새로운 위험에 대응하는 솔루션을 개발하며, 누구나 안심할 수 있는 안전한 사회를 꿈꾼다. 작은 기술 하나가 누군가의 하루를 지켜낼 수 있다는 믿음. 그 마음으로 브랜드뉴컴퍼니는 오늘도 세상을 조금 더 안전하게 바꾸고 있다. 
+							경호 현장에서 사람을 지키던 마음은 기술로 이어졌다. 데이트 폭력이나 스토킹 피해자처럼 도움을 절실히 필요로 하는 이들을 보호하던 경험은, 일상 속 화재 위험을 막는 기술로 확장됐다. 이제 브랜드뉴컴퍼니는 전기차·배터리 화재 등 새로운 위험에 대응하는 솔루션을 개발하며, 누구나 안심할 수 있는 안전한 사회를 꿈꾼다. 작은 기술 하나가 누군가의 하루를 지켜낼 수 있다는 믿음. 그 마음으로 브랜드뉴컴퍼니는 오늘도 세상을 조금 더 안전하게 바꾸고 있다. 
 						</p>				
 					</div>
 					<div class="article-text">
@@ -208,14 +233,14 @@
 							</ul>
 						</div>
 
-						<table class="table-normal">
+						<table class="table-normal emphasize">
 							<caption>
 								화재 진압 장비 비교
 							</caption>
 							<colgroup>
-						        <col style="width: 20%;">
-						        <col style="width: 50%;">
-						        <col style="width: 30%;">
+						        <col class="col-1">
+						        <col class="col-2">
+						        <col class="col-3">
 						    </colgroup>
 							<thead>
 							    <tr>
@@ -234,6 +259,28 @@
 								    </td>
 								    <td>
 								        1분 이내 진압 성공
+								    </td>
+								</tr>
+								<tr>
+								    <td>
+								    	방수 진화
+								    </td>
+								    <td>
+								    	소방차 2대, 30분 이상 살수했으나 진압 실패
+								    </td>
+								    <td>
+								        1분 이내 진압 성공
+								    </td>
+								</tr>
+								<tr>
+								    <td>
+								    	유독가스 발생
+								    </td>
+								    <td>
+								    	화재 완전 진압 전까지 지속 발생
+								    </td>
+								    <td>
+								        1분 이내 유독가스 차단 
 								    </td>
 								</tr>
 							</tbody>
@@ -291,7 +338,7 @@
 							고위험 피해자 신변보호 업무를 하면서 정말 큰 보람을 느꼈습니다. 이전에는 VIP 경호를 했는데, 실제 위기에 놓인 분들을 지키는 일은 감정의 무게가 전혀 다르더라고요. 그 경험을 통해 “이 일을 꾸준히, 사회적으로 의미 있게 해보고 싶다”는 마음이 생겼습니다. 
 						</p>
 						<p>
-							그 즈음 사회적기업을 운영하시는 대표님을 만나 많은 영감을 받았고, 이후 차근차근 준비해 현재는 예비 사회적기업으로 활동 중입니다. 내년 1월에는 정식 사회적기업 인증 접수를 앞두고 있습니다. 
+							그즈음 사회적기업을 운영하시는 대표님을 만나 많은 영감을 받았고, 이후 차근차근 준비해 현재는 예비 사회적기업으로 활동 중입니다. 내년 1월에는 정식 사회적기업 인증 접수를 앞두고 있습니다. 
 						</p>
 						<div class="article-image">
 							<div class="article-image-container">
@@ -301,7 +348,7 @@
 							</div>
 						</div>
 						<h5>
-							사회적기업으로서의 철학은 무엇인가요?
+							예비 사회적기업으로서의 철학은 무엇인가요?
 						</h5>
 						<p>
 							저희 철학은 ‘사회 안전, 그리고 국민의 생명과 재산 보호’입니다. 전기차 배터리 화재처럼 새로운 사회적 위험이 계속 생기고 있잖아요. 이런 문제를 기술로 해결하면서 사회적 가치를 만드는 것이 목표입니다.  

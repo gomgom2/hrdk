@@ -386,10 +386,9 @@ figure img {
 }
 .top-logo-2 {
     height: 1.125rem;
-    aspect-ratio: 119 / 18;
+    aspect-ratio: 120 / 18;
     display: block;
     background-image: url(../images/logo-white.png);
-    background-repeat: none;
     background-size: cover;
     margin-right: 0.5rem;
 }

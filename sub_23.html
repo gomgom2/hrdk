@@ -291,15 +291,17 @@ body {
 	.article-header-container-2 {
 	        grid-template-columns: 1fr;
 	   }
-
-.article-header-container-2 p {
-	width: 60%;
-}
-	.article-header-image-2 {
-	    margin-top: -20rem;
+	.article-header-container-2 p {
+		width: 56%;
 	}
+	.article-header-image-2 {
+	    margin-top: -19.5rem;
+	}
+    .article-header-text-2 h2 {
+    	font-size: 2rem;
+    }
 	.article-header-image-2 figure {
-		width: 50%;
+		width: 60%;
 		margin-left: 50%;
 	}
 	.match-image.big {
@@ -336,6 +338,14 @@ body {
 		width: 40%;
 		left:0;
 		transform: translateX(0) translateY(0);
+	}
+	.dialogue-container.list div ul {
+		grid-template-columns: 1fr;
+	}
+	.dialogue-container.list div li::before {
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%) translateY(-110%) rotate(90deg);
 	}
 }
 	</style>
@@ -525,7 +535,6 @@ body {
 											      <td>
 											        <ul>
 											          <li>사내학습조 경진대회 포상금</li>
-											          <li>기업당 50만 원 한도</li>
 											        </ul>
 											      </td>
 											    </tr>
@@ -535,6 +544,7 @@ body {
 											      <td>
 											        <ul>
 											          <li>학습 네트워크 활동비</li>
+											          <li>기업당 50만 원 한도</li>
 											        </ul>
 											      </td>
 											    </tr>

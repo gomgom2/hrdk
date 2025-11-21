@@ -178,6 +178,12 @@ body {
 .table-normal dt {
 	width: fit-content;
 }
+.col-1 {
+	width: 20%;
+}
+.col-2 {
+	width: 80%;
+}
 @media (max-width:767px) {
 	.article-header-container {
 		margin-top: 2rem;
@@ -186,7 +192,7 @@ body {
 		width: 100%;
 	}
 	.article-header-text h2 {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		width: 100%;
 	}
 	.article-header-text h4 {
@@ -215,6 +221,38 @@ body {
 	}
 	.wh-image {
 		grid-template-columns: 1fr;
+	}
+	.img-text {
+		padding: 2.5rem 1rem 1.5rem;
+	}
+	.img-text h6 {
+		padding: 0;
+		width: 80%;
+		font-size: .9rem;
+		text-align: center;
+	}
+	.table-normal th, .table-normal td {
+		padding: .5rem .5rem;
+	}
+	.col-1 {
+		width: 22%;
+	}
+	.col-2 {
+		width: 78%;
+	}
+	.table-normal dl {
+		flex-direction: column;
+		gap: .2rem;
+	}
+	.img-text-in {
+		grid-template-columns: 1fr;
+	}
+	.img-text-in > div {
+		border-right: 0;
+		margin-bottom: 1rem;
+	}
+	.img-text figure {
+		width: 50%;
 	}
 
 } 
@@ -262,8 +300,8 @@ body {
 								|외국인력 선발포인트제 2025년 기능시험 주요사항| 
 							</caption>
 							<colgroup>
-						        <col style="width: 20%;">
-						        <col style="width: 80%;">
+						        <col class="col-1">
+						        <col class="col-2">
 						    </colgroup>
 							<tbody>
 								<tr>
@@ -335,7 +373,7 @@ body {
 								</div>
 								<div>
 									<figure>
-										<img src="contents/sub_41_1.png">
+										<img src="contents/sub_41_3.png">
 									</figure>
 									<span>훈련</span>
 									<p>훈련 개설 목적이 직무 내용과 무관한 훈련과정은 인정하지 않음 </p>
