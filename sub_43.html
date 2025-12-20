@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>HDRK</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="HDRK - 한국산업인력공단">
 	<meta property="og:description" content="한국산업인력공단 웹매거진">
@@ -13,77 +14,158 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 	<style>
-:root {
-	--color-first: #F0F0F0; /* 전체 배경 */
-	--color-second: #000;
-	--color-third: #ffffff;
-	--color-fourth: #315985; /* 헤더 배경, 바 색깔 */
-}
-.article-header-wrap {
-	max-width: 700px;
-}
-.article-header-container {
-	padding: 5rem 0 1rem;
-}
-.article-header-text h3 {
-	line-height: 1;
-	font-family: Paperlogy-5Medium;
-	font-size: 2.5rem;
-	margin-top: 0rem;
-    margin-bottom: 0rem;
-}
-.article-header-text h3 b {
-	font-family: Paperlogy-9Black;
-}
-.article-header-line::before {
-	display: block;
-	content: '';
-	width: 100%;
-	height: 3px;
-	background-color: var(--color-fourth);
-}
-.article-header-text {
-	flex-shrink: 0;
-	width: 9rem;
-}
-.article-header-line {
-	flex-grow: 1;
-	padding-top: 1rem;
-}
-.article-body-zone {
-	background-color: var(--color-first);
-}
-.article-text {
-	margin-top: 0;
-	padding-top: 0;
-}
-.article-text h4 {
-	font-size: 1.3rem;
-	font-family: pretendard;
-	font-weight: 500;
-	color: #000;
-	margin-bottom: 1.5rem;
-	margin-top: 0;
-	padding-bottom: 1rem;
-	border-bottom: 1px solid #000;
-}
-.article-text h5 {
-	margin-top: 0;
-	padding-bottom: 1rem;
-	border-bottom: 1px solid #000;
-}
-.article-image {
-	margin-bottom: 5rem;
-	margin-top: 0;
-}
-@media (max-width: 767px) {
-    .article-image {
-        width: 100vw !important;
-    }
-}
+		:root {
+			--color-first: #F0F0F0;
+			/* 전체 배경 */
+			--color-second: #000;
+			--color-third: #ffffff;
+			--color-fourth: #C0D800;
+			/* 헤더 배경, 바 색깔 */
+		}
 
+		.article-header-wrap {
+			max-width: 700px;
+		}
+
+		.article-header-container {
+			padding: 5rem 0 1rem;
+		}
+
+		.article-header-text h3 {
+			line-height: 1;
+			font-family: Paperlogy-5Medium;
+			font-size: 2.5rem;
+			margin-top: 0rem;
+			margin-bottom: 0rem;
+		}
+
+		.article-header-text h3 b {
+			font-family: Paperlogy-9Black;
+		}
+
+		.article-header-line::before {
+			display: block;
+			content: '';
+			width: 100%;
+			height: 3px;
+			background-color: var(--color-fourth);
+		}
+
+		.article-header-text {
+			flex-shrink: 0;
+			width: 9rem;
+		}
+
+		.article-header-line {
+			flex-grow: 1;
+			padding-top: 1rem;
+		}
+
+		.article-body-zone {
+			background-color: var(--color-first);
+		}
+
+		.article-text {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		.article-text h4 {
+			font-size: 1.3rem;
+			font-family: pretendard;
+			font-weight: 500;
+			color: #000;
+			margin-bottom: 1.5rem;
+			margin-top: 0;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid #000;
+		}
+
+		.article-text h5 {
+			margin-top: 0;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid #000;
+		}
+
+		.article-image {
+			margin-bottom: 5rem;
+			margin-top: 0;
+		}
+
+		.article-tempbox {
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.article-tempbox-in {
+			background-color: #fff;
+			padding: 1rem 1.5rem;
+			border: 1px solid var(--color-fourth);
+			border-radius: 1rem;
+			position: relative;
+		}
+
+		.article-tempbox-top h6 {
+			font-size: .9rem;
+			font-family: Paperlogy-7Bold;
+			padding: .1rem 1rem;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: var(--color-fourth);
+			border-radius: 1rem;
+		}
+
+		.article-tempbox p {
+			font-size: 0.9rem;
+			line-height: 1.6;
+			margin-top: 0.5rem;
+			margin-bottom: 0;
+		}
+
+		.article-tempbox p+p {
+			margin-top: 0;
+		}
+
+		.article-tempbox-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1rem;
+			margin-top: 1rem;
+			align-items: stretch;
+		}
+
+		.article-tempbox-sector {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.article-tempbox span {
+			font-size: 0.9rem;
+			text-align: center;
+			display: block;
+			margin-bottom: .5rem;
+		}
+
+		.article-tempbox-sector .article-tempbox-in {
+			flex-grow: 1;
+			margin-bottom: 0;
+		}
+
+		.article-tempbox-in p {
+			margin-top: 0;
+		}
+
+		.article @media (max-width: 767px) {
+			.article-image {
+				width: 100vw !important;
+			}
+		}
 	</style>
 </head>
+
 <body>
 	<header id="menu"></header>
 	<main>
@@ -103,31 +185,69 @@
 					<div class="article-text">
 						<h5>01</h5>
 						<h4>
-							한국산업인력공단<br>고교 일학습병행<br>학습근로자 대상 안전교육 실시
+							현장에서 요구하는 인재를 대학이 키운다<br>SQF 기반 대학 교육과정 17개 인정
 						</h4>
 						<p>
-							한국산업인력공단은 지난 16일 고려아연 안전체험교육장(울산 울주군)에서 고교 일학습병행 참여학교인 ‘금샘고등학교(부산 금정구) 학습근로자’ 15명을 대상으로 안전교육을 실시했다. 이번 교육은 한국산업안전보건공단과의 협업을 통해 추진된 것으로, 산업현장을 오가는 고등학생들의 안전의식을 강화하고 사고를 예방하기 위해 진행했다. 양 기관은 앞으로도 ‘찾아가는 VR’, ‘안전체험교육장 체험’, ‘안전보건 콘텐츠’ 등을 통해 안전교육 강화에 힘쓸 예정이다. 이우영 이사장은 “공단은 모든 학습근로자가 안전하게 일과 학습을 병행할 수 있도록 체계적이고 효과적으로 지원하겠다”고 말했다. 
+							고용노동부와 한국산업인력공단, 산업별인적자원개발위원회는 지난 21일 서울가든호텔에서 ‘산업별역량체계(이하 SQF) 기반 대학 교육과정 인정서 수여식’을 개최했다.
+							이날 수여식에서는 남서울대 가상현실학과, 성신여대 뷰티산업학과 등 17개 대학 교육과정을 ‘SQF 기반 대학교육과정’으로 인정했다. ‘SQF 기반 대학교육과정’은
+							산업별인적자원개발위원회가 소관 산업에서 요구하는 직무역량을 참여 대학의 교육과정과 비교·분석해 인정하는 방식으로 진행되며 올해는 △화학 △가상융합 △식품가공 △세라믹
+							4개 산업 분야 관련 교육과정이 인정 대상이다. 수여식 이후에는 ‘SQF 사업 우수성과 발표회’를 통해 우수사례를 공유했다. 이우영 이사장은 “ 공단은 한국형
+							인적자원개발 선도기관으로서 전국민 평생직업능력개발 상식의 시대를 열어가겠다”고 말했다.
+						</p>
+						<div class="article-tempbox">
+							<div class="article-tempbox-top article-tempbox-in">
+								<h6>SQF 개념</h6>
+								<p>산업별역량체계(Sectoral Qualifications Framework, 이하 'SQF')란 산업분야별로 현장에서 통용되는 표준 직무를 도출하여
+									표준화하고, 직무 수행에 필요한 능력을 구조화한 것으로 국가직무능력표준(NCS) 등을 토대로 교육훈련-학위-자격-경력을 연계하여 활용하는 체계</p>
+							</div>
+							<div class="article-tempbox-container">
+								<div class="article-tempbox-sector">
+									<span>• 산업분야(Sector)</span>
+									<div class="article-tempbox-in">
+										<p>
+											· 일반적으로 산업 등 활동 분야, 영역을 의미하는 말로 일반적인 근로자의 경력이동이 가능한 범위
+										</p>
+										<p>
+											· 여기서 근로자의 경력이동이 가능하다는 것은 동일한 교육훈련 또는 자격을 통해 습득한 직무역량 (지식,기술 등)을 바탕으로 입직 또는
+											이직 활동이 이루어진다는 것을 의미
+										</p>
+									</div>
+								</div>
+								<div class="article-tempbox-sector">
+									<span>• 역량(Qualification)</span>
+									<div class="article-tempbox-in">
+										<p>
+											· 직업이나 특정 업무를 수행하는데 필요한 자질, 소질, 능력으로 학위, 직업자격(국가기술자격 등), 교육훈련이수증 등 공식적으로
+											인정받은 역량을 의미
+										</p>
+									</div>
+								</div>
+								<div class="article-tempbox-sector">
+									<span>• 체계(Frame)</span>
+									<div class="article-tempbox-in">
+										<p>
+											· 골격, 뼈대, 구조물을 의미하는 것으로 SQF에서는 해당 산업과 관련된 학위, 교육훈련, 자격 등을 장착하기 위한 골조 혹은 틀을
+											의미
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5>02</h5>
+						<h4>
+							한국산업인력공단<br>고교 일학습병행 10주년!<br>공단 ‘우수 교사·전담자’ 감사장 수여
+						</h4>
+						<p>
+							한국산업인력공단은 지난 5일 서울 강남구 엘리에나 서울 강남에서 ‘고교 일학습병행 업무관계자 워크숍’을 개최하고, 사업 10주년을 맞아 우수 교사 및 전담자에게
+							감사장을 수여했다. 이번 행사는 경기자동차고 등 우수 교사·전담자 140여 명에게 감사장을, ㈜서경산업 등 기업현장교사 20명에게 1급 인증서를 수여했다. 공단은
+							고교 일학습병행 사업이 안정적으로 정착할 수 있었던 것은 학교와 기업의 긴밀한 협력 덕분이라며, 현장교사와 전담자의 헌신에 감사 인사를 전했다. 이어 2026년
+							사업계획과 정책 방향을 안내하고, 일학습병행의 지속적인 발전과 현장 중심 지원 강화 방안을 공유했다. 이우영 이사장은 “앞으로도 공단은 학교와 기업이 함께 성장할 수
+							있도록 적극 지원하겠다”고 말했다.
 						</p>
 						<div class="article-image">
 							<div class="article-image-container">
 								<figure>
 									<img src="contents/sub_43_1.jpg">
-								</figure>
-							</div>
-						</div>
-						<h5>02</h5>
-						<h4>
-							한국산업인력공단<br>
-							국가인적자원개발컨소시엄 25주년<br>
-							베스트 오브 챔프 플러스 성황리 개최 
-						</h4>
-						<p>
-							한국산업인력공단은 지난 9월 4일 국가인적자원개발컨소시엄 25주년을 맞아 제16회 ‘베스트 오브 챔프 플러스(Best of CHAMP+)’ 행사를 성황리에 개최했다. 이번 행사는 대기업과 중소기업이 함께 성장해온 발자취를 돌아보고, AI 시대의 인적자원개발의 방향을 제시했다. 공단은 앞으로 산업별 직무변화 조사와 AI 특화 공동훈련센터 선정, 생애주기별 AI 훈련체계 구축 등을 통해 AI 기반 초연결 훈련 생태계를 조성해나갈 계획이다. 이우영 이사장은 “국가인적자원개발 컨소시엄 사업은 대기업과 중소기업 간 훈련 격차를 줄여 사회적 양극화 해소와 포용적 성장에 기여해온 대표적 상생모델”이라며 “향후에는 직무를 이끄는 AI 인재양성을 중심으로 산업혁신의 가교역할을 강화하겠다”고 말했다.
-						</p>
-						<div class="article-image">
-							<div class="article-image-container">
-								<figure>
-									<img src="contents/sub_43_2.jpg">
 								</figure>
 							</div>
 						</div>
@@ -138,4 +258,5 @@
 	</main>
 	<footer id="footer"></footer>
 </body>
+
 </html>
