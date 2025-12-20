@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>HDRK</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="HDRK - 한국산업인력공단">
 	<meta property="og:description" content="한국산업인력공단 웹매거진">
@@ -13,54 +14,67 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 	<style>
+		:root {
+			--color-first: #19447F;
+			/* 헤더 배경 */
+			--color-second: #CBA787;
+			/* h2 색상 */
+			--color-third: #fff;
+			/* h3, h4 색상 */
+			--color-fourth: #CBA787;
+			/* 프롤로그 박스 배경 */
+			--color-fifth: #fff;
+			/* 프롤로그 텍스트 */
+		}
 
-:root {
-	--color-first: #19447F; 	/* 헤더 배경 */
-	--color-second: #CBA787; 	/* h2 색상 */
-	--color-third: #fff;		/* h3, h4 색상 */
-	--color-fourth: #CBA787; 	/* 프롤로그 박스 배경 */
-	--color-fifth: #fff; 		/* 프롤로그 텍스트 */
-}
-.article-header-container-2 {
-	grid-template-columns: 3fr 1fr;
-}
-.article-header-text-2 h2 {
-	margin-top: 2rem;
-	font-size: 2.5rem;
-	color: #fff;
-}
-.cartoon {
-	max-width: 600px;
-	margin: 5rem auto;
-}
-.cartoon figure {
-	margin-bottom: 1rem;
-}
-@media (max-width: 767px) {
-    .article-header-container-2 {
-        grid-template-columns: 1fr;
-    }
-    .article-header-text-2 {
-        padding: 2rem 1rem 0;
-    }
-    .article-header-text-2 h2 {
-    	word-break: keep-all;
-    	font-size: 2.5rem;
-    }
-    .article-header-image-2 {
-    	width: 50%;
-    	margin-left: 40%;
-    	margin-top: -1rem;
-    }
-    .cartoon {
-    	margin: 3rem 1rem;
-    }
-}
+		.article-header-container-2 {
+			grid-template-columns: 3fr 1fr;
+		}
 
+		.article-header-text-2 h2 {
+			margin-top: 2rem;
+			font-size: 2.5rem;
+			color: #fff;
+		}
+
+		.cartoon {
+			max-width: 600px;
+			margin: 5rem auto;
+		}
+
+		.cartoon figure {
+			margin-bottom: 1rem;
+		}
+
+		@media (max-width: 767px) {
+			.article-header-container-2 {
+				grid-template-columns: 1fr;
+			}
+
+			.article-header-text-2 {
+				padding: 2rem 1rem 0;
+			}
+
+			.article-header-text-2 h2 {
+				word-break: keep-all;
+				font-size: 2.5rem;
+			}
+
+			.article-header-image-2 {
+				width: 50%;
+				margin-left: 40%;
+				margin-top: -1rem;
+			}
+
+			.cartoon {
+				margin: 3rem 1rem;
+			}
+		}
 	</style>
 
 
 </head>
+
 <body>
 	<header id="menu"></header>
 	<main>
@@ -70,8 +84,8 @@
 					<div class="article-header-text-2">
 						<span class="story-label">업글인간 카툰</span>
 						<h2>
-							말 한마디, 정리 한 줄의 차이가 결과를 바꾼다!<br>
-							보고, 한 번에 통과되는 치트키는?
+							작은 습관이 만드는 큰 차이!<br>
+							좋은 인상을 남기는 회사 습관
 						</h2>
 					</div>
 					<div class="article-header-image-2">
@@ -106,4 +120,5 @@
 	</main>
 	<footer id="footer"></footer>
 </body>
+
 </html>
