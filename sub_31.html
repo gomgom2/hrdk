@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>HDRK</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="HDRK - 한국산업인력공단">
 	<meta property="og:description" content="한국산업인력공단 웹매거진">
@@ -14,197 +15,230 @@
 	<script src="js/script.js"></script>
 
 	<style>
+		:root {
+			--color-first: #F6F8DA;
+			/* 전체 배경 */
+			--color-second: #6FC5A0;
+			/* 스토리라벨 h2 색상 */
+			--color-third: #000;
+			/* 박스 h4 색상 */
+			--color-fourth: #D0DB46;
+			/* 프롤로그 배경 */
+			--color-fifth: #fff;
+			/* 프롤로그 색상 */
 
-:root {
-	--color-first: #D8DEE6; 	/* 전체 배경 */
-	--color-second: #4E5BD5; 		/* 스토리라벨 h2 색상 */
-	--color-third: #000;		/* 박스 h4 색상 */
-	--color-fourth: #4E5BD5; 	/* 프롤로그 배경 */
-	--color-fifth: #fff; 		/* 프롤로그 색상 */
+		}
 
-}
-body {
-	background-color: var(--color-first);
-}
-.story-label {
-	color: var(--color-second);
-	border-color: var(--color-second);
-}
-.article-header-container-2 {
-    grid-template-columns: 1fr 1.6fr;
-    gap: 2rem;
-}
-.article-header-text-2 h2 {
-	margin-bottom: 1rem;
-}
-.article-header-container-2 p {
-	margin-bottom: 2rem;
-}
-.article-header-text-2 .article-meta {
-	color: var(--color-second);
-}
-.prologue-sns {
-	margin: 3rem auto;
-	display: flex;
-	justify-content: center;
-	font-size: 0.9rem;
-	gap: 1rem;
-}
-.prologue-sns span {
-	position: relative;
-	padding-left: 1.4rem;
-}
-.prologue-sns span::before {
-	content: '';
-	display: block;
-	width: 1rem;
-	height: 1rem;
-	background-image: url(images/icon_insta_black.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-54%);
-}
-.prologue-sns span.icon-yt-black::before {
-	background-image: url(images/icon_yt_black.png);
-}
-.prologue-sns span.icon-x-black::before {
-	background-image: url(images/icon_x_black.png);
-}
-.prologue-sns span.icon-blog-black::before {
-	background-image: url(images/icon_blog_black.png);
-}
-.recipe-box {
-	background-color: #fff;
-	border: 1px solid var(--color-fourth);
-	margin: 5rem 0;
-	border-radius: 20rem 20rem 0 0;
-}
-.recipe-img-title {
-	width: 25%;
-	margin: 2rem auto;
-}
-.recipe-box h3 {
-	text-align: center;
-	font-size: 1.5rem;
-    font-family: DaeguCatholicUniversity;
-    text-decoration: underline;
-    text-decoration-thickness: 0.5px;
-    text-underline-offset: 7px;
-}
-.recipe-container {
-	padding: 2rem;
-	display: grid;
-	grid-template-columns: 0.4fr 1fr;
-    gap: 3rem;
-    position: relative;
-}
-.recipe-container.border::before {
-    content: '';
-    display: block;
-    width: calc(100% - 4rem);
-    height: 4px;
-    background-image: url(images/sub_line_recipe.png);
-    background-size: 4px 4px;
-    background-repeat: repeat-x;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.recipe-meta h4 {
-    font-family: GapyeongWave;
-    font-style: normal;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.3;
-    letter-spacing: -0.01rem;
-    margin-top: 0.3rem;
-}
-.recipe-meta em {
-    font-size: 0.5rem;
-    vertical-align: middle;
-    display: inline-block;
-    width: fit-content;
-    height: 1rem;
-    background-color: var(--color-fourth);
-    color: #fff;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.5rem;
-    margin-left: 0.1rem;
-    vertical-align: top;
-    transform: translateY(0.4rem);
-}
-.recipe-meta p {
-	font-size: 0.9rem;
-	line-height: 1.5;
-    margin: 0.8rem 0 1rem;
-}
-.recipe-stuff {
-	font-size: 0.9rem;
-	display: flex;
-	justify-content: space-between;
-}
-.recipe-stuff p {
-	width: 82%;
-	line-height: 1.4;
-}
-.recipe-stuff h5 {
-	font-size: 0.9rem;
-	line-height: 1.4;
-}
-.recipe-step {
-	width: 82%;
-	margin-left: 18%;
-	margin-top: 0.6rem;
-	font-size: 0.9rem;
-}
-.recipe-step li {
-	display: flex;
-	gap: 0.3rem;
-	word-break: keep-all;
-	line-height: 1.3;
-	margin-bottom: 0.2rem;
-}
-@media (max-width: 767px) {
-    .article-header-container-2 {
-        grid-template-columns: 1fr;
-    }
-    .prologue-sns {
-    	flex-direction: column;
-    	margin: 2rem 0 0 2rem;
-    	gap: 0.5rem;
-    }
-    .recipe-container {
-    	gap: 1.5rem;
-    }
-    .recipe-stuff {
-    	flex-direction: column;
-    	margin-bottom: .5rem;
-    }
-    .recipe-stuff h5 br {
-    	display: none;
-    }
-    .recipe-stuff p {
-    	width: 100%;
-    }
-    .recipe-step {
-    	width: 100%;
-    	margin-left: 0;
-    }
+		body {
+			background-color: var(--color-first);
+		}
 
-}
+		.story-label {
+			color: var(--color-second);
+			border-color: var(--color-second);
+		}
 
+		.article-header-container-2 {
+			grid-template-columns: 1fr 1.6fr;
+			gap: 2rem;
+		}
 
+		.article-header-text-2 h2 {
+			margin-bottom: 1rem;
+		}
 
+		.article-header-container-2 p {
+			margin-bottom: 2rem;
+		}
 
+		.article-header-text-2 .article-meta {
+			color: var(--color-second);
+		}
+
+		.prologue-sns {
+			margin: 3rem auto;
+			display: flex;
+			justify-content: center;
+			font-size: 0.9rem;
+			gap: 1rem;
+		}
+
+		.prologue-sns span {
+			position: relative;
+			padding-left: 1.4rem;
+		}
+
+		.prologue-sns span::before {
+			content: '';
+			display: block;
+			width: 1rem;
+			height: 1rem;
+			background-image: url(images/icon_insta_black.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-54%);
+		}
+
+		.prologue-sns span.icon-yt-black::before {
+			background-image: url(images/icon_yt_black.png);
+		}
+
+		.prologue-sns span.icon-x-black::before {
+			background-image: url(images/icon_x_black.png);
+		}
+
+		.prologue-sns span.icon-blog-black::before {
+			background-image: url(images/icon_blog_black.png);
+		}
+
+		.recipe-box {
+			background-color: #fff;
+			border: 1px solid var(--color-fourth);
+			margin: 5rem 0;
+			border-radius: 20rem 20rem 0 0;
+		}
+
+		.recipe-img-title {
+			width: 25%;
+			margin: 2rem auto;
+		}
+
+		.recipe-box h3 {
+			text-align: center;
+			font-size: 1.5rem;
+			font-family: DaeguCatholicUniversity;
+			text-decoration: underline;
+			text-decoration-thickness: 0.5px;
+			text-underline-offset: 7px;
+		}
+
+		.recipe-container {
+			padding: 2rem;
+			display: grid;
+			grid-template-columns: 0.4fr 1fr;
+			gap: 3rem;
+			position: relative;
+		}
+
+		.recipe-container.border::before {
+			content: '';
+			display: block;
+			width: calc(100% - 4rem);
+			height: 4px;
+			background-image: url(images/sub_line_recipe.png);
+			background-size: 4px 4px;
+			background-repeat: repeat-x;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.recipe-meta h4 {
+			font-family: GapyeongWave;
+			font-style: normal;
+			font-size: 1.5rem;
+			font-weight: 500;
+			line-height: 1.3;
+			letter-spacing: -0.01rem;
+			margin-top: 0.3rem;
+		}
+
+		.recipe-meta em {
+			font-size: 0.5rem;
+			vertical-align: middle;
+			display: inline-block;
+			width: fit-content;
+			height: 1rem;
+			background-color: var(--color-fourth);
+			color: #fff;
+			padding: 0.2rem 0.4rem;
+			border-radius: 0.5rem;
+			margin-left: 0.1rem;
+			vertical-align: top;
+			transform: translateY(0.4rem);
+		}
+
+		.recipe-meta p {
+			font-size: 0.9rem;
+			line-height: 1.5;
+			margin: 0.8rem 0 1rem;
+		}
+
+		.recipe-stuff {
+			font-size: 0.9rem;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.recipe-stuff p {
+			width: 82%;
+			line-height: 1.4;
+		}
+
+		.recipe-stuff h5 {
+			font-size: 0.9rem;
+			line-height: 1.4;
+		}
+
+		.recipe-step {
+			width: 82%;
+			margin-left: 18%;
+			margin-top: 0.6rem;
+			font-size: 0.9rem;
+		}
+
+		.recipe-step li {
+			display: flex;
+			gap: 0.3rem;
+			word-break: keep-all;
+			line-height: 1.3;
+			margin-bottom: 0.2rem;
+		}
+
+		@media (max-width: 767px) {
+			.article-header-container-2 {
+				grid-template-columns: 1fr;
+			}
+
+			.prologue-sns {
+				flex-direction: column;
+				margin: 2rem 0 0 2rem;
+				gap: 0.5rem;
+			}
+
+			.recipe-container {
+				gap: 1.5rem;
+			}
+
+			.recipe-stuff {
+				flex-direction: column;
+				margin-bottom: .5rem;
+			}
+
+			.recipe-stuff h5 br {
+				display: none;
+			}
+
+			.recipe-stuff p {
+				width: 100%;
+			}
+
+			.recipe-step {
+				width: 100%;
+				margin-left: 0;
+			}
+
+		}
 	</style>
 
 
 
 </head>
+
 <body>
 	<header id="menu"></header>
 	<main>
@@ -214,10 +248,10 @@ body {
 					<div class="article-header-text-2">
 						<span class="story-label">셀럽의 건강식단</span>
 						<h4>
-							몸과 마음을 함께 돌보는 건강한 식습관 
+							음식에 진심인 식품 연구원의 간단 레시피
 						</h4>
 						<h2>
-							릴리요리
+							희원홈
 						</h2>
 						<div class="article-meta">
 							<span>글</span>
@@ -226,7 +260,7 @@ body {
 							<span class="dot">・</span>
 							<span>레시피·사진 제공</span>
 							<span class="pipe">ㅣ</span>
-							<span>릴리요리</span>
+							<span>희원홈</span>
 						</div>
 					</div>
 					<div class="article-header-image-2">
@@ -240,17 +274,19 @@ body {
 				<article>
 					<div class="article-prologue">
 						<p>
-							9년 차 헬스 트레이너이자 유튜버 ‘릴리요리’는 오랜 시간 수많은 사람들과 함께 운동하고 가르치며, ‘지속 가능한 건강’을 고민해 왔다. 3개월 동안 8kg 감량한 경험을 계기로, 극단적인 다이어트 대신 몸과 마음이 모두 편안한 식습관을 추구하고 있다. 그가 전하고자 하는 것은 빠른 변화가 아니라 꾸준히 이어갈 수 있는 건강한 루틴이다. 균형 잡힌 한 끼를 통해 누구나 일상에서 자연스럽게 건강을 실천할 수 있도록 돕는 ‘릴리요리’의 레시피를 만나보자.  
-						</p>				
+							음식에 진심인 식품 연구원이자 10년 차 자취생. 전문적인 식품 지식을 바탕으로 간단하면서도 맛있는 레시피를 연구하며, 바쁜 일상에서도 건강한 한 끼를 챙길 방법을
+							고민해 왔다. 식품 연구원으로서 전문성과 10년간의 자취 경험이 만나, 누구나 쉽게 뚝딱 만들 수 있는 실용적인 요리를 선보인다. 복잡한 과정 없이 냉장고 속 간단한
+							재료로 만드는 그녀의 레시피는 자취생들의 현실적인 고민을 누구보다 잘 알기에 시간도 아끼고 재료도 아끼면서 영양까지 챙길 수 있다.
+						</p>
 					</div>
 					<div class="prologue-sns">
 						<span class="icon-x-black">
 							<b>인스타그램</b>
-							<a href="https://www.instagram.com/llily_yori/" target="_blanck">@llily_yori</a>
+							<a href="https://www.instagram.com/heewon_home/" target="_blanck">@heewon_home</a>
 						</span>
 						<span class="icon-yt-black">
 							<b>유튜브</b>
-							<a href="https://www.youtube.com/@릴리요리" target="_blanck">릴리요리 lilyyori</a>
+							<a href="https://www.youtube.com/@Heewon_home" target="_blanck">희원홈</a>
 						</span>
 						<!-- <span class="icon-blog-black">
 							<b>저서</b> 
@@ -262,7 +298,7 @@ body {
 							<img src="contents/sub_31_recipe.png">
 						</figure>
 						<h3>
-							자연스럽고 건강한 식습관을 함께 나눠요~
+							잘 먹고 잘 사는 간단 요리 레시피
 						</h3>
 						<div class="recipe-container">
 							<div class="recipe-image">
@@ -270,42 +306,43 @@ body {
 									<img src="contents/sub_31_food_1.png">
 								</figure>
 							</div>
-							<div class="recipe-text">						
+							<div class="recipe-text">
 								<div class="recipe-meta">
 									<span>
-										든든하지만 가볍게!
+										집에 양배추를 꼭 사놓는 이유!
 									</span>
 									<h4>
-										달콤 고소 메밀 유부롤
+										양배추 새우 갈릭 파스타
 										<em>Recipe</em>
 									</h4>
 									<p>
-										자취생 다이어트 레시피로도 좋은 메밀 유부롤. 유부의 달콤함과 메밀의 고소함이 어우러져 부담 없이 즐길 수 있는 한 끼다. 바로 먹어도 맛있지만, 전날 만들어 냉장 보관을 했다가 먹으면 쫀득하고 담백한 풍미가 더해진다.  
+										아삭한 양배추와 통통한 새우의 조화! 파스타 면을 평소보다 적게 넣어도, 양배추와 반숙 달걀로 속은 편하고 포만감까지 채워준다.
 									</p>
 								</div>
 								<div class="recipe-stuff">
 									<h5>재료<br>(8개 분량)</h5>
 									<p>
-										100% 메밀면 1인분, 간장 2스푼, 알룰로스 2스푼, 들기름 2스푼, 조미김 10장, 고추냉이 적당량, 드레싱 적당량
+										새우 5마리, 채 썬 양배추 2줌, 마늘 5알, 페페론치노 2~4개, 대파 흰 부분 반대, 삶은 파스타 1인분, 올리브유 3큰술, 굴 소스
+										1큰술, 참치액 1큰술, 달걀 후라이 1개
 									</p>
 								</div>
 								<div class="recipe-step">
 									<ul>
 										<li>
 											<i>①</i>
-											볼에 삶은 메밀면과 간장, 알룰로스, 들기름을 넣어 버무려준다. 
+											팬에 올리브유를 두르고, 편을 썬 마늘과 페페론치노를 볶는다.
 										</li>
 										<li>
 											<i>②</i>
-											유부를 펼치고 그 위에 조미김과 메밀면을 가지런히 놓는다.
+											대파를 송송 썰어 넣어주고, 해동한 새우와 양배추, 굴 소스, 참치액을 넣고 볶는다.
 										</li>
 										<li>
 											<i>③</i>
-											고추냉이를 취향껏 올리고 돌돌 말아준다.
+											삶은 파스타와 면수를 넣고 잘 비벼준다.
 										</li>
 										<li>
 											<i>➃</i>
-											드레싱과 깨를 올려 장식한다.
+											소금과 후추로 간을 하고 그릇에 담아내고, 달걀 후라이 반숙으로 토핑을 올린다.
 										</li>
 									</ul>
 								</div>
@@ -317,57 +354,88 @@ body {
 									<img src="contents/sub_31_food_2.png">
 								</figure>
 							</div>
-							<div class="recipe-text">						
+							<div class="recipe-text">
 								<div class="recipe-meta">
 									<span>
-										초간단 5분컷 전자레인지 자취식단!
+										달콤한 초 간단 밥도둑!
 									</span>
 									<h4>
-										오리 샤브 찜
+										목살 양념갈비
 										<em>Recipe</em>
 									</h4>
 									<p>
-										칼로리는 낮고 기름기가 아래로 빠져서 훨씬 담백하게 즐길 수 있다. 전자레인지로 빠르게 조리할 수 있어 자취생이나 바쁜 직장인에게도 제격이다. 직접 만든 땅콩소스와 곁들여 먹으면 파는 맛과 비슷하다.  
+										단 3가지 재료로 재워두고 굽기만 하면 완성되는 목살 양념갈비!<br>
+										간단하게 만드는 것에 비해 맛은 기대 이상이다.
 									</p>
 								</div>
 								<div class="recipe-stuff">
 									<h5>재료</h5>
 									<p>
-										훈제 오리 100g, 숙주나물 한 줌, 팽이버섯 100g, 배추 6장, 물 150ml
-									</p>
-								</div>
-								<div class="recipe-stuff">
-									<h5>땅콩소스</h5>
-									<p>
-										땅콩소스 3스푼, 저칼로리 마요네즈 2스푼, 알룰로스 1.5스푼, 레몬즙 1스푼, 간장 1스푼
+										목살 400g, 다진 마늘 1큰술, 참소스 적당량, 통깨 약간
 									</p>
 								</div>
 								<div class="recipe-step">
 									<ul>
 										<li>
 											<i>①</i>
-											채소는 세척하고 전자레인지 조리 가능 용기에 숙주, 배추, 오리고기, 팽이버섯 순으로 올려준다.
+											목살은 앞뒤로 칼집을 낸다.
 										</li>
 										<li>
 											<i>②</i>
-											물을 넣고 전자레인지에 5분간 쪄준다.  
+											지퍼백 안에 목살과 다진 마늘을 넣고, 참소스를 목살이 잠길 때까지 부어준다.
 										</li>
 										<li>
 											<i>③</i>
-											땅콩소스 재료를 잘 저어 소스를 만들어준다.
+											한 시간 이상 재워주고, 팬에 고기와 소스를 살짝 부어 앞뒤로 노릇하게 굽는다.
 										</li>
 										<li>
 											<i>④</i>
-											전자레인지에서 꺼내 소스와 곁들여 먹는다.
+											한입 크기로 자르고, 취향껏 깨를 올린다.
 										</li>
-										<!-- <li>
-											<i>⑤</i>
-											물이 빠지면 부드러운 입자를 위해 짜낸 크림을 핸드 블렌더로 갈아준다.  
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="recipe-container border">
+							<div class="recipe-image">
+								<figure>
+									<img src="contents/sub_31_food_2.png">
+								</figure>
+							</div>
+							<div class="recipe-text">
+								<div class="recipe-meta">
+									<span>
+										쫀득쫀득 맛있는
+									</span>
+									<h4>
+										애호박 새우 전
+										<em>Recipe</em>
+									</h4>
+									<p>
+										애호박과 새우의 조합으로 만드는 쫀득한 전!<br>
+										한입 베어 물면 애호박의 수분과 새우의 풍미가 입안에 가득 퍼진다.
+									</p>
+								</div>
+								<div class="recipe-stuff">
+									<h5>재료</h5>
+									<p>
+										애호박 1개, 새우 10마리, 청양고추 1개, 부침가루 1큰술, 전분 2큰술, 소금 1작은술, 후추 약간, 식용유 적당량
+									</p>
+								</div>
+								<div class="recipe-step">
+									<ul>
+										<li>
+											<i>①</i>
+											애호박 1개를 얇게 채 썰고, 소금 1큰술에 10분간 절여준다.
 										</li>
 										<li>
-											<i>⑥</i>
-											알룰로스 또는 토핑을 추가해서 먹거나, 빵과 곁들여 준다. 
-										</li> -->
+											<i>②</i>
+											새우 10마리는 살짝 다지고, 절인 애호박, 채 썬 청양고추, 부침가루, 전분을 넣어 섞는다.
+										</li>
+										<li>
+											<i>③</i>
+											팬에 식용유를 두르고 반죽을 올려 노릇하게 앞뒤로 구워 완성한다.
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -379,4 +447,5 @@ body {
 	</main>
 	<footer id="footer"></footer>
 </body>
+
 </html>
