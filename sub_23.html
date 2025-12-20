@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>HDRK</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="HDRK - 한국산업인력공단">
 	<meta property="og:description" content="한국산업인력공단 웹매거진">
@@ -13,343 +14,416 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 	<style>
+		:root {
+			--color-first: #fff;
+			/* 헤더 배경 */
+			--color-second: #D0DB46;
+			/* h2 색상 */
+			--color-third: #F4B57F;
+			/* 전체배경 */
+			--color-fourth: #F86856;
+			/* 프롤로그 배경 */
+			--color-fifth: #000;
+			/* 프롤로그 색상 */
+		}
 
-:root {
-	--color-first: #fff; 		/* 헤더 배경 */
-	--color-second: #375885; 	/* h2 색상 */
-	--color-third: #F4B57F;		/* 전체배경 */
-	--color-fourth: #F86856; 	/* 프롤로그 배경 */
-	--color-fifth: #000; 		/* 프롤로그 색상 */
-}
-body {
-	/*background-color: var(--color-third);*/
-	background: linear-gradient(
-	    135deg,
-	    #e2cecd 0%,   /* 왼쪽 위 살구+보라빛 */
-	    #8792b9 40%,  /* 중간 보라/퍼플 */
-	    #637eae 100%  /* 오른쪽 아래 파란색 */
-	);
-	max-width: 100vw;
-	overflow-x: hidden;
-}
-.story-label {
-	color: var(--color-second);
-	border-color: var(--color-second);
-}
-.article-header-container-2 {
-    grid-template-columns: 2.5fr 1fr;
-    gap: 0;
-}
-.article-header-text-2 h4 {
-    font-family: Paperlogy-7Bold;
-    color: #000;
-    margin-top: 1rem;
-    margin-bottom: 0;
-}
-.article-header-text-2 h2 {
-	margin-bottom: 1rem;
-}
-.article-header-container-2 p {
-	margin-bottom: 2rem;
-	word-break: keep-all;
-}
-.article-header-text-2 .article-meta {
-	color: #000;
-}
+		body {
+			/*background-color: var(--color-third);*/
+			background: linear-gradient(135deg,
+					#CCE6E0 0%,
+					/* 왼쪽 위 살구+보라빛 */
+					#CDE4C2 40%,
+					/* 중간 보라/퍼플 */
+					#D2DE52 100%
+					/* 오른쪽 아래 파란색 */
+				);
+			max-width: 100vw;
+			overflow-x: hidden;
+		}
 
-.article-body {
-	max-width: 800px;
-}
-.article-text {
-    margin-top: 2rem;
-}
-.match-box-dual, .match-box-single {
-	position: relative;
-	padding: 0 0 0 10%;
-}
-.match-box-single {
-	padding-top: 4rem;
-}
-.match-image {
-	position: absolute;
-}
-.match-image.small {
-	width: 30%;
-}
-.match-image.left {
-	top: 0;
-	left: 0;
-}
-.match-image.small.left {
-	transform: translateX(-80%) translateY(15%);
-}
-.dialogue {
-	display: flex;
-}
-.dialogue h6 {
-	font-size: 1rem;
-	font-weight: 500;
-    line-height: 1.3;
-    letter-spacing: -0.01rem;
-    margin: 0 0 0.2rem 0;
-}
-.dialogue.right {
-	justify-content: flex-end;
-}
-.dialogue.right .dialogue-container {
-	width: 65%;
-/*	margin-top: 1rem;*/
-}
-.match-box-single .dialogue.right .dialogue-container p::before {
-	content: "";
-	width: 3rem;
-	height: 3rem;
-	display: block;
-	border-radius: 50%;
-	border: 1px solid #fff;
-	padding: 2px;
-	position: absolute;
-	right: 0;
-	top: 0;
-    transform: translateX(120%) translateY(-80%);
-	background-clip: content-box;
-	background-color: #fff;
-	background-image: url("contents/sub_23_icon_1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.match-box-single .dialogue.left .dialogue-container p::before,
-.dialogue-container.list div::before {
-	content: "";
-	width: 3rem;
-	height: 3rem;
-	display: block;
-	border-radius: 50%;
-	border: 1px solid #fff;
-	padding: 2px;
-	position: absolute;
-	left: 0;
-	top: 0;
-    transform: translateX(-120%) translateY(-80%);
-	background-clip: content-box;
-	background-color: #fff;
-	background-image: url("contents/sub_23_icon_2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.dialogue.left .dialogue-container {
-	width: 85%;
-}
-.match-box-single .dialogue.left .dialogue-container {
-	transform: translateX(40px) translateY(-30px);	
-}
-.dialogue.left h6 {
-	margin-left: 0.5rem;
-}
-.dialogue.right h6 {
-	text-align: right;
-	margin-right: 0.5rem;
-}
-.dialogue p {
-	background-color: #fff;
-	padding: 1.2rem;
-	border-radius: 10px;
-	position: relative;
-	z-index: 5;
-	font-size: 1rem;
-	margin: 0;
-	line-height: 1.5;
-	box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
-}
-.dialogue p span {
-	font-size: 0.8rem;
-}
-.dialogue p i {
-	display: inline-block;
-	width: 0.8rem;
-	height: 0.8rem;
-	background: url(contents/sub_icon_23_bul.png) 0 0 no-repeat;
-	background-size: 100% 100%;
-	transform: translateY(0.05rem);
-	margin-right: 0.2rem;
-}
-.dialogue p em {
-	font-weight: 600;
-	text-decoration: underline;
-	font-size: 1rem;
-	margin-top: 0.5rem;
-	display: block;
-}
-.dialogue.right p::after {
-	content: "";
-	display: block;
-	width: 50px;
-	height: 25px;
-    background-image: url("contents/sub_bul_23.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translateX(32px) translateY(15px) rotate(90deg);
-}
-.dialogue.left p::after,
-.dialogue-container.list div::after,
-.dialogue-container.table div::after {
-	content: "";
-	display: block;
-	width: 54px;
-	height: 26px;
-    background-image: url("contents/sub_bul_23.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateX(-21px) translateY(5px) rotate(0deg);
-}
-.dialogue-container.list div,
-.dialogue-container.table div {
-	background-color: #fff;
-    padding: 1.2rem;
-    border-radius: 10px;
-    position: relative;
-    z-index: 5;
-    font-size: 1rem;
-    margin: 0;
-    line-height: 1.5;
-    box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
-}
-.dialogue-container.list div ul {
-	margin-top: 0.8rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 1.5rem;
-}
-.dialogue-container.list div li {
-	margin-top: 0.1rem;
-	position: relative;
-	border: 1px solid #000;
-}
-.dialogue-container.list div li span {
-	display: block;
-	text-align: center;
-	font-size: 0.9rem;
-	padding: 0.8rem 0;
-}
-.dialogue-container.list div li span.up {
-	font-size: 0.8rem;
-	background-color: var(--color-second);
-	color: #fff;
-	padding: 0.5rem 0;
-}
-.dialogue-container.list div li::before {
-	content: "";
-	display: block;
-	width: 18px;
-	height: 18px;
-    background-image: url("contents/sub_23_bul.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateX(-100%) translateY(-50%);
-}
-.dialogue-container.list div li:nth-child(1)::before {
-	display: none;
-}
-.table-normal {
-	margin-top: 1rem;
-}
-.table-normal tr td {
-	border-color: var(--color-second);
-	line-height: 1.45;
-	padding: 0.6rem 0.6rem;
-	word-break: keep-all;
-}
-.table-normal tr th {
-	background-color: var(--color-second);
-	border-color: #fff;
-	color: #fff;
-}
-.table-normal tbody tr td:first-child {
-    text-align: center;
-    border-left-color: #fff;
-}
-.table-normal tbody tr td:nth-last-child(1) {
-	border-right-color: #fff;
-}
-.table-normal tbody tr td ul li {
-	display: flex;
-}
-.table-normal tbody tr td ul li::before {
-	content: "•";
-	padding-right: 0.1rem;
-}
-@media (max-width:767px) {
-	.article-header-container-2 {
-	        grid-template-columns: 1fr;
-	   }
-	.article-header-container-2 p {
-		width: 56%;
-	}
-	.article-header-image-2 {
-	    margin-top: -19.5rem;
-	}
-    .article-header-text-2 h2 {
-    	font-size: 2rem;
-    }
-	.article-header-image-2 figure {
-		width: 60%;
-		margin-left: 50%;
-	}
-	.match-image.big {
-		display: none;
-	}
-	.dialogue.left .dialogue-container,
-	.dialogue.right .dialogue-container {
-		width: 100%;
-	}
-	.dialogue.right {
-		justify-content: flex-start;
-	}
-	.match-box-dual, .match-box-single {
-		padding: 0 3rem 1rem;
-	}
-	.match-box-single .dialogue.left .dialogue-container {
-		transform: translateX(20px) translateY(0);
-	}
-	.match-box-single .dialogue.right .dialogue-container {
-		transform: translateX(-20px) translateY(0);
-	}
-	.dialogue-container {
-		margin-top: 1rem;
-	}
-	.match-box-single .dialogue.left .dialogue-container p::before {
-		transform: translateX(-120%) translateY(-50%);
-	}
-	.match-box-single .dialogue.right .dialogue-container p::before {
-		transform: translateX(120%) translateY(-50%);
-	}
-	.match-image {position: relative;}
-	.match-image.small.left {
-		top:0;
-		width: 40%;
-		left:0;
-		transform: translateX(0) translateY(0);
-	}
-	.dialogue-container.list div ul {
-		grid-template-columns: 1fr;
-	}
-	.dialogue-container.list div li::before {
-		left: 50%;
-		top: 0;
-		transform: translateX(-50%) translateY(-110%) rotate(90deg);
-	}
-}
+		.story-label {
+			color: var(--color-second);
+			border-color: var(--color-second);
+		}
+
+		.article-header-container-2 {
+			grid-template-columns: 2.5fr 1fr;
+			gap: 0;
+		}
+
+		.article-header-text-2 h4 {
+			font-family: Paperlogy-7Bold;
+			color: #000;
+			margin-top: 1rem;
+			margin-bottom: 0;
+		}
+
+		.article-header-text-2 h2 {
+			margin-bottom: 1rem;
+		}
+
+		.article-header-container-2 p {
+			margin-bottom: 2rem;
+			word-break: keep-all;
+		}
+
+		.article-header-text-2 .article-meta {
+			color: #000;
+		}
+
+		.article-body {
+			max-width: 800px;
+		}
+
+		.article-text {
+			margin-top: 2rem;
+		}
+
+		.match-box-dual,
+		.match-box-single {
+			position: relative;
+			padding: 0 0 0 10%;
+		}
+
+		.match-box-single {
+			padding-top: 4rem;
+		}
+
+		.match-image {
+			position: absolute;
+		}
+
+		.match-image.small {
+			width: 30%;
+		}
+
+		.match-image.left {
+			top: 0;
+			left: 0;
+		}
+
+		.match-image.small.left {
+			transform: translateX(-80%) translateY(15%);
+		}
+
+		.dialogue {
+			display: flex;
+		}
+
+		.dialogue h6 {
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 1.3;
+			letter-spacing: -0.01rem;
+			margin: 0 0 0.2rem 0;
+		}
+
+		.dialogue.right {
+			justify-content: flex-end;
+		}
+
+		.dialogue.right .dialogue-container {
+			width: 65%;
+			/*	margin-top: 1rem;*/
+		}
+
+		.match-box-single .dialogue.right .dialogue-container p::before {
+			content: "";
+			width: 3rem;
+			height: 3rem;
+			display: block;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			padding: 2px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transform: translateX(120%) translateY(-80%);
+			background-clip: content-box;
+			background-color: #fff;
+			background-image: url("contents/sub_23_icon_1.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.match-box-single .dialogue.left .dialogue-container p::before,
+		.dialogue-container.list div::before {
+			content: "";
+			width: 3rem;
+			height: 3rem;
+			display: block;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			padding: 2px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: translateX(-120%) translateY(-80%);
+			background-clip: content-box;
+			background-color: #fff;
+			background-image: url("contents/sub_23_icon_2.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.dialogue.left .dialogue-container {
+			width: 85%;
+		}
+
+		.match-box-single .dialogue.left .dialogue-container {
+			transform: translateX(40px) translateY(-30px);
+		}
+
+		.dialogue.left h6 {
+			margin-left: 0.5rem;
+		}
+
+		.dialogue.right h6 {
+			text-align: right;
+			margin-right: 0.5rem;
+		}
+
+		.dialogue p {
+			background-color: #fff;
+			padding: 1.2rem;
+			border-radius: 10px;
+			position: relative;
+			z-index: 5;
+			font-size: 1rem;
+			margin: 0;
+			line-height: 1.5;
+			box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+		}
+
+		.dialogue p span {
+			font-size: 0.8rem;
+		}
+
+		.dialogue p i {
+			display: inline-block;
+			width: 0.8rem;
+			height: 0.8rem;
+			background: url(contents/sub_icon_23_bul.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			transform: translateY(0.05rem);
+			margin-right: 0.2rem;
+		}
+
+		.dialogue p em {
+			font-weight: 600;
+			text-decoration: underline;
+			font-size: 1rem;
+			margin-top: 0.5rem;
+			display: block;
+		}
+
+		.dialogue.right p::after {
+			content: "";
+			display: block;
+			width: 50px;
+			height: 25px;
+			background-image: url("contents/sub_bul_23.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transform: translateX(32px) translateY(15px) rotate(90deg);
+		}
+
+		.dialogue.left p::after,
+		.dialogue-container.list div::after,
+		.dialogue-container.table div::after {
+			content: "";
+			display: block;
+			width: 54px;
+			height: 26px;
+			background-image: url("contents/sub_bul_23.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: translateX(-21px) translateY(5px) rotate(0deg);
+		}
+
+		.dialogue-container.list div,
+		.dialogue-container.table div {
+			background-color: #fff;
+			padding: 1.2rem;
+			border-radius: 10px;
+			position: relative;
+			z-index: 5;
+			font-size: 1rem;
+			margin: 0;
+			line-height: 1.5;
+			box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+		}
+
+		.dialogue-container.list div ul {
+			margin-top: 0.8rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 1.5rem;
+		}
+
+		.dialogue-container.list div li {
+			margin-top: 0.1rem;
+			position: relative;
+			border: 1px solid #000;
+		}
+
+		.dialogue-container.list div li span {
+			display: block;
+			text-align: center;
+			font-size: 0.9rem;
+			padding: 0.8rem 0;
+		}
+
+		.dialogue-container.list div li span.up {
+			font-size: 0.8rem;
+			background-color: var(--color-second);
+			color: #fff;
+			padding: 0.5rem 0;
+		}
+
+		.dialogue-container.list div li::before {
+			content: "";
+			display: block;
+			width: 18px;
+			height: 18px;
+			background-image: url("contents/sub_23_bul.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateX(-100%) translateY(-50%);
+		}
+
+		.dialogue-container.list div li:nth-child(1)::before {
+			display: none;
+		}
+
+		.table-normal {
+			margin-top: 1rem;
+		}
+
+		.table-normal tr td {
+			border-color: var(--color-second);
+			line-height: 1.45;
+			padding: 0.6rem 0.6rem;
+			word-break: keep-all;
+		}
+
+		.table-normal tr th {
+			background-color: var(--color-second);
+			border-color: #fff;
+			color: #fff;
+		}
+
+		.table-normal tbody tr td:first-child {
+			text-align: center;
+			border-left-color: #fff;
+		}
+
+		.table-normal tbody tr td:nth-last-child(1) {
+			border-right-color: #fff;
+		}
+
+		.table-normal tbody tr td ul li {
+			display: flex;
+		}
+
+		.table-normal tbody tr td ul li::before {
+			content: "•";
+			padding-right: 0.1rem;
+		}
+
+		@media (max-width:767px) {
+			.article-header-container-2 {
+				grid-template-columns: 1fr;
+			}
+
+			.article-header-container-2 p {
+				width: 56%;
+			}
+
+			.article-header-image-2 {
+				margin-top: -19.5rem;
+			}
+
+			.article-header-text-2 h2 {
+				font-size: 2rem;
+			}
+
+			.article-header-image-2 figure {
+				width: 60%;
+				margin-left: 50%;
+			}
+
+			.match-image.big {
+				display: none;
+			}
+
+			.dialogue.left .dialogue-container,
+			.dialogue.right .dialogue-container {
+				width: 100%;
+			}
+
+			.dialogue.right {
+				justify-content: flex-start;
+			}
+
+			.match-box-dual,
+			.match-box-single {
+				padding: 0 3rem 1rem;
+			}
+
+			.match-box-single .dialogue.left .dialogue-container {
+				transform: translateX(20px) translateY(0);
+			}
+
+			.match-box-single .dialogue.right .dialogue-container {
+				transform: translateX(-20px) translateY(0);
+			}
+
+			.dialogue-container {
+				margin-top: 1rem;
+			}
+
+			.match-box-single .dialogue.left .dialogue-container p::before {
+				transform: translateX(-120%) translateY(-50%);
+			}
+
+			.match-box-single .dialogue.right .dialogue-container p::before {
+				transform: translateX(120%) translateY(-50%);
+			}
+
+			.match-image {
+				position: relative;
+			}
+
+			.match-image.small.left {
+				top: 0;
+				width: 40%;
+				left: 0;
+				transform: translateX(0) translateY(0);
+			}
+
+			.dialogue-container.list div ul {
+				grid-template-columns: 1fr;
+			}
+
+			.dialogue-container.list div li::before {
+				left: 50%;
+				top: 0;
+				transform: translateX(-50%) translateY(-110%) rotate(90deg);
+			}
+		}
 	</style>
 </head>
+
 <body>
 	<header id="menu"></header>
 	<main>
@@ -359,13 +433,15 @@ body {
 					<div class="article-header-text-2">
 						<span class="story-label">퍼스널 매칭업(業)</span>
 						<h4>
-							기업 경쟁력을 업그레이드!
+							시험만 보던 자격에서
 						</h4>
 						<h2>
-							근로자의 역량이 <br>기업의 성장으로 이어지다
+							실무형 인재를 키우는 ‘과정 자격’까지!
 						</h2>
 						<p>
-							신재생에너지설비 기업을 운영하는 김길영(가명) 씨는 업무 관련 지식, 경험, 노하우를 작업장 내에서 체계적으로 축적 및 확산시키고자 했으나 현실적인 한계에 부딪쳤다. 근로자의 직무역량을 높이고 학습 문화를 장착시키며, 일련의 활동이 원활히 이루어질 수 있도록 지원을 받을 방법을 고민하던 그는 한국산업인력공단 직업능력국 능력개발기획부에 도움을 요청했다.
+							전문대 2학년에 재학 중인 정하진(가명) 씨는 졸업을 앞두고 고민이 많다. 학교에서는 NCS 기반 실습과 현장실습으로 바쁜 와중, 채용 공고만 보면 ‘관련 자격증
+							소지자 우대’라는 문구가 빠지지 않는다. 하진 씨는 자신의 전공 수업과 연계해 자격 취득까지 노릴 수 있는 방법을 찾고자 한국산업인력공단 능력평가국 과정평가운영부에
+							도움을 요청했다.
 						</p>
 						<div class="article-meta">
 							<span>글</span>
@@ -389,34 +465,37 @@ body {
 							</figure>
 							<div class="dialogue right">
 								<div class="dialogue-container">
-									<h6>김길영</h6>
+									<h6>정하진</h6>
 									<p>
-										안녕하세요.😁 <br>
-										저는 신재생에너지설비 기업을 운영하는 김길영(가명)입니다!🦾
+										안녕하세요. 👩‍🎓<br>
+										저는 전문대 2학년으로 재학 중인 정하진(가명)입니다!✌️
 									</p>
 								</div>
 							</div>
 							<div class="dialogue left">
-								<div class="dialogue-container">								
-									<h6>HRDK 능력개발기획부</h6>
+								<div class="dialogue-container">
+									<h6>HRDK 과정평가운영부</h6>
 									<p>
-										안녕하세요. 한국산업인력공단 직업능력국 능력개발기획부입니다. 저희는 근로자와 기업의 역량 강화를 위한 다양한 교육 관련 사업을 중심으로, 능력개발사업의 계획을 중장기적인 안목에서 기획하고 그에 맞는 예산을 관리하고 있습니다. 또한 근로자와 기업이 능력개발 사업에 적극적으로 참여할 수 있도록 능력개발 촉진 사업도 함께 수행하고 있습니다.
+										안녕하세요. 한국산업인력공단 능력평가국 과정평가운영부입니다. 저희는 과정평가형 자격, 일학습병행 외부평가 계획·시행·관리 전반을 수행하고
+										있습니다. 수험자부터 직업훈련기관까지 다양한 외부고객을 대상으로 외부평가 일정 수립, 채점, 결과 통보 등 핵심 업무를 수행해 산업현장에서
+										요구하는 실무형 인재 양성을 지원하고 있습니다.
 									</p>
 								</div>
 							</div>
 							<div class="dialogue right">
 								<div class="dialogue-container">
-									<h6>김길영</h6>
+									<h6>정하진</h6>
 									<p>
-										중소기업 학습조직화 사업은 무엇인가요?🤓
+										과정평가형 자격제도는 무엇인가요?💯
 									</p>
 								</div>
 							</div>
 							<div class="dialogue left">
 								<div class="dialogue-container">
-									<h6>HRDK 능력개발기획부</h6>
+									<h6>HRDK 과정평가운영부</h6>
 									<p>
-										중소기업 학습조직화 사업이란 중소기업이 근로자 능력향상을 위해 학습조직을 도입하고자 할 경우 이에 필요한 컨설팅, 기술 지원뿐만 아니라 학습 인프라 구축 등에 필요한 비용을 지원하는 제도입니다.
+										산업현장의 ‘일’을 중심으로 직업교육훈련과 자격이 유기적으로 연계할 수 있는 방안 중 하나로, 국가직무능력표준(NCS)에 기반해 일정 요건을
+										갖춘 교육훈련과정을 충실히 이수한 자에게 내외부 평가를 실시하고, 정해진 합격기준을 충족한 경우 국가기술자격을 부여하는 제도입니다.
 									</p>
 								</div>
 							</div>
@@ -425,190 +504,130 @@ body {
 						<div class="match-box-single">
 							<figure class="match-image small left">
 								<img src="contents/sub_23_2.png">
-							</figure>							
+							</figure>
 							<div class="dialogue right">
 								<div class="dialogue-container">
-									<h6>김길영</h6>
+									<h6>정하진</h6>
 									<p>
-										저희 회사도 지원대상에 해당하나요? 자격 요건이 궁금합니다.🧑‍💼🏢
+										기존 자격제도와의 차이점은 무엇인가요? ✌️✒️
 									</p>
 								</div>
 							</div>
 							<div class="dialogue left">
 								<div class="dialogue-container list">
-									<h6>HRDK 능력개발기획부</h6>
+									<h6>HRDK 과정평가운영부</h6>
 									<p>
-										네, 가능합니다. 지원대상은 「고용보험법 시행령」 제12조에 따른 우선지원 대상기업 또는 사업주 단체로서, 일학습병행, 사업주 훈련 등 직업훈련사업 참여 이력이 있고, 상시근로자 수가 최소 20인 이상인 기업이 해당됩니다. 
+										검정형 자격은 정해진 응시요건을 충족한 사람만 응시할 수 있고, 지필·실기 시험에서 각각 60점 이상을 받아야 하며, 자격증에는 자격종목과
+										인적사항만 기재됩니다. 과정평가형 자격은 해당 과정을 이수한 누구나 응시할 수 있고, 내부·외부 평가를 1:1로 반영해 평균 80점 이상일 때
+										합격하며, 자격증에는 교육·훈련기관명, 이수기간·시간, NCS 능력단위명이 추가로 표기됩니다.
 									</p>
 								</div>
-							</div>							
+							</div>
 							<div class="dialogue right">
 								<div class="dialogue-container">
-									<h6>김길영</h6>
+									<h6>정하진</h6>
 									<p>
-										꼭 20인 이상이어야 하는 것일까요?🥲
+										과정평가형 자격제도의 장점은 무엇이 있나요?⭐
 									</p>
 								</div>
 							</div>
 							<div class="dialogue left">
 								<div class="dialogue-container">
-									<h6>HRDK 능력개발기획부</h6>
+									<h6>HRDK 과정평가운영부</h6>
 									<p>
-										신기술분야 기업의 경우 상시근로자수 최소 10인 이상일 경우 참여가 가능합니다.(인공지능, 빅데이터, 클라우드, 사물인터넷, 5G, 3D프린팅, 블록체인, 지능형반도체, 첨단소재, 스마트헬스케어, AR/VR, 드론, 스마트공장, 스마트팜, 지능형 로봇, 자율주행차, O2O, 신재생에너지, 스마트시티, 핀테크) 자세한 사항은 HRD4U를 통해 확인하실 수 있습니다.
+										과정평가형 자격제도는 해당 교육·훈련과정을 성실히 이수할 수 있는 사람이라면, 학력·경력 등 별도 응시요건 없이 기능사·산업기사· 기사 등에
+										도전할 수 있는 제도입니다. 비용지원 훈련과정 참여 시 훈련비 지원을 받을 수 있고(조건별 상이), 공단 지정장소의 지필평가와 교육·훈련기관의
+										실무평가를 통해 교육·훈련과 자격 취득을 동시에 준비할 수 있습니다. 산업현장 요구를 반영한 NCS 기반 교육으로 현장 실무역량을 키우고,
+										이수한 능력단위가 기재된 자격증으로 경력개발에도 유리합니다.
 									</p>
 								</div>
-							</div>							
+							</div>
 							<div class="dialogue right">
 								<div class="dialogue-container">
-									<h6>김길영</h6>
+									<h6>정하진</h6>
 									<p>
-										신청방법 및 선정 절차에 대해서 알고 싶어요📄
+										과정평가형 자격 제도로 취득할 수 있는 자격종목은 무엇이 있나요?🔎
 									</p>
 								</div>
 							</div>
 							<div class="dialogue left">
 								<div class="dialogue-container list">
-									<h6>HRDK 능력개발기획부</h6>
-									<div>
-										소요 기간은 별도로 명시되어 있지 않으며, 기업의 준비 상황, 신청 내용의 복잡성, 정부 심사 절차 진행 등에 따라 달라질 수 있습니다. 신청 전에는 Q-Net을 통해 기업자격 검정사업 시행 규정과 요건을 확인하고, 심사 기준을 충족한 후 진행하시기 바랍니다.
-										<ul>
-											<li>
-												<span class="up">참여기업 모집공고</span>
-												<span>공단(본부)</span>
-											</li>
-											<li>
-												<span class="up">참여기업 신청접수</span>
-												<span>기업</span>
-											</li>
-											<li>
-												<span class="up">서면검토 및 현장실사</span>
-												<span>공단(지부지사)</span>
-											</li>
-											<li>
-												<span class="up">최종선정심사</span>
-												<span>공단(본부)</span>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="match-box-single">
-							<figure class="match-image small left">
-								<img src="contents/sub_23_3.png">
-							</figure>							
-							<div class="dialogue right">
-								<div class="dialogue-container">
-									<h6>김길영</h6>
+									<h6>HRDK 과정평가운영부</h6>
 									<p>
-										사업에 참여하면 실제로 어떤 지원을 받을 수 있나요?💸
-									</p>
-								</div>
-							</div>
-							<div class="dialogue left">
-								<div class="dialogue-container table">
-									<h6>HRDK 능력개발기획부</h6>
-									<div>
-										지원 유형은 총 5가지로, 학습조 활동 지원, 우수 활동 지원(계속 기업), 학습 네트워크 지원, 외부 전문가 지원, 학습인프라 구축 지원(우수 기업)이 있습니다. 자세한 사항은 HRD4U를 통해 확인하실 수 있습니다.
-										<table class="table-normal">
-											<thead>
-											    <tr>
-											      <th style="width: 25%;">유형</th>
-											      <th style="width: 75%;">지원내용</th>
-											    </tr>
-											</thead>
-											<tbody>
-											    <tr>
-											      <td>학습조 활동 지원</td>
-											      <td>
-											        <ul>
-											          <li>학습조 활동비(조당)</li>
-											          <li>학습조직화 활성화를 위한 교육비</li>
-											          <li>학습리더 및 학습조장 활동비</li>
-											          <li>기업당 100만 원 한도</li>
-											        </ul>
-											      </td>
-											    </tr>
-
-											    <tr>
-											      <td>우수 활동 지원(계속기업)</td>
-											      <td>
-											        <ul>
-											          <li>사내학습조 경진대회 포상금</li>
-											        </ul>
-											      </td>
-											    </tr>
-
-											    <tr>
-											      <td>학습 네트워크 지원</td>
-											      <td>
-											        <ul>
-											          <li>학습 네트워크 활동비</li>
-											          <li>기업당 50만 원 한도</li>
-											        </ul>
-											      </td>
-											    </tr>
-
-											    <tr>
-											      <td>외부 전문가 지원</td>
-											      <td>
-											        <ul>
-											          <li>학습조직화를 위한 전문 코칭 및 컨설팅 지원</li>
-											        </ul>
-											      </td>
-											    </tr>
-
-											    <tr>
-											      <td>학습인프라 구축 지원(우수기업)</td>
-											      <td>
-											        <ul>
-											          <li>학습모임을 위한 공간 구축 지원</li>
-											        </ul>
-											      </td>
-											    </tr>
-											</tbody>											
-										</table>
-									</div>
-								</div>
-							</div>							
-							<div class="dialogue right">
-								<div class="dialogue-container">
-									<h6>김길영</h6>
-									<p>
-										지원 기간은 어떻게 되나요?📅💸
-									</p>
-								</div>
-							</div>
-							<div class="dialogue left">
-								<div class="dialogue-container">
-									<h6>HRDK 능력개발기획부</h6>
-									<p>
-										지원기간은 1년을 원칙으로 하되, 사업성과 평가 결과에 따라 최대 3년까지 지원 가능합니다. 단, 외부전문가 지원 유형, 학습인프라 지원유형은 1년(1회)만 지원됩니다.
-									</p>
-								</div>
-							</div>							
-							<div class="dialogue right">
-								<div class="dialogue-container">
-									<h6>김길영</h6>
-									<p>
-										사업 수행절차는 어떻게 되나요?🚩
-									</p>
-								</div>
-							</div>
-							<div class="dialogue left">
-								<div class="dialogue-container">
-									<h6>HRDK 능력개발기획부</h6>
-									<p>
-										수행 절차는 참여기업 모집 및 선정 → 사업계획서 제출, 승인 및 사전지원금 지급 → CEO연수, 학습리더 및 조장 교육 → 직업능력개발훈련 종합컨설팅 → 사업실시 및 모니터링 → 학습조 활동 완료보고 → 성과평가 및 회계정산 → 사후지원금 정산 및 지급 순으로 진행됩니다.
+										과정평가형 자격은 현행 국가기술자격법령에 따른 국가기술자격 종목 가운데, 제도 정착 정도와 운영 여건, 성과 분석 등을 종합적으로 고려하여
+										순차적으로 시행 종목을 확대해 나가고 있습니다. 2025년 기준으로 과정평가형으로 운영 중인 대상 종목은 총 201개이며, 구체적인 종목별 세부
+										내용은 CQ-NET 홈페이지의 「과정평가형자격 안내 → 종목정보 → 과정평가형자격 시행종목」 메뉴 또는 하단에 제공된 자료에서 확인할 수
+										있습니다.
 									</p>
 								</div>
 							</div>
 						</div>
 					</div>
-				</article>
+					<div class="match-box-single">
+						<figure class="match-image small left">
+							<img src="contents/sub_23_3.png">
+						</figure>
+						<div class="dialogue right">
+							<div class="dialogue-container">
+								<h6>정하진</h6>
+								<p>
+									과정평가형 자격제도의 교육·훈련 과정에서 탈락한 사람은 검정형 자격시험에 응시할 수 있나요?📝
+								</p>
+							</div>
+						</div>
+						<div class="dialogue left">
+							<div class="dialogue-container table">
+								<h6>HRDK 과정평가운영부</h6>
+								<p>
+									과정평가형 자격 교육·훈련 과정에서 중도 탈락하더라도, 검정형 자격시험 응시는 가능합니다. 과정평가형 자격과 기존 검정형 자격은 자격을 취득하는
+									방식(과정 이수 vs 시험 응시)만 다를 뿐, 시험을 통해 자격을 취득한다는 점에서는 동일합니다. 따라서 과정평가형 교육·훈련 과정에서 중도에
+									그만두었거나 현재 참여 중인 경우라도, 검정형 자격의 응시 기준(산업기사·기사·기능장·기술사 등 법령상 학력 또는 경력 요건)에 해당한다면 언제든지
+									검정형 자격시험에 응시할 수 있습니다.
+								</p>
+							</div>
+						</div>
+						<div class="dialogue right">
+							<div class="dialogue-container">
+								<h6>정하진</h6>
+								<p>
+									그렇다면 과정평가형 자격 제도에서 탈락한 사람은 재응시가 가능한가요?💦
+								</p>
+							</div>
+						</div>
+						<div class="dialogue left">
+							<div class="dialogue-container">
+								<h6>HRDK 과정평가운영부</h6>
+								<p>
+									과정평가형 자격의 외부평가에서 불합격한 경우, 해당 결과 발생일로부터 2년 이내에는 재응시가 가능합니다. 다만, 응시 인원이 적어 시험장 개설이 어려운
+									등 사유로 인해 기존 교육·훈련기관에서 외부평가 응시가 불가능한 경우에는, 동일 능력단위를 교육·훈련했다는 전제를 충족하고, 타 교육·훈련기관의
+									시설·장비 활용이 가능한 등 제반 여건이 허락하는 범위에서 다른 기관에서 외부평가에 재응시하는 것도 허용됩니다.
+								</p>
+							</div>
+						</div>
+						<div class="dialogue right">
+							<div class="dialogue-container">
+								<h6>정하진</h6>
+								<p>
+									이미 국가기술자격을 취득한 사람의 경우 과정평가형 자격제도 교육·훈련 과정에 참여할 수 있는지도 궁금합니다!🙋‍♀️
+								</p>
+							</div>
+						</div>
+						<div class="dialogue left">
+							<div class="dialogue-container">
+								<h6>HRDK 과정평가운영부</h6>
+								<p>
+									이미 검정형 국가기술자격을 취득한 사람도 과정평가형 자격의 교육·훈련과정에 참여할 수 있습니다. 검정형 자격과 과정평가형 자격은 종목과 등급이 같더라도
+									자격 취득 방식과 자격증에 기재되는 내용이 서로 다르기 때문에, 추가로 과정평가형 자격을 취득하는 것이 가능합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+			</div>
+			</article>
 			</div>
 		</section>
 	</main>
 	<footer id="footer"></footer>
 </body>
+
 </html>

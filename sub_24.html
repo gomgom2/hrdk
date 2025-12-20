@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>HDRK</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="HDRK - 한국산업인력공단">
 	<meta property="og:description" content="한국산업인력공단 웹매거진">
@@ -13,175 +14,212 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 	<style>
+		:root {
+			--color-first: #F1F4BA;
+			/* 전체 배경 */
+			--color-second: #000;
+			/* 스토리라벨 h2 색상 */
+			--color-third: #000;
+			/* 박스 h4 색상 */
+			--color-fourth: #D0DB46;
+			/* 프롤로그 배경 */
+			--color-fifth: #000;
+			/* 프롤로그 색상 */
+		}
 
-:root {
-	--color-first: #B0BCCD; 	/* 전체 배경 */
-	--color-second: #000; 		/* 스토리라벨 h2 색상 */
-	--color-third: #000;		/* 박스 h4 색상 */
-	--color-fourth: #3C5983; 	/* 프롤로그 배경 */
-	--color-fifth: #000; 		/* 프롤로그 색상 */
-}
-body {
-	background-color: var(--color-first);
-}
-.story-label {
-	color: var(--color-second);
-	border-color: var(--color-second);
-}
-.article-header-container-2 {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-.header-img-text {
-	width: 50%;
-	margin: 1rem 0;
-}
-.article-header-text-2 h2 {
-	margin-bottom: 1rem;
-}
-.article-header-container-2 p {
-	margin-bottom: 2rem;
-}
-.article-header-text-2 .article-meta {
-	color: var(--color-second);
-}
-.article-body {
-	max-width: 600px;
-	padding: 10rem 0 0;
-}
-.license-box {
-	background-color: #fff;
-	padding: 5rem 2rem 2rem;
-	position: relative;
-	border-radius: 1rem;
-	margin-bottom: 10rem;
-	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-}
-.license-box-clip {
-	width: 25%;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%) translateY(-70%);
-}
-.license-box-container h4 {
-	width: 55%;
-	height: 2.4rem;
-	text-align: center;
-	font-size: 1.6rem;
-	font-weight: normal;
-	font-family: Paperlogy-7Bold;
-	color: #fff;
-	background-color: var(--color-fourth);
-	border-radius: 1.2rem;
-	margin-bottom: 2rem;
-}
-.license-box-container h4 span {
-	font-size: 1rem;
-	font-family: Paperlogy-4Regular;
-	margin-left: 0.5rem;
-}
-.license-box-container h5 {
-	font-size: 1.2rem;
-	text-decoration: underline;
-	text-decoration-thickness: 0.05rem; 
-	text-underline-offset: 0.3rem;
-	margin: 1rem 0 0;
-}
-.license-box-container h6 {
-	font-size: 1.2rem;
-	font-family: Paperlogy-5Medium;
-	color: var(--color-fourth);
-	margin-top: 0.5rem;
-}
-.license-box-container li {
-	font-size: 1.2rem;
-	font-family: Paperlogy-4Regular;
-	margin-top: 0.5rem;
-	width: 50%;
-	word-break: keep-all;
-	line-height: 1.3;
-}
-.license-box-container .bul li {
-	padding-left: 1rem;
-	position: relative;
-}
-.license-box-container .bul li::before {
-	content: "";
-	display: block;
-	width: 10px;
-	height: 20px;
-	position: absolute;
-	left: 0;
-	top: 0.8rem;
-	transform: translateY(-50%);
-	background: url("contents/sub_24_bul.png") 0 0 no-repeat;
-	background-size: 100% 100%;
-}
-.license-box-container .bul li.no-bul::before {
-	display: none;
-}
-.license-box-container p {
-	margin-top: 2rem;
-	width: 40%;
-	font-weight: 300;
-}
-.license-box-container p.pdb-30 {
-	padding-bottom: 3rem;
-}
-.license-box-container p.pdt-30 {
-	padding-top: 3rem;
-}
-.license-box-container p b {
-	font-weight: 600;
-	display: block;
-}
-.license-box-container figure {
-	width: 55%;
-	position: absolute;
-	bottom: 0;
-	right: 0.5rem;
-}
-.small .license-box-container figure {
-	width: 40%;
-}
-.big .license-box-container figure {
-	width: 65%;
-}
-@media (max-width: 767px) {
-    .article-header-container-2 {
-        grid-template-columns: 1fr;
-    }
-    .article-header-text-2 h2 {
-    	word-break: keep-all;
-    }
-	.article-body {
-		padding: 10rem 1rem 0;
-	}
-	.license-box {
-		margin-bottom: 6rem;
-	}
-	.license-box-container h4 {
-		width: 100%;
-	}
-	.license-box-container figure.mobile-small {
-		width: 45%;
-	}
-	.license-box-container li {
-		width: 90%;
-	}
-	.license-box-container p {
-		width: 100%;
-	}
-	.license-box-container figure {
-		position: relative;
-		margin: 2rem auto 0;
-	}
-}
+		body {
+			background-color: var(--color-first);
+		}
 
+		.story-label {
+			color: var(--color-second);
+			border-color: var(--color-second);
+		}
 
+		.article-header-container-2 {
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+
+		.header-img-text {
+			width: 50%;
+			margin: 1rem 0;
+		}
+
+		.article-header-text-2 h2 {
+			margin-bottom: 1rem;
+		}
+
+		.article-header-container-2 p {
+			margin-bottom: 2rem;
+		}
+
+		.article-header-text-2 .article-meta {
+			color: var(--color-second);
+		}
+
+		.article-body {
+			max-width: 600px;
+			padding: 10rem 0 0;
+		}
+
+		.license-box {
+			background-color: #fff;
+			padding: 5rem 2rem 2rem;
+			position: relative;
+			border-radius: 1rem;
+			margin-bottom: 10rem;
+			box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		.license-box-clip {
+			width: 25%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%) translateY(-70%);
+		}
+
+		.license-box-container h4 {
+			width: 55%;
+			height: 2.4rem;
+			text-align: center;
+			font-size: 1.6rem;
+			font-weight: normal;
+			font-family: Paperlogy-7Bold;
+			color: #fff;
+			background-color: var(--color-fourth);
+			border-radius: 1.2rem;
+			margin-bottom: 2rem;
+		}
+
+		.license-box-container h4 span {
+			font-size: 1rem;
+			font-family: Paperlogy-4Regular;
+			margin-left: 0.5rem;
+		}
+
+		.license-box-container h5 {
+			font-size: 1.2rem;
+			text-decoration: underline;
+			text-decoration-thickness: 0.05rem;
+			text-underline-offset: 0.3rem;
+			margin: 1rem 0 0;
+		}
+
+		.license-box-container h6 {
+			font-size: 1.2rem;
+			font-family: Paperlogy-5Medium;
+			color: var(--color-fourth);
+			margin-top: 0.5rem;
+		}
+
+		.license-box-container li {
+			font-size: 1.2rem;
+			font-family: Paperlogy-4Regular;
+			margin-top: 0.5rem;
+			width: 50%;
+			word-break: keep-all;
+			line-height: 1.3;
+		}
+
+		.license-box-container .bul li {
+			padding-left: 1rem;
+			position: relative;
+		}
+
+		.license-box-container .bul li::before {
+			content: "";
+			display: block;
+			width: 10px;
+			height: 20px;
+			position: absolute;
+			left: 0;
+			top: 0.8rem;
+			transform: translateY(-50%);
+			background: url("contents/sub_24_bul.png") 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+
+		.license-box-container .bul li.no-bul::before {
+			display: none;
+		}
+
+		.license-box-container p {
+			margin-top: 2rem;
+			width: 40%;
+			font-weight: 300;
+		}
+
+		.license-box-container p.pdb-30 {
+			padding-bottom: 3rem;
+		}
+
+		.license-box-container p.pdt-30 {
+			padding-top: 3rem;
+		}
+
+		.license-box-container p b {
+			font-weight: 600;
+			display: block;
+		}
+
+		.license-box-container figure {
+			width: 55%;
+			position: absolute;
+			bottom: 0;
+			right: 0.5rem;
+		}
+
+		.small .license-box-container figure {
+			width: 40%;
+		}
+
+		.big .license-box-container figure {
+			width: 65%;
+		}
+
+		@media (max-width: 767px) {
+			.article-header-container-2 {
+				grid-template-columns: 1fr;
+			}
+
+			.article-header-text-2 h2 {
+				word-break: keep-all;
+			}
+
+			.article-body {
+				padding: 10rem 1rem 0;
+			}
+
+			.license-box {
+				margin-bottom: 6rem;
+			}
+
+			.license-box-container h4 {
+				width: 100%;
+			}
+
+			.license-box-container figure.mobile-small {
+				width: 45%;
+			}
+
+			.license-box-container li {
+				width: 90%;
+			}
+
+			.license-box-container p {
+				width: 100%;
+			}
+
+			.license-box-container figure {
+				position: relative;
+				margin: 2rem auto 0;
+			}
+		}
 	</style>
 </head>
+
 <body>
 	<header id="menu"></header>
 	<main>
@@ -194,10 +232,14 @@ body {
 							<img src="contents/sub_24_top_text.png">
 						</figure>
 						<h2>
-							환경 보호 자격증 총정리
+							전도유망 자격증 5선
 						</h2>
 						<p>
-							기후변화와 환경 위기가 일상이 된 지금, 정부, 기업, 산업 전반에서 지속가능성을 핵심 가치로 삼으며, 환경 전문 인력의 수요가 지속적으로 증가하고 있다. 수질, 대기, 토양, 소음 진동, 폐기물, 생태 복원 등 다양한 분야에서 환경 전문가로 성장할 수 있는 자격증의 종류는 무엇인지 직무내용과 진로를 함께 살펴보자.
+							생성형 AI와 자동화 기술이 빠르게 확산되면서, 일터에서는 두 가지 역량이 요구되고 있다.
+							하나는 디지털·데이터 기반으로 일할 수 있는 IT·분석 역량이고, 다른 하나는 기계가 대신하기 어려운 전문성이다. AI 시대, ‘AI를 잘 쓰는 사람’과 ‘AI로도
+							쉽게 대체되지 않는 사람’이 되기 위해 어떤 자격증이 있는지,
+							각 자격의 직무내용과 함께 살펴보자.
+						</p>
 						<div class="article-meta">
 							<span>글</span>
 							<span class="pipe">ㅣ</span>
@@ -223,20 +265,21 @@ body {
 						</figure>
 						<div class="license-box-container">
 							<h4>
-								수질환경기사
+								정보처리기사
 							</h4>
 							<div class="license-box-info">
 								<h6>
-									진로:
+									자격증 핵심 역량 :
 								</h6>
 								<ul class="bul">
-									<li>한국환경공단, 한국수자원공사 등 유관기관</li>
-									<li>오·폐수 배출업체 및 전문 폐수처리업체</li>
+									<li>디지털·AI 시대 학습을 위한 기초 IT·컴퓨팅 소양 확보</li>
+									<li>프로그래밍·데이터베이스·운영체제 등 정보기술 전반 기본 개념 습득</li>
+									<li>비전공자의 IT·데이터 직무 진입을 위한 자격증</li>
 								</ul>
 							</div>
 							<p>
 								<b>직무내용:</b>
-								수질 분야에 측정망을 설치하고 지역의 수질오염 상태를 측정하여, 다각적인 연구와 실험 분석을 통해 수질오염에 대한 대책을 강구한다. 또한 오염물질 제거·감소를 위한 방지시설 설계·시공· 운영하는 업무를 수행하는 직무이다.
+								소프트웨어 개발 관련 광범위한 지식과 실무 역량을 바탕으로 정보시스템 생명주기 전반에 걸친 프로젝트 업무를 수행하는 직무이다.
 							</p>
 							<figure>
 								<img src="contents/sub_24_1.png">
@@ -249,22 +292,22 @@ body {
 						</figure>
 						<div class="license-box-container">
 							<h4>
-								대기환경기사
+								빅데이터분석기사
 							</h4>
 							<div class="license-box-info">
 								<h6>
-									진로:
+									자격증 핵심 역량 :
 								</h6>
 								<ul class="bul">
-									<li>한국환경공단</li>
-									<li>환경 관련 연구소 및 학계</li>
-									<li>환경플랜트회사 및 환경오염방지 설계·시공회사</li>
-									<li>환경시설 전문관리업체</li>
+									<li>통계·머신러닝 기반 데이터분석·예측 역량 검증</li>
+									<li>정형·비정형 데이터를 활용한 데이터 기반 의사결정 지원 능력 확보</li>
+									<li>AI·데이터 직무(데이터분석가·데이터 사이언티스트 등) 진입을 위한 실무 자격증</li>
 								</ul>
 							</div>
 							<p>
 								<b>직무내용:</b>
-								대기 분야에 측정망을 설치하고 지역의 대기오염 상태를 측정하여, 다각적인 연구와 실험 분석을 통해 대기오염에 대한 대책을 강구한다. 또한 대기오염물질을 제거하거나 감소시키기 위한 방지시설을 설계·시공· 운영하는 업무를 수행하는 직무이다.
+								대용량의 데이터 집합으로부터 유용한 정보를 찾고 결과를 예측하기 위해 목적에 따라 분석기술과 방법론을 기반으로 정형·비정형 대용량 데이터를 구축·탐색·분석하고
+								시각화를 수행하는 직무이다.
 							</p>
 							<figure>
 								<img src="contents/sub_24_2.png">
@@ -277,136 +320,24 @@ body {
 						</figure>
 						<div class="license-box-container">
 							<h4>
-								토양환경기사
+								정보관리기술사
 							</h4>
 							<div class="license-box-info">
 								<h6>
-									진로:
+									자격증 핵심 역량 :
 								</h6>
 								<ul class="bul">
-									<li>국립환경과학원, 한국환경정책·평가연구원 등 정부 산하 기관</li>
-									<li>토양 및 지하수 환경 대행업체</li>
-									<li>환경컨설팅기관</li>
-									<li>각종 교육기관</li>
+									<li>정보시스템·데이터 구조를 설계·통제하는 상위 아키텍처·거버넌스 역량 검증</li>
+									<li>AI·데이터 서비스가 안정적으로 작동하도록 정보전략, 보안·개인정보, 품질·리스크를 통합 관리하는 능력 확보</li>
 								</ul>
 							</div>
 							<p>
 								<b>직무내용:</b>
-								토양 및 지하수를 채취하여 시험·분석하고, 중금속 및 기름 등의 오염분포를 파악한다. 화학약품 처리나 열처리, 진공처리 등의 세척방법과미생물정화·동전기정화 등 다양한 정화공법을이용해 정화계획을 수립하며, 정화기술 및 시스템설계, 정화작업 감독, 예방대책 수립 등의 업무를 수행하는 직무이다.
+								정보관리에 관한 고도의 전문지식과 실무경험에 입각해 정보시스템을 계획, 연구, 설계, 분석, 시험, 운영, 시공, 감리, 평가, 진단, 사업관리, 기술판단,
+								기술중재 또는 이에 관한 기술자문과 기술지도 업무를 수행하는 직무이다.
 							</p>
 							<figure>
 								<img src="contents/sub_24_3.png">
-							</figure>
-						</div>
-					</div>
-					<div class="license-box big">
-						<figure class="license-box-clip">
-							<img src="contents/sub_24_clip.png">
-						</figure>
-						<div class="license-box-container">
-							<h4>
-								환경위해관리기사
-							</h4>
-							<div class="license-box-info">
-								<h6>
-									진로:
-								</h6>
-								<ul class="bul">
-									<li> 
-										중앙정부 및 지자체 부서 
-										<br> > 식품위생(식품위생팀,공중위생팀, 위생지도팀 등)
-										<br> > 환경(환경관리팀)
-									</li>
-								</ul>
-							</div>
-							<p class="pdb-30">
-								<b>직무내용:</b>
-								화학물질로 인한 일반환경 및 산업환경의 유해인자에 노출되어 발생할 수 있는 위해성을 예측하고, 관리의 우선순위를 결정한 후 위해성 저감 대책을 수립하고 관리하는 직무이다.
-							</p>
-							<figure>
-								<img src="contents/sub_24_4.png">
-							</figure>
-						</div>
-					</div>
-					<div class="license-box big">
-						<figure class="license-box-clip">
-							<img src="contents/sub_24_clip.png">
-						</figure>
-						<div class="license-box-container">
-							<h4>
-								자연환경관리기술사
-							</h4>
-							<div class="license-box-info">
-								<h6>
-									진로:
-								</h6>
-								<ul class="bul">
-									<li>국립환경과학원, 환경환경연구원 등 정부 산하 기관</li>
-									<li>토목 및 환경용역회사</li>
-									<li>환경영향평가 대행업체</li>
-									<li>환경컨설팅기관</li>
-									<li>각종 교육기관</li>
-								</ul>
-							</div>
-							<p>
-								<b>직무내용:</b>
-								자연생태계 및 관련 법규에 대한 전문지식을 바탕으로 생태계 평가 및 복원계획을 수립하고, 각종 사업의 타당성 조사와 기본계획·복원계획 수립및 각 단계별 생태변화의 검토서를 포함한 종합적 생태계 영향 평가의 총괄 및 조정 등을 수행하는 직무이다.
-							</p>
-							<figure>
-								<img src="contents/sub_24_5.png">
-							</figure>
-						</div>
-					</div>
-					<div class="license-box small">
-						<figure class="license-box-clip">
-							<img src="contents/sub_24_clip.png">
-						</figure>
-						<div class="license-box-container">
-							<h4>
-								소음진동기사
-							</h4>
-							<div class="license-box-info">
-								<h6>
-									진로:
-								</h6>
-								<ul class="bul">
-									<li>한국환경공단 등 유관기관</li>
-									<li>건축·기계 관련 업체</li>
-									<li>소음·진동 방지 설계 및 시공업체 </li>
-								</ul>
-							</div>
-							<p>
-								<b>직무내용:</b>
-								공장, 공사장, 항공기, 철도, 사업장 등에서 소음· 진동 상태를 측정·분석하고, 연구와 실험을 통해저감 대책을 마련한다. 또한 분석한 소음진동원인을 제거 또는 감소시키기 위한 방지시설 설계· 시공·운영하는 업무를 수행하는 직무이다.
-							</p>
-							<figure>
-								<img src="contents/sub_24_6.png">
-							</figure>
-						</div>
-					</div>
-					<div class="license-box small">
-						<figure class="license-box-clip">
-							<img src="contents/sub_24_clip.png">
-						</figure>
-						<div class="license-box-container">
-							<h4>
-								폐기물처리기사
-							</h4>
-							<div class="license-box-info">
-								<h6>
-									진로:
-								</h6>
-								<ul class="bul">
-									<li>한국환경공단 등 유관기관</li>
-									<li>폐기물처리업체</li>
-								</ul>
-							</div>
-							<p class="pdb-30 pdt-30">
-								<b>직무내용:</b>
-								생활 및 산업활동에서 발생하는 폐기물을 기계적 분리, 건조, 파쇄, 압축, 소각, 퇴비화 등의 방법으로 감량화·무해화·안전화하여 취급이 용이하도록 처리하는 업무를 담당하는 직무이다.
-							</p>
-							<figure class="mobile-small">
-								<img src="contents/sub_24_7.png">
 							</figure>
 						</div>
 					</div>
@@ -416,26 +347,51 @@ body {
 						</figure>
 						<div class="license-box-container">
 							<h4>
-								자연생태복원산업기사
+								임상심리사 1·2급
 							</h4>
 							<div class="license-box-info">
 								<h6>
-									진로:
+									자격증 핵심 역량 :
 								</h6>
 								<ul class="bul">
-									<li>토목건설 및 엔지니어링 업체</li>
-									<li>환경복원 전문업체</li>
-									<li>생태계 위해성 평가기관</li>
-									<li>전과정평가(LCA) 산업체</li>
-									<li>국·공립공원 관리기관 및 정부투자기관</li>
+									<li>과학적 심리평가·진단·치료 수행을 위한 정신건강 전문성 인증</li>
+									<li>AI로 대체하기 어려운 공감·관계 형성·임상적 판단 역량 검증</li>
+								</ul>
+							</div>
+							<p class="pdb-30">
+								<b>직무내용:</b>
+								국민의 심리적 건강과 적응을 위해 임상심리학적 지식을 활용하여 심리평가, 심리검사, 심리치료상담, 심리재활, 심리교육 및 심리자문 등의 업무를 수행하는
+								직무이다.
+							</p>
+							<figure>
+								<img src="contents/sub_24_4.png">
+							</figure>
+						</div>
+					</div>
+					<div class="license-box">
+						<figure class="license-box-clip">
+							<img src="contents/sub_24_clip.png">
+						</figure>
+						<div class="license-box-container">
+							<h4>
+								변리사
+							</h4>
+							<div class="license-box-info">
+								<h6>
+									자격증 핵심 역량 :
+								</h6>
+								<ul class="bul">
+									<li>특허·실용신안·상표·디자인 등 산업재산권 전반에 대한 법·기술 융합 전문성 확보</li>
+									<li>인간의 책임·판단이 핵심인, AI 대체하기 어려운 전문 서비스</li>
 								</ul>
 							</div>
 							<p>
 								<b>직무내용:</b>
-								생태공학기술과 환경계획·복원설계에 대한 지식을 바탕으로, 생태계의 현황을 조사하고 교란 요인을 예측· 분석하며, 훼손되었거나 훼손이 예상되는자연생태환경에 대한 조사·복원 시공 및 모니터링을 수행하는 직무이다.
+								변리사는 산업재산권에 관한 상담 및 권리 취득이나 분쟁해결에 관련된 제반업무를 수행하는 산업재산권에 관한 전문자격사로서, 산업재산권의 출원에서 등록까지의 모든
+								절차를 대리 수행하는 직무이다.
 							</p>
 							<figure>
-								<img src="contents/sub_24_8.png">
+								<img src="contents/sub_24_5.png">
 							</figure>
 						</div>
 					</div>
@@ -445,4 +401,5 @@ body {
 	</main>
 	<footer id="footer"></footer>
 </body>
+
 </html>
