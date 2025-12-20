@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>HDRK</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="HDRK - 한국산업인력공단">
 	<meta property="og:description" content="한국산업인력공단 웹매거진">
@@ -13,337 +14,346 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 	<style>
-:root {
-	--color-first: #fff;
-	--color-second: #5656CE;
-	--color-third: #000;
-	--color-fourth: #405883;
-	--color-fifth: #F0D2AE;
-	
-}
-body {
-	background-color: #D8DEE6;
-}
-.article-header-container {
-	margin-top: 2rem;
-}
-.article-header-text {
-	margin: 0 auto;
-	padding: 0;
-}
-.article-header-text h2 {
-	font-family: Paperlogy-7Bold;
-	margin-bottom: 0;
-	text-align: center;
-	font-size: 2.5rem;
-}
-.article-header-text h4 {
-	font-family: Paperlogy-5Medium;
-	font-size: 2rem;
-	color: var(--color-second);
-	text-align: center;
-	color: var(--color-third);
-}
-.article-header-text-in {
-	width: 65%;
-	margin: 1rem auto 3rem;
-}
-.article-header-text-in p {
-	font-size: 1.1rem;
-    margin-bottom: 2rem;
-    line-height: 1.76;
-    color: var(--color-third);
-}
-.article-header-text-in h5,
-.article-text h5 {
-	font-family: pretendard;
-	color: var(--color-third);
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: -0.01rem;
-    margin-bottom: 1rem;
-    text-align: left;
-}
-.article-header-text-in h6,
-.article-text h6 {
-	font-size: 1.2rem;
-	color: var(--color-second);
-	margin: 0;
-}
+		:root {
+			--color-first: #F6F8D0;
+			--color-second: #48C79D;
+			--color-third: #000;
+			--color-fourth: #D0DB46;
+			--color-fifth: #F0D2AE;
 
-.img-text {
-	margin: 3rem 0;
-	background-color: #ECEEF3;
-	border: 1px solid var(--color-fourth);
-	border-radius: 1rem;
-	padding: 2rem 2rem 1.5rem;
-	position: relative;
-}
-.img-text h6 {
-	margin: 0;
-	position: absolute;
-	width: fit-content;
-	padding: 0 3rem;
-	background-color: var(--color-fourth);
-	font-size: 1rem;
-	line-height: 2rem;
-	border-radius: 1rem;
-	color: #fff;
-	font-weight: 400;
-	left: 50%;
-	top: 0;
-	transform: translateX(-50%) translateY(-50%);
-}
-.img-text figure {
-	width: 70%;
-	margin: 1rem auto;
-}
-.img-text p {
-	text-align: center;
-	line-height: 1.3;
-	margin-bottom: 0;
-	color: var(--color-fourth);
-}
-.img-text ul {
-	display: flex;
-	flex-wrap: wrap;
-}
-.img-text li {
-	padding-left: 1rem;
-	position: relative;
-	width: 50%;
-}
-.img-text li::before {
-	content: "☑︎";
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-55%);
-}
-.img-text.wh {
-	background-color: #fff;
-	padding: 2rem 1rem;
-}
-.img-text.wh span {
-	font-weight: 600;
-}
-.img-text.wh p {
-	font-size: 0.9rem;
-	line-height: 1.5;
-	color: #000;
-	padding-bottom: 0;
-}
-.img-text-in {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	text-align: center;
-}
-.img-text-in > div {
-	border-right: 0.01rem solid var(--color-fourth);
-	padding: 0 1.5rem;
-}
-.img-text-in > div:last-child {
-	border: none;
-}
+		}
 
-.article-image .image-dual {
-	grid-template-columns: 2.5fr 1fr;
-	gap: 0.5rem;
-}
-.table-normal,
-.table-normal th, .table-normal td {
-	border-color: #3C5983;
-}
-.table-normal {
-	border-top-width: 3px;
-	margin-top: 4rem;
-}
-.table-normal caption {
-	font-size: 1rem;
-	font-weight: 400;
-}
-.table-normal th, .table-normal td {
-	padding: 1rem 2rem;
-	font-size: 0.9rem;
-	line-height: 1.4;
-}
-.table-normal tr td:first-child {
-	text-align: center;
-}
-.table-normal dl {
-	display: flex;
-	gap: 0.5rem;
-}
-.table-normal dt {
-	width: fit-content;
-}
-.col-1 {
-	width: 20%;
-}
-.col-2 {
-	width: 80%;
-}
-@media (max-width:767px) {
-	.article-header-container {
-		margin-top: 2rem;
-	}
-	.article-header-text {
-		width: 100%;
-	}
-	.article-header-text h2 {
-		font-size: 1.6rem;
-		width: 100%;
-	}
-	.article-header-text h4 {
-		line-height: 1.3;
-		margin-bottom: 2rem;
-	}
-	
-	.article-header-text-in {
-		width: 90%;
-	}
-	.article-text {
-		padding: 0 2rem;
-	}
-	.article-image {
-        width: 90vw;
-    }
-    .article-header-grid {
-    	flex-direction: column;
-    }
-    .article-header-flow {
-    	flex-wrap: wrap;
-    	gap: 1rem;
-    }
-    .table-caption p {
-	    margin-left: 1rem;
-	}
-	.wh-image {
-		grid-template-columns: 1fr;
-	}
-	.img-text {
-		padding: 2.5rem 1rem 1.5rem;
-	}
-	.img-text h6 {
-		padding: 0;
-		width: 80%;
-		font-size: .9rem;
-		text-align: center;
-	}
-	.table-normal th, .table-normal td {
-		padding: .5rem .5rem;
-	}
-	.col-1 {
-		width: 22%;
-	}
-	.col-2 {
-		width: 78%;
-	}
-	.table-normal dl {
-		flex-direction: column;
-		gap: .2rem;
-	}
-	.img-text-in {
-		grid-template-columns: 1fr;
-	}
-	.img-text-in > div {
-		border-right: 0;
-		margin-bottom: 1rem;
-	}
-	.img-text figure {
-		width: 50%;
-	}
+		.article-header-container {
+			margin-top: 2rem;
+		}
 
-} 
+		.article-header-text {
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		.article-header-text h2 {
+			font-family: Paperlogy-7Bold;
+			margin-bottom: 0;
+			text-align: center;
+			font-size: 2.5rem;
+		}
+
+		.article-header-text h4 {
+			font-family: Paperlogy-5Medium;
+			font-size: 2rem;
+			color: var(--color-second);
+			text-align: center;
+			color: var(--color-third);
+		}
+
+		.article-body {
+			max-width: 600px;
+		}
+
+		.article-header-text-in {
+			max-width: 600px;
+			margin: 1rem auto 3rem;
+		}
+
+		.article-header-text-in p {
+			font-size: 1.1rem;
+			margin-bottom: 2rem;
+			line-height: 1.76;
+			color: var(--color-third);
+		}
+
+		.article-header-text-in h5,
+		.article-text h5 {
+			font-family: pretendard;
+			color: var(--color-third);
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 1.3;
+			letter-spacing: -0.01rem;
+			margin-bottom: 1rem;
+			text-align: left;
+		}
+
+		.article-header-text-in h6,
+		.article-text h6 {
+			font-size: 1.2rem;
+			color: var(--color-second);
+			margin: 0;
+		}
+
+		.img-text {
+			margin: 3rem 0;
+			background-color: #fff;
+			border: 1px solid var(--color-fourth);
+			border-radius: 1rem;
+			padding: 2rem 1rem 1.5rem;
+			position: relative;
+		}
+
+		.img-text h6 {
+			margin: 0;
+			position: absolute;
+			width: fit-content;
+			padding: 0 2rem;
+			background-color: var(--color-fourth);
+			font-size: .8rem;
+			line-height: 2rem;
+			border-radius: 1rem;
+			color: #000;
+			font-weight: 700;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%) translateY(-50%);
+		}
+
+		.img-text figure {
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		.img-text p {
+			display: flex;
+			align-items: flex-end;
+			/* 바닥 라인 맞춤 */
+			justify-content: center;
+			/* 가운대 정렬 유지 */
+			gap: 4px;
+			/* 숫자와 단위 사이 간격 */
+			line-height: normal;
+			/* 큰 글자로 인한 높이 왜곡 방지 */
+			font-size: 1.2rem;
+		}
+
+		.img-text.wh p {
+			margin-top: 1rem;
+		}
+
+		.img-text p.small {
+			font-size: 1.1rem;
+			margin: .5rem 2rem 0;
+			text-align: center;
+			line-height: 1.4;
+		}
+
+		.img-text p em {
+			font-size: 2.5rem;
+			line-height: 1;
+			font-style: normal;
+			font-weight: 600;
+		}
+
+		.img-text-in {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			text-align: center;
+		}
+
+		.img-text-in>div {
+			border-right: 0.01rem solid var(--color-fourth);
+			padding: 0 1.5rem;
+		}
+
+		.img-text-in>div:last-child {
+			border: none;
+		}
+
+		.article-image .image-dual {
+			grid-template-columns: 2.5fr 1fr;
+			gap: 0.5rem;
+		}
+
+		.table-normal,
+		.table-normal th,
+		.table-normal td {
+			border-color: var(--color-fourth);
+		}
+
+		.table-normal {
+			border-top-width: 3px;
+			margin-top: 4rem;
+			margin-bottom: 2rem;
+		}
+
+		.table-normal caption {
+			font-size: 1rem;
+			font-weight: 400;
+		}
+
+		.table-normal th,
+		.table-normal td {
+			padding: 1rem 2rem;
+			font-size: 0.9rem;
+			line-height: 1.4;
+		}
+
+		.table-normal tr td:first-child {
+			text-align: center;
+		}
+
+		.table-normal dl {
+			display: flex;
+			gap: 0.5rem;
+		}
+
+		.table-normal dt {
+			width: fit-content;
+		}
+
+		.col-1 {
+			width: 20%;
+		}
+
+		.col-2 {
+			width: 80%;
+		}
+
+		@media (max-width:767px) {
+			.article-header-container {
+				margin-top: 2rem;
+			}
+
+			.article-header-text {
+				width: 100%;
+			}
+
+			.article-header-text h2 {
+				font-size: 1.6rem;
+				width: 100%;
+			}
+
+			.article-header-text h4 {
+				line-height: 1.3;
+				margin-bottom: 2rem;
+			}
+
+			.article-header-text-in {
+				width: 90%;
+			}
+
+			.article-text {
+				padding: 0 2rem;
+			}
+
+			.article-image {
+				width: 90vw;
+			}
+
+			.article-header-grid {
+				flex-direction: column;
+			}
+
+			.article-header-flow {
+				flex-wrap: wrap;
+				gap: 1rem;
+			}
+
+			.table-caption p {
+				margin-left: 1rem;
+			}
+
+			.wh-image {
+				grid-template-columns: 1fr;
+			}
+
+			.img-text {
+				padding: 2.5rem 1rem 1.5rem;
+			}
+
+			.img-text h6 {
+				padding: 0;
+				width: 80%;
+				font-size: .9rem;
+				text-align: center;
+			}
+
+			.table-normal th,
+			.table-normal td {
+				padding: .5rem .5rem;
+			}
+
+			.col-1 {
+				width: 22%;
+			}
+
+			.col-2 {
+				width: 78%;
+			}
+
+			.table-normal dl {
+				flex-direction: column;
+				gap: .2rem;
+			}
+
+			.img-text-in {
+				grid-template-columns: 1fr;
+			}
+
+			.img-text-in>div {
+				border-right: 0;
+				margin-bottom: 1rem;
+			}
+
+			.img-text figure {
+				width: 50%;
+			}
+
+		}
 	</style>
 
 
 </head>
+
 <body>
 	<header id="menu"></header>
 	<main>
 		<section class="article-header">
 			<div class="article-header-wrap wrap">
-				<div class="article-header-container grid gap-30" >
+				<div class="article-header-container grid gap-30">
 					<div class="article-header-text flex flex-direction-column flex-justify-center">
 						<span>HRDK 포커스온</span>
-						<h2 class="paperlogy">타지키스탄 외국인 근로자 최초 입국, </h2>
-						<h4>
+						<h2 class="paperlogy">한국산업인력공단<br>디지털 원격훈련 아카이브 발표회 개최</h2>
+						<!-- <h4>
 							직접 지은 한글 이름으로 힘찬 첫 출발!
-						</h4>
+						</h4> -->
 					</div>
 					<div class="article-header-text-in">
 						<p>
-							한국산업인력공단은 지난 22일 타지키스탄 고용허가제(EPS*) 외국인 근로자의 첫 번째 입국을 환영하며, 인천국제공항에서 ‘한글 이름표 달아주기’ 행사를 개최했다. 외국인 근로자(E-9*)들은 입국 직후 인천국제공항에서 한글 이름표를 받게 되며, 이는 한국 사회의 일원으로 존중받으며 안정적으로 정착할 수 있는 첫걸음을 상징한다. 
+							한국산업인력공단은 지난 12일 서울 글래드 여의도에서 ‘2025년 디지털 원격훈련 아카이브 우수사례 발표회’를 개최했다. ‘디지털 원격훈련 아카이브 사업’은 근로자가
+							원격훈련 수강 플랫폼(=아카이브)을 통해 고품질의 다양한 훈련 콘텐츠를 자유롭게 선택해 학습할 수 있는 구독형 기업훈련 제도다.
 						</p>
-					    <h5>
-					    	*EPS : Employment Permit System의 약자로, 중소기업에 17개국 외국인 근로자를 도입하여 인력난 해소를 지원함, E-9(비전문취업) 비자
-					    </h5>
-
 						<div class="img-text">
 							<h6>
-								고용허가제(E-9비자) 송출국:
+								디지털 원격훈련 아카이브 훈련 기업·인원 수
 							</h6>
-							<p>
-								필리핀, 베트남, 태국, 인도네시아, 스리랑카, 몽골, 우즈베키스탄, 파키스탄, 캄보디아, 중국, 방글라데시, 키르기스스탄, 네팔, 미얀마, 동티모르, 라오스, 타지키스탄 
-							</p>
+							<div class="img-text-in">
+								<div>
+									<figure>
+										<img src="contents/sub_41_1.png">
+									</figure>
+									<p>약 7천여 개 기업</p>
+								</div>
+								<div>
+									<figure>
+										<img src="contents/sub_41_2.png">
+									</figure>
+									<p>약 <em>17</em> 만명</p>
+								</div>
+							</div>
 						</div>
 						<p>
-							한편, 입국한 근로자 3명은 2024년 10월 정부 간 양해각서(MOU) 체결을 통해 타지키스탄이 17번째 송출국가로 지정된 이후 최초 입국자라는 점에서 양국의 경제 교류 증진 및 관계 발전의 의미가 있다. 현재까지 공단은 외국인력 선발포인트제** 등을 통해 67명의 근로자를 선발했으며, 향후 더 많은 근로자가 입국할 것으로 기대된다.
+							지난 9월 디지털 원격훈련 아카이브 운영기관 20개소에서 제출한 31개의 사례 중에서는 심사를 거쳐 6개의 우수사례가 선정됐다. 일반 콘텐츠 부문은 △주식회사
+							데이원컴퍼니 △주식회사 엘캠퍼스 △㈜휴넷이 선정됐으며, AI 콘텐츠 부문은 △한국생산성본부 △주식회사 데이원컴퍼니 △주식회사 엘캠퍼스가 선정됐다. 우수사례 선정
+							4개소는 공단 이사장상과 순위에 따른 상금이 수여됐다.
 						</p>
-					    <h5>
-					    	** 외국인력 선발포인트제 : 외국인력 선발을 위한 구직자명부를 작성하기 위해 한국어능력, 기능수준, 직무능력을 점수화하여 종합적으로 평가하는 시스템 
-					    </h5>
-					    <table class="table-normal">
-							<caption>
-								|외국인력 선발포인트제 2025년 기능시험 주요사항| 
-							</caption>
-							<colgroup>
-						        <col class="col-1">
-						        <col class="col-2">
-						    </colgroup>
-							<tbody>
-								<tr>
-								    <td>
-								    	기초기능
-								    </td>
-								    <td>
-								    	실제 사업장에서 수행하는 업무 기반으로 업종별 특화과제 신설<br>
-								    	평가과제: 공통과제(핀 꽂기) + 업종별 특화과제
-								    </td>
-								</tr>
-								<tr>
-								    <td>
-								    	한국어면접
-								    </td>
-								    <td>
-								    	업종별 특화 질문 및 산업안전 관련 평가항목 신설
-								    	<dl class="table-in">
-								    		<dt>평가과제:</dt>
-								    		<dd>❶ 자기소개 및 태도 ❷ 기초대화 및 행동지시 ❸ 작업도구 및 지시 수행능력 <br>❹ NCS 직업기초능력 ❺ 안전 인식</dd>
-								    	</dl>
-								    </td>
-								</tr>
-								<tr>
-								    <td>
-								    	체력평가
-								    </td>
-								    <td>
-								    	활동 기반의 체력검증을 위한 평가과제 신설<br>
-								    	평가과제: 악력·배근력 + 심폐지구력(버피테스트, 장비 옮기기, 핸드카트밀기) 
-								    </td>
-								</tr>
-								<tr>
-								    <td>
-								    	직무능력평가
-								    </td>
-								    <td>
-								    	기능시험 응시 업종과 관련된 경력, 자격, 훈련 등에 대한 가점 인정 
-								    </td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="img-text">
+							<h6>
+								디지털 원격훈련 아카이브란
+							</h6>
+							<p class="small">
+								훈련기관이 기업에 고품질로 구성된 원격훈련과정 아카이브를 제공하여 훈련생이 다양한 콘텐츠를 자유롭게 활용할 수 있도록 지원하는 훈련사업
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -352,49 +362,71 @@ body {
 			<div class="article-body">
 				<article>
 					<div class="article-text">
+
+						<table class="table-normal">
+							<caption>
+								|디지털 원격훈련 아카이브 효능|
+							</caption>
+							<tbody>
+								<tr>
+									<td>
+										다양한 훈련과정을 하나의 아카이브에서 이용 가능
+									</td>
+								</tr>
+								<tr>
+									<td>
+										큐레이션 서비스를 통해 기업, 훈련생이 필요한 과정을 손쉽게 선택 가능
+									</td>
+								</tr>
+								<tr>
+									<td>
+										숏폼, 마이크로러닝 등 트렌디한 콘텐츠를 적시 활용 가능
+									</td>
+								</tr>
+								<tr>
+									<td>
+										개인별로 필요한 부분만 택하여 원하는 만큼, 무제한으로 시청 가능
+									</td>
+								</tr>
+								<tr>
+									<td>
+										훈련 결과보고서를 통해 교육 전후 훈련생의 역량향상도를 확인 가능
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							일반 콘텐츠 부문 1위’ 주식회사 데이원컴퍼니는 글로벌 게임사 해긴의 제작 효율 문제 해결을 위해 구성원 대상 사전 인터뷰, FGI 등을 통해 기업 니즈를 포착하고,
+							핵심 툴을 중심으로 콘텐츠를 개발했다. 이를 통해 작업 속도를 단축, 수정 회차 감소 등의 성과를 달성해 높은 평가를 받았다.
+						</p>
 						<div class="img-text wh">
 							<h6>
-								인정되지 않는 경력·자격·훈련
+								데이원컴퍼니 디지털원격훈련 아카이브 효능
 							</h6>
 							<div class="img-text-in">
 								<div>
 									<figure>
-										<img src="contents/sub_41_1.png">
-									</figure>
-									<span>경력</span>
-									<p>응시자가 업종별 산업 활동에 관련된 업체에서 근무했음에도 단순 판매, 경영지원 교육, 공무원 및 공공기관 종사자 등 단순 경력은 직무능력으로 인정하지 않음</p>
-								</div>
-								<div>
-									<figure>
-										<img src="contents/sub_41_2.png">
-									</figure>
-									<span>자격</span>
-									<p>업종별 직무내용과 무관한 자격(면허)는 인정하지 않음</p>
-								</div>
-								<div>
-									<figure>
 										<img src="contents/sub_41_3.png">
 									</figure>
-									<span>훈련</span>
-									<p>훈련 개설 목적이 직무 내용과 무관한 훈련과정은 인정하지 않음 </p>
+									<p>
+										작업속도 <em>50%</em> 단축
+									</p>
 								</div>
-							</div>
-						</div>
-					    <p>
-					    	입국 현장에서는 주한 타지키스탄 키롬 살로히딘 대사도 직접 참석하여 환영의 뜻을 전했다. 대사는 “타지키스탄 근로자들이 고용허가제를 통해 처음으로 대한민국에 오게 된 것을 매우 기쁘게 생각하고, 이들이 한국 노동시장에 크게 기여할 것이라 믿는다”며, “이는 양국 간 우호와 국민 간 유대 강화에도 도움이될 것이라 확신한다”고 말했다.
-					    </p>
-					    <div class="article-image">
-					    	<div class="article-image-container image-dual">
-					    		<figure>
-									<img src="contents/sub_41_1.jpg">
-								</figure>
-								<figure>
-									<img src="contents/sub_41_2.jpg">
-								</figure>
+								<div>
+									<figure>
+										<img src="contents/sub_41_4.png">
+									</figure>
+									<p>
+										수정회차 <em>35%</em> 단축
+									</p>
+								</div>
 							</div>
 						</div>
 						<p>
-							공단은 10월 22일 타지키스탄 입국 근로자를 시작으로, 17개 송출 국가의 E-9 신규 입국 근로자 전원에게 한글 이름표를 제공할 예정이다. 이우영 이사장은 “타지키스탄 외국인 근로자의 첫 번째 입국을 진심으로 환영한다”라며, “공단은 외국인 근로자의 인권 보호와 상호존중 문화 조성을 위해 최선을 다하겠다” 고 말했다. 
+							‘AI 콘텐츠 부문 1위’ 한국생산성본부는 KAIST 협업 실시간 특강, 생성형 AI·영상제작·프롬프트엔지니어링 등 프로젝트 기반 실습형 이러닝 과정을 개발해
+							산업특화 AI 과정을 제공했다. 이를 통해 기업의 솔루션 개발·업무 최적화, 글로벌 경쟁력 확보로 이어지는 지속 가능한 기업 혁신을 이어간 사례로 높은 평가를
+							받았다.
+							이우영 이사장은 “앞으로도 공단은 「전국민 평생직업능력개발 상식의 시대」를 위해 노력하겠다”고 말했다
 						</p>
 
 					</div>
@@ -404,4 +436,5 @@ body {
 	</main>
 	<footer id="footer"></footer>
 </body>
+
 </html>
