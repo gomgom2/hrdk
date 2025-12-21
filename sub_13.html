@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>HDRK</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="HDRK - 한국산업인력공단">
 	<meta property="og:description" content="한국산업인력공단 웹매거진">
@@ -13,238 +14,334 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 	<style>
+		:root {
+			--color-first: #fff;
+			/* 헤더 배경 */
+			--color-second: #D0DB46;
+			/* h2 색상 */
+			--color-third: #000000;
+			/* h3, h4 색상 */
+			--color-fourth: #E6E6E8;
+			/* 질문 배경 */
+			--color-fifth: #000;
+			/* 질문 색상 */
+		}
 
-:root {
-	--color-first: #fff; 	/* 헤더 배경 */
-	--color-second: #375885; 	/* h2 색상 */
-	--color-third: #000000;		/* h3, h4 색상 */
-	--color-fourth: #E6E6E8; 	/* 질문 배경 */
-	--color-fifth: #000; 		/* 질문 색상 */
-}
-.article-header-container-2 {
-	grid-template-columns: 1fr 1fr;
-	gap: 0;
-	padding-top: 3rem;
-}
-.article-header-text-2 h4 {
-	font-family: Paperlogy-2ExtraLight;
-	color: var(--color-second);
-}
-.article-header-text-2 h3 {
-	font-family: Paperlogy-5Medium;
-	font-size: 2.8rem;
-	margin: 0;
-    border-top: 0.05rem solid var(--color-third);
-}
-.article-header-text-2 h2 {
-	font-size: 5rem;
-    font-family: Black Han Sans;
-    margin-bottom: 0;
-}
-.use-box h4::before {
-	color: var(--color-second);
-}
-.use-text-box {
-	margin: 0 0 0 15%;
-}
-.use-text-box h5 {
-	width: 14vw;
-	text-align: center;
-	background-color: #9FAAC1;
-	color: #000;
-	font-size: 1rem;
-	font-family: Pretendard;
-	padding: 0.3rem 0;
-	font-weight: 500;
-	margin: 2.5rem 0 0.5rem;
-}
-.use-text-box h6 {
-	font-size: 1rem;
-	font-family: Pretendard;
-	padding: 0;
-	font-weight: 300;
-	margin: 1.5rem 0 1rem;
-	width: auto;
-}
-.use-text-box p {
-	font-size: 1rem;
-	padding: 0 0 0 1rem;
-	margin: 0;
-	font-weight: 600;
-}
-.use-text-box ul {
-	padding-left: 1rem;
-}
-.use-text-box ul li {
-	position: relative;
-	padding-left: 0.8rem;
-	margin-top: 0.5rem;
-}
-.use-text-box ul li::before {
-	content: "•";
-	position: absolute;
-	left: 0;
-	top: 0;
-	font-size: 1rem;
-	line-height: 1.3;
-}
-.table-use-box {
-	margin-top: 0;
-}
-.table-use-box tr td {
-	border-color: var(--color-second);
-}
-.table-use-box tr th {
-	background-color: var(--color-second);
-}
-.table-use-box tbody tr td:first-child {
-	text-align: left;
-}
-.table-use-box tr.header td {
-	background-color: var(--color-second);
-	border-left-color: #fff;
-	border-right-color: #fff;
-	color: #fff;
-	text-align: center;
-}
-.table-use-box tbody tr.header td:nth-last-child(1) {
-	border-right-color: var(--color-second);
-}
-.table-use-box tbody tr.header td:nth-child(1) {
-	border-left-color: var(--color-second);
-	text-align: center;
-}
-.table-first-center thead tr th:nth-child(1) {
-	border-left-color: var(--color-second);
-}
-.table-first-center tbody tr td:nth-child(1) {
-	text-align: center;
-}
-.table-first-center thead tr th:nth-last-child(1) {
-	border-right-color: var(--color-second);
-}
-.table-first-center {
-	margin-top: 2rem;
-}
-.col-1 { width: 15%; }
-.col-2 { width: 20%; }
-.col-3 { width: 15%; }
-.col-4 { width: 20%; }
-.col-5 { width: 30%; }
+		.article-header-container-2 {
+			grid-template-columns: 1fr 1fr;
+			gap: 0;
+			padding-top: 3rem;
+		}
 
-.use-box-image figure {
-	width: 70%;
-	transform: translateX(10%);
-}
-p.desc {
-	padding-left: 0;
-	font-weight: 400;
-	font-size: 0.9rem;
-	line-height: 1.3;
-	margin-top: 0.5rem;
-}
-.use-text-box p.no-pad {
-	padding-left: 0;
-	font-weight: 500;
-}
-.rect-box {
-	width: 80%;
-	margin: 0 auto;
-}
-.rect-box div {
-	padding: 0.5rem 1rem;
-	border: 0.01rem dashed var(--color-second);
-	border-radius: 1rem;
-	text-align: center;
-}
-.rect-box div figure img {
-	height: 1.5rem;
-	width: auto;
-	margin: 0 auto 0.5rem;
-}
-.rect-box div p {
-	padding: 0;
-	font-size: 0.9rem;
-	font-weight: 300;
-	line-height: 1.2;
-	word-break: keep-all;
-}
-.rect-box.dual {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
-	margin-top: 3rem;
-	margin-bottom: 0.5rem;
-}
-.rect-box.flex {
-	margin-top: 0.5rem;
-}
-@media (max-width: 767px) {
-    .article-header-container-2 {
-        grid-template-columns: 1fr;
-        padding-top: 0;
-    }
-    .article-header-text-2 {
-    	padding-top: .5rem;
-    }
-    .article-header-text-2 h4 {
-    	margin-top: 1rem;
-    	font-size: 1.2rem;
-    }
-    .article-header-text-2 h3 {
-    	font-size: 2rem;
-    }
-    .article-text {
-    	margin-top: 3rem;
-    }
-    .use-box-image figure {
-    	transform: translateX(30%);
-    }
-    .use-text-box {
-    	margin: 0 1rem 0 0;
-    }
-    .use-text-box h5 {
-    	width: 50%;
-    	margin-left: .8rem;
-    }
-    .use-text-box p {
-    	padding-left: .8rem;
-    	line-height: 1.4;
-    }
-    .use-text-box ul {
-    	padding-left: 1rem;
-    }
-    .use-desc {
-    	margin-left: 1rem;
-    }
-    .use-box h4 {
-        padding: 1rem;
-        font-size: 1.2rem;
-    }
-    .use-box h6 {
-    	font-size: 3em;
-    	margin: 0.8rem 0 0 0.5rem;
-    }
-    .use-text-box.with-table {
-    	/*margin-right: 0;*/
-    }
-    .use-text-box.with-table h6 {
-    	font-size: 1rem;
-    	margin-left: .8rem;
-    	margin-top: 1rem;
-    	margin-bottom: .5rem;
-    }
-    .use-text-box.with-table table {
-    	margin-left: .8rem;
-    	width: auto;
-    }
-    .use-text-box p.no-pad {
-    	padding-left: .8rem;
-    }
-}
+		.article-header-text-2 h4 {
+			font-family: Paperlogy-2ExtraLight;
+			color: var(--color-second);
+		}
 
+		.article-header-text-2 h3 {
+			font-family: Paperlogy-5Medium;
+			font-size: 2.8rem;
+			margin: 0;
+			border-top: 0.05rem solid var(--color-third);
+		}
+
+		.article-header-text-2 h2 {
+			font-size: 5rem;
+			font-family: Black Han Sans;
+			margin-bottom: 0;
+		}
+
+		.use-box h4::before {
+			color: var(--color-second);
+		}
+
+		.use-text-box {
+			margin: 0 0 0 15%;
+		}
+
+		.use-text-box h5 {
+			width: 14vw;
+			text-align: center;
+			background-color: var(--color-second);
+			color: #000;
+			font-size: 1rem;
+			font-family: Pretendard;
+			padding: 0.3rem 0;
+			font-weight: 500;
+			margin: 2.5rem 0 0.5rem;
+		}
+
+		.use-text-box h6 {
+			font-size: 1rem;
+			font-family: Pretendard;
+			padding: 0;
+			font-weight: 300;
+			margin: 1.5rem 0 1rem;
+			width: auto;
+		}
+
+		.use-text-box p {
+			font-size: 1rem;
+			padding: 0 0 0 1rem;
+			margin: 0;
+			font-weight: 600;
+		}
+
+		.use-text-box ul {
+			padding-left: 1rem;
+		}
+
+		.use-text-box ul li {
+			position: relative;
+			padding-left: 0.8rem;
+			margin-top: 0.5rem;
+		}
+
+		.use-text-box ul li::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 1rem;
+			line-height: 1.3;
+		}
+
+		.table-use-box {
+			margin-top: 0;
+		}
+
+		.table-use-box tr td {
+			border-color: var(--color-second);
+		}
+
+		.table-use-box tr th {
+			background-color: var(--color-second);
+		}
+
+		.table-use-box tbody tr td:first-child {
+			text-align: left;
+		}
+
+		.table-use-box tr.header td {
+			background-color: var(--color-second);
+			border-left-color: #fff;
+			border-right-color: #fff;
+			color: #fff;
+			text-align: center;
+		}
+
+		.table-use-box tbody tr.header td:nth-last-child(1) {
+			border-right-color: var(--color-second);
+		}
+
+		.table-use-box tbody tr.header td:nth-child(1) {
+			border-left-color: var(--color-second);
+			text-align: center;
+		}
+
+		.table-first-center thead tr th:nth-child(1) {
+			border-left-color: var(--color-second);
+		}
+
+		.table-first-center tbody tr td:nth-child(1) {
+			text-align: center;
+		}
+
+		.table-first-center thead tr th:nth-last-child(1) {
+			border-right-color: var(--color-second);
+		}
+
+		.table-first-center {
+			margin-top: 2rem;
+		}
+
+		.col-1 {
+			width: 15%;
+		}
+
+		.col-2 {
+			width: 20%;
+		}
+
+		.col-3 {
+			width: 15%;
+		}
+
+		.col-4 {
+			width: 20%;
+		}
+
+		.col-5 {
+			width: 30%;
+		}
+
+		.use-box:first-child {
+			margin-top: -8rem;
+		}
+
+		.use-box-image figure {
+			width: 40%;
+			transform: translateX(150%);
+		}
+
+		p.desc {
+			padding-left: 0;
+			font-weight: 400;
+			font-size: 0.9rem;
+			line-height: 1.3;
+			margin-top: 0.5rem;
+		}
+
+		.use-text-box p.no-pad {
+			padding-left: 0;
+			font-weight: 500;
+		}
+
+		.rect-box {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.rect-box div {
+			padding: 0.5rem 1rem;
+			border: 0.01rem dashed var(--color-second);
+			border-radius: 1rem;
+			text-align: center;
+		}
+
+		.rect-box div figure img {
+			height: 1.5rem;
+			width: auto;
+			margin: 0 auto 0.5rem;
+		}
+
+		.rect-box div p {
+			padding: 0;
+			font-size: 0.9rem;
+			font-weight: 300;
+			line-height: 1.2;
+			word-break: keep-all;
+		}
+
+		.rect-box.dual {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+			margin-top: 3rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.rect-box.flex {
+			margin-top: 0.5rem;
+		}
+
+		.use-box-graphic {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			margin: 1rem 0 0 15%;
+			gap: 1px;
+			background-color: rgba(0, 0, 0, 0.3);
+			border: 1px solid rgba(0, 0, 0, 0.3);
+		}
+
+		.use-box-graphic li {
+			background-color: #fff;
+		}
+
+		.use-box-graphic li figure {
+			width: 50%;
+			margin: 1rem auto;
+		}
+
+		.use-box-graphic li figure figcaption {
+			font-size: .8rem;
+			line-height: 1.3;
+			text-align: center;
+			margin-top: .5rem
+		}
+
+		@media (max-width: 767px) {
+			.article-header-container-2 {
+				grid-template-columns: 1fr;
+				padding-top: 0;
+			}
+
+			.article-header-text-2 {
+				padding-top: .5rem;
+			}
+
+			.article-header-text-2 h4 {
+				margin-top: 1rem;
+				font-size: 1.2rem;
+			}
+
+			.article-header-text-2 h3 {
+				font-size: 2rem;
+			}
+
+			.article-text {
+				margin-top: 3rem;
+			}
+
+			.use-box-image figure {
+				transform: translateX(30%);
+			}
+
+			.use-text-box {
+				margin: 0 1rem 0 0;
+			}
+
+			.use-text-box h5 {
+				width: 50%;
+				margin-left: .8rem;
+			}
+
+			.use-text-box p {
+				padding-left: .8rem;
+				line-height: 1.4;
+			}
+
+			.use-text-box ul {
+				padding-left: 1rem;
+			}
+
+			.use-desc {
+				margin-left: 1rem;
+			}
+
+			.use-box h4 {
+				padding: 1rem;
+				font-size: 1.2rem;
+			}
+
+			.use-box h6 {
+				font-size: 3em;
+				margin: 0.8rem 0 0 0.5rem;
+			}
+
+			.use-text-box.with-table {
+				/*margin-right: 0;*/
+			}
+
+			.use-text-box.with-table h6 {
+				font-size: 1rem;
+				margin-left: .8rem;
+				margin-top: 1rem;
+				margin-bottom: .5rem;
+			}
+
+			.use-text-box.with-table table {
+				margin-left: .8rem;
+				width: auto;
+			}
+
+			.use-text-box p.no-pad {
+				padding-left: .8rem;
+			}
+		}
 	</style>
 </head>
+
 <body>
 	<header id="menu"></header>
 	<main>
@@ -254,10 +351,10 @@ p.desc {
 					<div class="article-header-text-2">
 						<span class="story-label">HRDK 사용법</span>
 						<h4>
-							우수 훈련 인프라를 나누는 상생 제도
+							능력 중심 채용의 기준
 						</h4>
 						<h3>
-							국가인적자원개발컨소시엄
+							국가직무능력표준(NCS)
 						</h3>
 						<h2>
 							A to Z
@@ -291,281 +388,272 @@ p.desc {
 							<div class="use-box-title">
 								<h6>01</h6>
 								<h4>
-									국가인적자원개발컨소시엄은 무엇인가요?
+									국가직무능력표준(NCS)는 무엇인가요?
 								</h4>
 							</div>
 							<p>
-								중소기업 재직근로자의 직업훈련 참여를 확대하고, 신성장동력·융복합 등 전략 산업 분야의 전문인력을 육성하며, 산업계 주도로 지역별 직업훈련 기반을 조성하기 위해 운영되는 제도입니다. 복수의 중소기업이 인적자원개발컨소시엄 협약을 맺어 공동훈련을 실시할 수 있도록, 정부가 훈련 인프라와 훈련비 등을 지원하는 대한민국 대표 직업능력개발훈련 제도입니다.
+								국가직무능력표준(NCS, National Competency Standards)은 산업 현장에서 직무를 수행하기 위해 요구되는 능력(지식, 기술, 태도)을
+								국가적 차원에서 표준화한 것으로 능력단위 또는 능력단위의 집합을 의미합니다.
 							</p>
 						</div>
 						<div class="use-box">
 							<div class="use-box-title">
 								<h6>02</h6>
 								<h4>
-									사업 훈련 유형은 어떻게 되나요?
+									직업기초능력과 직무수행능력은 무엇인가요?
 								</h4>
 							</div>
+							<p>
+								NCS기반 채용에서는 직업기초능력(필기시험)과 직무수행능력(전공시험)을 활용합니다.
+							</p>
 							<div class="use-text-box">
 								<h5>
-									산업맞춤형 공동훈련센터
+									직업기초능력
 								</h5>
 								<p>
-									협약기업의 훈련 수요를 조사하여 해당 산업 분야에 맞는 훈련 과정을 개발하고 운영합니다.
+									직업기초능력은 직종이나 직위에 상관없이 모든 직업인들에게 공통적으로 요구되는 기본적인 능력 및 자질을 의미합니다.
 								</p>
-								<ul>
-									<li>
-										대중소상생과정 : 해당 산업분야 협약기업 훈련 수요조사를 통해 개발한 훈련과정
-									</li>
-									<li>
-										정부전략과정 : 중앙부처 인력양성계획에 따라 협약기업 훈련수요를 통해 개발한 훈련과정
-									</li>
-									<li>
-										지역산업맞춤형과정(이하 “지산맞과정”이라 한다) : 지역인적자원개발위원회의 지역 훈련수요조사를 근거로 협약기업을 발굴하고 수요를 파악하여 개발한 훈련과정
-									</li>
-								</ul>
+								<table class="table-normal table-use-box table-first-center">
+									<thead>
+										<tr class="header">
+											<td>대영역</td>
+											<td>하위영역</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>의사소통능력</td>
+											<td>문서이해능력, 문서작성능력, 경청능력, 언어구사력, 기초외국어능력</td>
+										</tr>
+										<tr>
+											<td>수리능력</td>
+											<td>기초연산능력, 기초통계능력, 도표분석능력, 도표작성능력</td>
+										</tr>
+										<tr>
+											<td>문제해결능력</td>
+											<td>사고력, 문제처리능력</td>
+										</tr>
+										<tr>
+											<td>자기개발능력</td>
+											<td>자아인식능력, 자기관리능력, 경력개발능력</td>
+										</tr>
+										<tr>
+											<td>자원관리능력</td>
+											<td>시간자원관리능력, 예산관리능력, 물질자원관리능력, 인적자원관리능력</td>
+										</tr>
+										<tr>
+											<td>대인관계능력</td>
+											<td>팀웍능력, 리더십능력, 갈등관리능력, 협상능력, 고객서비스능력</td>
+										</tr>
+										<tr>
+											<td>정보능력</td>
+											<td>컴퓨터활용능력, 정보처리능력</td>
+										</tr>
+										<tr>
+											<td>조직이해능력</td>
+											<td>국제감각능력, 조직체제이해능력, 경영이해능력, 업무이해능력</td>
+										</tr>
+										<tr>
+											<td>직업윤리</td>
+											<td>근로윤리, 공동체윤리</td>
+										</tr>
+										<tr>
+											<td>기술능력</td>
+											<td>기술이해능력, 기술선택능력, 기술적용능력</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 							<div class="use-text-box">
 								<h5>
-									하이테크형 공동훈련센터
+									직무수행능력
 								</h5>
 								<p>
-									디지털, 첨단산업, 저탄소 등 신산업 변화에 대응하기 위한 훈련을 제공합니다.
+									직무수행능력이란 내가 지원하는 직무를 수행하기 위해 요구되는 지식·기술·태도를 체계화한 것입니다. 직무별로 직무수행능력 시험이 모두 다르며, 기존과
+									동일하게 객관식 또는 논술형식으로 나오고 해당 기업체의 직무 상황을 반영한 문제들이 추가됩니다.
 								</p>
-								<ul>
-									<li>
-										K-하이테크플랫폼 : 지역 내 다양한 훈련 수요자를 대상으로 첨단산업 맞춤형 훈련기회를 제공하고 디지털 인프라의 공유 개방을 지원하기 위한 직업능력개발훈련 종합 플랫폼
-									</li>
-									<li>
-										산업전환 공동훈련센터 : 산업변화에 대응하여 직무훈련 및 각종 지원 서비스를 제공하고, 기업의 사업전환 및 근로자의 직무전환을 선제적ㆍ종합적으로 지원하는 공동훈련센터
-									</li>
-								</ul>
 							</div>
 						</div>
 						<div class="use-box">
 							<div class="use-box-title">
 								<h6>03</h6>
 								<h4>
-									사업 훈련 유형은 어떻게 되나요?
+									국가직무능력표준(NCS)는 어떻게 구성되어 있나요?
 								</h4>
 							</div>
-							<div class="use-text-box with-table">
-								<h5>
-									공동훈련센터
-								</h5>
-								<h6>
-									[산업맞춤형 공동훈련센터]
-								</h6>
-								<table class="table-normal table-use-box table-all-left">
-								  <colgroup>
-								    <col class="col-1">
-								    <col class="col-2">
-								    <col class="col-3">
-								    <col class="col-4">
-								    <col class="col-5">
-								  </colgroup>
-
-								  <tbody>
-									  <tr class="header">
-									    <td colspan="2">지원항목</td>
-									    <td>지원비율</td>
-									    <td>연간지원한도액</td>
-									    <td>비고</td>
-									  </tr>
-									  <tr>
-									    <td rowspan="2">운영비</td>
-									    <td>전담자인건비</td>
-									    <td>80%</td>
-									    <td rowspan="2">4억 원</td>
-									    <td rowspan="3"></td>
-									  </tr>
-									  <tr>
-									    <td>일반운영비</td>
-									    <td>100%</td>
-									  </tr>
-									  <tr>
-									    <td colspan="2">훈련시설 및 장비</td>
-									    <td>80%</td>
-									    <td>15억 원</td>
-									  </tr>
-
-									  <tr>
-									    <td colspan="2">프로그램 개발비 등</td>
-									    <td>100%</td>
-									    <td>1억 원</td>
-									    <td>기업수요맞춤형 직무분석 별도</td>
-									  </tr>
-									</tbody>
-								</table>
-								<h6>
-									[하이테크형 공동훈련센터]
-								</h6>
-								<table class="table-normal table-use-box table-all-left">
-								  <colgroup>
-								    <col class="col-1">
-								    <col class="col-2">
-								    <col class="col-3">
-								    <col class="col-4">
-								    <col class="col-5">
-								  </colgroup>
-
-								  <tbody>
-								    <!-- HEADER : 첫 줄 4칸 (1~2칸 colspan) -->
-								    <tr class="header">
-								      <td colspan="2">지원항목</td>
-								      <td>지원비율</td>
-								      <td>연간지원한도액</td>
-								      <td>비고</td>
-								    </tr>
-
-								    <!-- 공동 (3줄 묶음 → rowspan=3) -->
-								    <tr>
-								      <td rowspan="3">공통</td>
-								      <td>전담자인건비</td>
-								      <!-- 지원비율: 아래 2줄 합쳐짐 -->
-								      <td rowspan="6">
-								        100%<br>
-								        (대응 투자 없음)
-								      </td>
-								      <td rowspan="6">
-								        1년차 10억 원<br>
-								        2~5년차 5억 원
-								      </td>
-								      <td rowspan="6"></td>
-								    </tr>
-
-								    <tr>
-								      <td>일반운영비</td>
-								    </tr>
-
-								    <tr>
-								      <td>훈련시설 및 장비</td>
-								    </tr>
-
-								    <!-- K-하이테크 플랫폼 -->
-								    <tr>
-								      <td>K-하이테크 플랫폼</td>
-								      <td>하이테크 확산 지원비</td>
-								    </tr>
-
-								    <!-- 산업전환공동 훈련센터 -->
-								    <tr>
-								      <td>산업전환공동 훈련센터</td>
-								      <td>산업전환 대응 지원비</td>
-								    </tr>
-								  </tbody>
-								</table>
-								<p class="desc">
-									* 원칙적으로 인건비, 시설비, 장비비 지원에 대응투자금이 없으나, 훈련목표 미달 등 성과가 저조한 경우 차년도 지원시 대응투자 비율 부여
-								</p>
-							</div>
-							<div class="use-text-box with-table">
-								<h5>
-									협약기업
-								</h5>
-								<h6>
-									[재직근로자 맞춤형 교육훈련 제공]
-								</h6>
-								<p class="no-pad">
-									대기업에 비해 상대적으로 어려운 중소기업 근로자들을 위하여 공동훈련센터에서 지속적으로 협약기업 근로자의 교육체계 관리서비스를 제공하고, 수요조사를 통하여 협약기업의 근로자가 원하는 맞춤형 교육훈련 및 핵심훈련을 지원
-								</p>
-								<h6>
-									[채용 예정자 훈련]
-								</h6>
-								<p class="no-pad">
-									MOU(memorandum of understanding) 협약업체(기업) 채용 예정자들을 대상으로, 해당분야에서 요구되는 실무지식 및 스킬교육을 제공하고, 협약기업에서 필요로 하는 맞춤형 인재양성육성 과정의 기회를 지원
-								</p>
-								<p class="desc">
-									* 특징 : 무료교육, 자격증취득, 훈련수당 (최대20만원) 취업연계 등
-								</p>
-							</div>
+							<p>
+								NCS는 총 24개 대분류, 80여 개 중분류, 270여 개 소분류, 1,000여 개의 세분류로 구성됩니다.
+							</p>
+							<ul class="use-box-graphic">
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_1.png">
+										<figcaption>사업관리</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_2.png">
+										<figcaption>경영·회계· 사무</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_3.png">
+										<figcaption>금융·보험</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_4.png">
+										<figcaption>교육·자연·사회과학</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_5.png">
+										<figcaption>법률·경찰·소방·교도·국방</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_6.png">
+										<figcaption>보건·의료</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_7.png">
+										<figcaption>사회복지·종교</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_8.png">
+										<figcaption>문화·예술·디자인·방송</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_9.png">
+										<figcaption>운전·운송</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_10.png">
+										<figcaption>영업판매</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_11.png">
+										<figcaption>경비·청소</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_12.png">
+										<figcaption>이용·숙박·여행·오락·스포츠</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_13.png">
+										<figcaption>음식서비스</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_14.png">
+										<figcaption>건설</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_15.png">
+										<figcaption>기계</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_16.png">
+										<figcaption>재료</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_17.png">
+										<figcaption>화학·바이오</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_18.png">
+										<figcaption>섬유·의복</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_19.png">
+										<figcaption>전기·전자</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_20.png">
+										<figcaption>정보통신</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_21.png">
+										<figcaption>식품가공</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_22.png">
+										<figcaption>인쇄·목재·가구·공예</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_23.png">
+										<figcaption>환경·에너지·안전</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="contents/sub_13_g_24.png">
+										<figcaption>농림어업</figcaption>
+									</figure>
+								</li>
+							</ul>
 						</div>
 						<div class="use-box">
 							<div class="use-box-title">
 								<h6>04</h6>
 								<h4>
-									사업 참여 가능 기관의 조건은 어떻게 되나요?
+									국가직무능력표준(NCS)의 목적은 무엇인가요?
 								</h4>
 							</div>
-							<div class="use-text-box with-table">
-								<table class="table-normal table-use-box table-first-center">
-								  	<colgroup>
-									    <col style="width: 30%;">
-									    <col style="width: 70%">
-								  	</colgroup>
-								  	<thead>
-								  	  <tr>
-								  	  	<th>구분</th>
-								  	  	<th>정의</th>
-								  	  </tr>
-								  	</thead>
-								  	<tbody>
-									  <tr>
-									    <td>기업</td>
-									    <td>
-									    	｢고용보험법｣ 제8조 및 ｢고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률｣ 제5조에 따라 고용보험에 가입된 기업→ 대기업 또는 중소기업이 공동훈련센터인 경우
-									    </td>
-									  </tr>
-									  <tr>
-									    <td>사업주단체 또는 그 연합체</td>
-									    <td>
-									    	회원사가 동일 산업 또는 업종의 기업인 단체로 동 회원사를 위한 지원 사업을 주된 목적으로 하는 협회 또는 조합 등의 단체
-									    </td>
-									  </tr>
-									  <tr>
-									    <td>학교 또는 대학형태의<br>평생교육시설 및 기능대학</td>
-									    <td>
-									    	｢고등교육법｣ 제4조 및 ｢평생교육법｣ 제31조부터 제33조까지의 규정에 따른 대학형태의 평생교육시설 및 ｢근로자직업능력 개발법｣ 제39조에 따른 기능대학
-									    </td>
-									  </tr>
-									  <tr>
-									    <td>기타</td>
-									    <td>
-									    	｢공공기관의 운영에 관한 법률｣ 제4조에 따른 공공기관, 특별법에 따라 정부가 보호·육성하는 법인으로서 정부가 출연한 법인<br>
-									    	｢지방자치단체 출자·출연 기관의 운영에 관한 법률｣에 따라 행정자치부장관이 고시한 기관<br>
-									    	｢연구개발특구의 육성에 관한 특별법｣ 제2조제5호의 국립연구기관 및 정부출연연구기관<br>
-									    	｢산업기술혁신 촉진법｣제42조제1항에 따른 전문생산기술연구소<br>
-									    	그 밖에 관계 중앙행정기관의 장의 추천을 받은 기관
-									    </td>
-									  </tr>
-									</tbody>
-								</table>
-							</div>
+
 						</div>
 						<div class="use-box">
 							<div class="use-box-title">
 								<h6>05</h6>
 								<h4>
-									사업절차는 어떻게 되나요?
+									국가직무능력표준(NCS)를 활용하면 어떤 점이 좋은가요?
 								</h4>
 							</div>
-							<div class="use-text-box">
-								<div class="rect-box dual">
-									<div>
-										<figure>
-											<img src="contents/sub_13_3.png">
-										</figure>
-										<p>정책수립 제도 개선 등</p>
-									</div>
-									<div>
-										<figure>
-											<img src="contents/sub_13_4.png">
-										</figure>
-										<p>공동훈련센터 및 훈련과정 승인, 예산지원 및 관리</p>
-									</div>
-								</div>
-								<div class="sand-image">
-									<figure>
-										<img src="contents/sub_13_6.png">
-									</figure>
-								</div>
-								<div class="rect-box flex">
-									<div>
-										<figure>
-											<img src="contents/sub_13_5.png">
-										</figure>
-										<p>사업운영 컨설팅 지원, 사업 관련 조사 및 연구, 권역별 허브사업단 운영(중부권, 동남권, 서남권)</p>
-									</div>
-								</div>
+						</div>
+						<div class="use-box">
+							<div class="use-box-title">
+								<h6>06</h6>
+								<h4 style="padding-bottom: 1rem;">
+									국가직무능력표준(NCS)기반 채용은 <br>기존 채용, 블라인드 채용과의 차이점은 무엇인가요?
+								</h4>
 							</div>
 						</div>
 					</div>
@@ -575,4 +663,5 @@ p.desc {
 	</main>
 	<footer id="footer"></footer>
 </body>
+
 </html>
