@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>HDRK</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="HDRK - 한국산업인력공단">
 	<meta property="og:description" content="한국산업인력공단 웹매거진">
@@ -13,451 +14,146 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 	<style>
-:root {
-	--color-first: #DCDBED;
-	--color-second: #405883;
-	--color-third: #000;
-	--color-fourth: #000;
-}
-body {
-	background-color: var(--color-first);
-}
-.article-body {
-	max-width: 900px;
-	padding-top: 10rem;
-	padding-bottom: 10rem;
-}
-.info-header {
-	position: relative;
-}
-.category {
-	display: block;
-    width: fit-content;
-    font-size: 0.8rem;
-    line-height: 1.6rem;
-    font-family: GmarketSansMedium;
-    padding: 0px 12px;
-    border: 1px solid var(--color-third);
-    color: var(--color-third);
-    border-radius: .8rem;
-    margin-bottom: 1rem;
-}
-.info-header p {
-	color: var(--color-fourth);
-	margin-bottom: 1rem;
-	width: 50%;
-}
-.info-header h4 {
-	color: var(--color-second);
-	font-family: Paperlogy-5Medium;
-	font-size: 1.5rem;
-}
-.info-header h2 {
-	color: var(--color-third);
-	font-family: Paperlogy-7Bold;
-	font-size: 2rem;
-	letter-spacing: -0.01rem;
-	line-height: 1.2;
-	margin-bottom: .5rem;
-}
-.info-header h5 {
-	font-family: Paperlogy-5Medium;
-	font-size: 1.3rem;
-	line-height: 1.3;
-	margin-top: 2.8rem;
-}
-.info-header .article-meta {
-	text-align: left;
-	font-size: 0.8rem;
-	color: var(--color-third);
-	margin-top: 0;
-}
-.info-header figure {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 45%;
-}
-.info-box {
-	position: relative;
-	border-top: 1px solid var(--color-second);
-	margin-top: 5rem;
-}
-.info-box::before {
-	content: "";
-	display: block;
-	width: 11px;
-	height: 11px;
-	background-color: var(--color-second);
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translateY(-50%);
-	border-radius: 50%;
-}
-.info-box h3 {
-	font-family: Paperlogy-5Medium;
-	font-size: 1.5rem;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-.info-box h3 span {
-	color: var(--color-second);
-}
-.info-box p {
-	font-family: Paperlogy-4Regular;
-}
-.info-box-flex {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.info-box-flex.width-80 {
-	width: 80%;
-}
-.info-box-flex .info-box-in {
-	width: 30%;
-}
-.info-box-center h4 {
-	font-family: Paperlogy-7Bold;
-	color: #2C4573;
-	text-align: center;
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-}
-.info-box-center figure {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 10%;
-}
-.info-box-list {
-	display: flex;
-	align-items: center;
-	border: 1px solid var(--color-second);
-	border-radius: 0.5rem;
-	background-color: #fff;
-	margin-top: 2rem;
-}
-.info-box-list h5 {
-	font-size: 1.2rem;
-	font-family: Paperlogy-7Bold;
-	width: fit-content;
-	padding: 0 1rem;
-	border-right: 1px solid var(--color-second);
-}
-.info-box-list-in {
-	display: flex;
-	justify-content: space-between;
-	flex: 1;
-	padding: 0.5rem 5%;
-}
-.info-box-list-in figure {
-	height: 2.5vw;
-}
-.info-box-list-in figure img {
-	width: auto;
-	height: 100%;
-}
-.info-box h5 {
-	font-family: Paperozi;
-	font-weight: 600;
-	font-size: 1.2rem;
-	text-align: center;
-}
-.info-box h5 + .info-box-flex {
-	margin-top: 2rem;
-}
-.info-box-flex.small-image {
-	position: relative;
-	text-align: center;
-}
-.info-box-flex.small-image figure {
-	width: 50%;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-bottom: 1rem;
-}
-.info-box-in h4 {
-	padding: 0.1rem 0;
-	text-align: center;
-	color: #fff;
-	font-family: Paperozi;
-	font-weight: 700;
-	letter-spacing: -0.01rem;
-	font-size: 1.2rem;
-	background-color: var(--color-second);
-	border-radius: 1rem;
-	margin-bottom: 1rem;
-}
-.info-box-in:nth-of-type(2) h4 {
-	background-color: #5B5CA3;
-}
-.info-box-in:nth-of-type(3) h4 {
-	background-color: #5656CE;
-}
-.info-box-in p {
-	text-align: center;
-}
-.info-box-list-2-in {
-	position: relative;
-	width: 25vw;
-	background-color: #fff;
-	margin: 4vw;
-	padding: 0.2vw 4vw;
-	border-radius: 2rem;
-	border: 2px solid var(--color-second);
-	font-family: Paperozi;
-	font-weight: 700;
-	display: flex;
-	align-items: center;
-}
-.info-box-list-2-in span {
-	margin-right: 1rem;
-}
-.info-box-list-2-in em {
-	font-weight: 500;
-}
-.info-box-list-2-in strong {
-	font-size: 1.8rem;
-	margin: 0 0.3rem;
-}
-.info-box-list-2-in figure {
-	width: 6vw;
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-}
-@media (max-width:767px) {
-	.article-body {
-		padding: 2rem 1rem;
-	}
-	.info-header h2 {
-		word-break: keep-all;
-	}
-	.info-header p {
-		width: 100%;
-	}
-	.info-header figure {
-		position: relative;
-		width: 100%;
-	}
-	.info-box-flex.width-80 {
-		width: 90%;
-		margin-bottom: 1rem;
-	}
-	.info-box-center h4 {
-		font-size: 1rem;
-	}
-	.info-box h5 {
-		font-size: .8rem;
-	}
-	.info-box-list-in figure {
-	    height: 3.5vw;
-	}
-	.info-box h5 + .info-box-flex {
-	    margin-top: 1rem;
-	}
-	.info-box-flex .info-box-in {
-	    width: 31%;
-	}
-	.info-box-flex.small-image figure {
-		width: 60%;
-	}
-	.info-box-in p {
-		font-size: .7rem;
-		line-height: 1.3;
-	}
-	.info-box-in p br {
-		display: none;
-	}
-	.info-box-in h4 {
-		font-size: 1rem;
-		word-break: keep-all;
-		line-height: 1.2;
-		min-height: 3rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.info-box-flex {
-		margin-top: 1rem;
-	}
-	.info-box-list-2-in {
-		width: 80%;
-		padding-left: 8vw;
-	}
-	.info-box-list-2-in figure {
-		width: 10vw;
-	}
-	.info-box-list-2-in strong {
-		font-size: 1.5rem;
-	}
+		:root {
+			--color-first: #55AE94;
+			--color-second: #CEDB00;
+			--color-third: #000;
+			--color-fourth: #000;
+		}
 
-}
+		body {
+			background-color: var(--color-first);
+		}
+
+		.article-body {
+			max-width: 1200px;
+			padding-top: 120px;
+		}
+
+		.category {
+			display: block;
+			width: fit-content;
+			font-size: 0.8rem;
+			line-height: 1.6rem;
+			font-family: GmarketSansMedium;
+			padding: 0px 12px;
+			border: 1px solid var(--color-third);
+			color: var(--color-third);
+			border-radius: .8rem;
+			margin-bottom: 1rem;
+		}
+
+		.infographic-box {
+			display: grid;
+			grid-template-columns: 1fr 1.225fr;
+			position: relative;
+		}
+
+		.infographic-box-left p {
+			color: var(--color-fourth);
+			margin-bottom: 1rem;
+			width: 90%
+		}
+
+		.infographic-box-left h4 {
+			color: var(--color-second);
+			font-family: Paperlogy-5Medium;
+			font-size: 1.5rem;
+		}
+
+		.infographic-box-left h2 {
+			color: var(--color-third);
+			font-family: Paperlogy-7Bold;
+			font-size: 2.8rem;
+			letter-spacing: -0.01rem;
+			line-height: 1.1;
+			margin-top: .5rem
+		}
+
+		.infographic-box-left .article-meta {
+			text-align: left;
+			font-size: 0.8rem;
+			color: var(--color-third);
+			margin-top: 1rem;
+		}
+
+		.infographic-box-left figure {
+			margin-top: -6rem;
+		}
+
+		.infographic-box-right {
+			margin-top: 5rem;
+		}
+
+		.infographic-box-center {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			width: 20%;
+			transform: translateX(-90%);
+		}
+
+		@media (max-width:767px) {
+			.article-body {
+				padding-top: 20px;
+			}
+
+			.infographic-box {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.infographic-box-center {
+				right: 0;
+				left: auto;
+				top: 40%;
+				bottom: auto;
+				transform: translateX(-10%);
+			}
+
+			.infographic-box-right {
+				margin-top: 0rem;
+			}
+
+			.infographic-box-left h2 {
+				font-size: 2rem;
+				margin-bottom: 0.5rem;
+			}
+
+		}
 	</style>
 </head>
+
 <body>
 	<header id="menu"></header>
 	<main>
 		<section>
-			<div class="article-body">
-				<div class="info-header">
-					<span class="category">테마 infographic</span>
-					<h4>인포그래픽으로 보는</h4>
-					<h2>
-						국가인적자원개발컨소시엄 현황
-					</h2>
-					<div class="article-meta">
-						<span>글</span>
-						<span class="pipe">ㅣ</span>
-						<span>최영윤</span>
-						<span class="dot">・</span>
-						<span>자료</span>
-						<span class="pipe">ㅣ</span>
-						<span>한국산업인력공단</span>
-					</div>
-					<p>
-						한국산업인력공단은 기업·사업주단체·공공기관·대학 등으로 구성된 컨소시엄 공동훈련센터가 관련 중소기업과 공동훈련 협약을 맺고, 자체 보유한 훈련시설 등을 활용해 중소기업 근로자들에게 맞춤형 훈련을 제공할 수 있도록 지원·관리하는 사업을 운영하고 있습니다.
-					</p>
-					<figure>
-						<img src="contents/sub_12_top.png">
-					</figure>
-				</div>
-				<div class="info-box">
-					<h3>국가인적자원개발컨소시엄이란</h3>
-					<p>
-						중소기업 재직근로자의 직업훈련 참여를 확대하고, 신성장동력분야, 융복합분야 등의 전략산업 전문인력을 육성하며, 산업계 주도의 지역별 직업훈련기반 조성하기 위해 복수의 중소기업과 인적자원개발 컨소시엄 협약을 구성한 기업에게 공동훈련에 필요한 훈련 인프라와 훈련비 등을 지원하는 대한민국의 대표적인 직업능력개발훈련 사업
-					</p>
-					<div class="info-box-flex width-80">
-						<div class="info-box-in">
-							<figure>
-								<img src="contents/sub_12_1.png">
-							</figure>
+			<div class="article-body wrap">
+				<div class="infographic-box">
+					<div class="infographic-box-left">
+						<span class="category">테마 infographic</span>
+						<p>
+							한국산업인력공단은 산업현장의 기술 변화와 직무 수행에 필요한 능력(지식·기술·태도)을 국가가 표준화한 기준인, 국가직무능력표준(NCS)을 운영하고 있습니다.
+						</p>
+						<h4>인포그래픽으로 보는</h4>
+						<h2>국가직무능력표준(NCS)<br>개념 및 성과</h2>
+						<div class="article-meta">
+							<span>글</span>
+							<span class="pipe">ㅣ</span>
+							<span>최영윤</span>
+							<span class="dot">・</span>
+							<span>자료</span>
+							<span class="pipe">ㅣ</span>
+							<span>한국산업인력공단</span>
 						</div>
-						<div class="info-box-in">
-							<figure>
-								<img src="contents/sub_12_2.png">
-							</figure>
-						</div>
-						<div class="info-box-in">
-							<figure>
-								<img src="contents/sub_12_3.png">
-							</figure>
-						</div>
-					</div>
-					<div class="info-box-center">
-						<h4>협약기업 훈련수요 맞춤형 훈련제공</h4>
 						<figure>
-							<img src="contents/sub_12_4.png">
+							<img src="contents/sub_12_1.png">
 						</figure>
 					</div>
-					<div class="info-box-list">
-						<h5>사업수행</h5>
-						<div class="info-box-list-in">
-							<figure>
-								<img src="contents/sub_12_5.png">
-							</figure>
-							<figure>
-								<img src="contents/sub_12_6.png">
-							</figure>
-							<figure>
-								<img src="contents/sub_12_7.png">
-							</figure>
-						</div>
-					</div>					
-				</div>
-				<div class="info-box">
-					<h3>국가인적자원개발컨소시엄 사업 목적</h3>
-					<h5>[사업 목적]</h5>
-					<div class="info-box-flex small-image">
-						<div class="info-box-in">
-							<figure>
-								<img src="contents/sub_12_8.png">
-							</figure>
-							<p>
-								중소기업에 지속적이고 체계적인<br>
-								인적자원개발 등 인력관리시스템을 제공
-							</p>
-						</div>
-						<div class="info-box-in">
-							<figure>
-								<img src="contents/sub_12_9.png">
-							</figure>
-							<p>
-								중소기업을 위한 공동 교육훈련<br>
-								인프라를 구축
-							</p>
-						</div>
-						<div class="info-box-in">
-							<figure>
-								<img src="contents/sub_12_10.png">
-							</figure>
-							<p>
-								대·중소기업 상생을 위한 인력양성<br>
-								생태계 구축
-							</p>
-						</div>
-					</div>
-				</div>	
-				<div class="info-box">
-					<h3>국가인적자원개발컨소시엄 사업 유형</h3>
-					<div class="info-box-flex">
-						<div class="info-box-in">
-							<h4>산업맞춤형</h4>
-							<p>
-								중소기업 등과 컨소시엄을 구성하여 직무훈련을 제공하는 등 중소기업 등의 종합적인 직업능력개발을 지원하는 공동훈련센터
-							</p>
-						</div>
-						<div class="info-box-in">
-							<h4>하이테크형</h4>
-							<p>
-								첨단산업, 산업전환 분야 등 신기술·신산업에 대응하여 직무훈련 및 각종 지원서비스를 제공하는 공동훈련센터
-							</p>
-						</div>
-						<div class="info-box-in">
-							<h4>대중소상생 아카테미</h4>
-							<p>
-								대기업이 보유한 우수 교육 훈련 프로그램을 중소기업과 공유하여  중소기업 근로자의 역량을 강화하고 동반 성장을 도모하는 아카데미
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="info-box">
-					<h3>국가인적자원개발컨소시엄 현황</h3>		
-					<div class="info-box-list-2">
-						<div class="info-box-list-2-in">
-							<figure>
-								<img src="contents/sub_12_11.png">
-							</figure>
-							<span>공동훈련센터</span>
-							<strong>306</strong>
-							<em>개소</em>
-						</div>
-						<div class="info-box-list-2-in">
-							<figure>
-								<img src="contents/sub_12_12.png">
-							</figure>
-							<span>실시인원</span>
-							<em>약</em>
-							<strong>213,000</strong>
-							<em>명</em>
-						</div>
-						<div class="info-box-list-2-in">
-							<figure>
-								<img src="contents/sub_12_13.png">
-							</figure>
-							<span>참여기업</span>
-							<em>약</em>
-							<strong>97,000</strong>
-							<em>개</em>
-						</div>
+					<div class="infographic-box-right">
+						<figure>
+							<img src="contents/sub_12_2.png">
+						</figure>
 					</div>
 				</div>
 			</div>
@@ -465,4 +161,5 @@ body {
 	</main>
 	<footer id="footer"></footer>
 </body>
+
 </html>
