@@ -154,6 +154,34 @@
 			.article-header-container-2 h2 {
 				font-size: 2.5rem;
 			}
+
+			.article-list {
+				grid-template-columns: 1fr;
+				gap: 5rem;
+				width: 90%;
+				margin: 3rem auto;
+			}
+
+			.article-list::after {
+				transform: translateX(-50%) translateY(-50%) rotate(90deg);
+			}
+
+			.article-image-container.flex-image {
+				width: 90%;
+				margin: 0 auto;
+				gap: 1rem
+			}
+
+			.flex-image figcaption {
+				font-size: .8rem;
+				word-break: keep-all;
+				line-height: 1.1;
+			}
+
+			.flex-image figcaption b {
+				font-size: 1rem;
+				margin-top: .2rem;
+			}
 		}
 	</style>
 
